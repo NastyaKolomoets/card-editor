@@ -1,0 +1,6 @@
+{
+  "projects": {
+    "default": "munchkin-card-editor",
+    "card-editor": "munchkin-card-editor"
+  }
+}
