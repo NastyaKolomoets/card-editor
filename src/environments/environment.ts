@@ -3,7 +3,17 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebase: {
+    // ***********************************************************************************************************************
+    // * TODO(DEVELOPER): Update values according to: Firebase Console > Overview > Add Firebase to your web app. *
+    // ***********************************************************************************************************************
+    apiKey: '',
+    authDomain: 'localhost',
+    databaseURL: 'https://munchkin-card-editor.firebaseio.com',
+    projectId: 'munchkin-card-editor',
+    storageBucket: 'gs://munchkin-card-editor.appspot.com'
+  }
 };
 
 /*
