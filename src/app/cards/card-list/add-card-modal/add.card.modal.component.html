@@ -1,0 +1,19 @@
+<form (ngSubmit)="submit()" class="form-group">
+    <div class="modal-header">
+        Add new card
+    </div>
+    <div class="modal-body">
+        <div class="container-fluid">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" name="name" id="name" [(ngModel)]="name" placeholder="Name">
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="submit" class="btn btn-success">
+            OK
+        </button>
+        <button type="button" class="btn btn-secondary" (click)="activeModal.dismiss('')">
+            Cancel
+        </button>
+    </div>
+</form>

@@ -1,7 +1,8 @@
 <div class="card">
     <img class="card-img-top" src="{{backgroundImg}}" alt="background">
-    <div class="card-body">
-        <h4 class="card-title">{{card.name}}</h4>
-        <p class="card-text">{{card.description}}</p>
+    <div class="card-body info">
+        <h4 class="card-title text-center">{{card.name}}</h4>
+        <ng-content></ng-content>
+        <!-- <p class="card-text text-center">{{card.description}}</p> -->
     </div>
 </div>

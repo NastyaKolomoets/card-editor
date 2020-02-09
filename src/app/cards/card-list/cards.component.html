@@ -14,14 +14,19 @@
                                         <a data-toggle="collapse" data-parent="#doors" href="#{{type}}_cards" aria-expanded="true" [attr.aria-controls]="type + '_cards'">
                                             {{getTypeName(type)}}
                                         </a>
+                                        <a class="float-right" (click)="addCard('doors', type)" href="#" role="button">
+                                            Add
+                                            <i class="fa fa-plus" aria-hidden="true"></i>
+                                        </a>
                                     </h6>
                                 </div>
                                 <div id="{{type}}_cards" class="collapse in" role="tabpanel" [attr.aria-labelledby]="type">
                                     <div class="card-body">
                                         <div class="card-deck">
-                                            <ng-container *ngFor="let card of getDoorsOfType(type)">
-                                                <app-card-item [card]="card" [backgroundImg]="getDoorsBackgroundImg()"></app-card-item>
-                                            </ng-container>
+                                            <div class="card card-sm" *ngFor="let card of getDoorsOfType(type)">
+                                                <app-card-select [type]="type" [card]="card"></app-card-select>
+                                                <!-- <app-card-item [card]="card" [backgroundImg]="getDoorsBackgroundImg()"></app-card-item> -->
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

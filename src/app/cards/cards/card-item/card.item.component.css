@@ -1,7 +1,4 @@
-.card {
-    max-width: 20%;
-}
-
-img {
-    width: 100%;
+.card-body.info {
+    margin-top: -15em;
+    height: 15em;
 }
