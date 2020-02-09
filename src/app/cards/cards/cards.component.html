@@ -1,6 +1,6 @@
 <div class="container">
-    <div class="col">
-        <div class="row list-group">
+    <div class="row">
+        <div class="col list-group">
             <div class="list-group-item">
                 <a data-toggle="collapse" href="#doors" role="button" aria-expanded="false" aria-controls="doors">
                     Doors
@@ -20,13 +20,7 @@
                                     <div class="card-body">
                                         <div class="card-deck">
                                             <ng-container *ngFor="let card of getDoorsOfType(type)">
-                                                <div class="card">
-                                                    <img class="card-img-top" src="holder.js/100x180/" alt="{{card.img}}">
-                                                    <div class="card-body">
-                                                        <h4 class="card-title">{{card.name}}</h4>
-                                                        <p class="card-text">{{card.description}}</p>
-                                                    </div>
-                                                </div>
+                                                <app-card-item [card]="card" [backgroundImg]="getDoorsBackgroundImg()"></app-card-item>
                                             </ng-container>
                                         </div>
                                     </div>

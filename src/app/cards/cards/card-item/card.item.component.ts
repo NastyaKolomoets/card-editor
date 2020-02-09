@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { ICard } from 'src/app/cards/models/card';
 
 @Component({
@@ -7,9 +7,9 @@ import { ICard } from 'src/app/cards/models/card';
   styleUrls: ['card.item.component.css']
 })
 export class CardItemComponent {
-  card: ICard;
+  @Input() card: ICard;
+  @Input() backgroundImg: string;
 
-  constructor(card: ICard) {
-    this.card = card;
+  constructor() {
   }
 }

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFireDatabase } from 'angularfire2/database';
 import { Observable } from 'rxjs';
+import { DoorCard } from '../models/doors/door-card';
 
 class Cards {
   doors: any[];
@@ -17,9 +18,7 @@ export class CardsComponent implements OnInit {
   cards: Cards;
   doorCardTypes = [];
 
-  constructor(
-    public db: AngularFireDatabase
-  ) {
+  constructor(public db: AngularFireDatabase) {
   }
 
   ngOnInit(): void {
@@ -34,7 +33,11 @@ export class CardsComponent implements OnInit {
     return type.replace('_', ' ').toUpperCase();
   }
 
-  getDoorsOfType(type: string): any[] {
+  getDoorsOfType(type: string): DoorCard[] {
     return Object.values(this.cards.doors[type]);
+  }
+
+  getDoorsBackgroundImg() {
+    return '../assets/doors_back.png';
   }
 }
