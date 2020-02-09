@@ -1,24 +1,40 @@
-import { Component } from '@angular/core';
-import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
-import { AngularFireAuth } from 'angularfire2/auth';
+import { Component, OnInit } from '@angular/core';
+import { AngularFireDatabase } from 'angularfire2/database';
 import { Observable } from 'rxjs';
-import { AuthService } from 'src/app/services/auth.service';
+
+class Cards {
+  doors: any[];
+  treasures: any[];
+}
+
 @Component({
   selector: 'app-cards',
   templateUrl: 'cards.component.html',
   styleUrls: ['cards.component.css']
 })
-export class CardsComponent {
-  monsters: Observable<any[]>;
+export class CardsComponent implements OnInit {
+  cards$: Observable<any[]>;
+  cards: Cards;
+  doorCardTypes = [];
 
   constructor(
-    public db: AngularFireDatabase,
-    private authService: AuthService
+    public db: AngularFireDatabase
   ) {
-    // authService.user.subscribe(user => {
-    //   if (user !== null) {
-    //     this.monsters = this.db.list<any>('/cards/doors/monsters').valueChanges();
-    //   }
-    // });
+  }
+
+  ngOnInit(): void {
+      this.cards$ = this.db.list<Cards>('/').valueChanges();
+      this.cards$.subscribe(cards => {
+        this.cards = cards[0];
+        this.doorCardTypes = Object.keys(cards[0].doors);
+      });
+  }
+
+  getTypeName(type: string): string {
+    return type.replace('_', ' ').toUpperCase();
+  }
+
+  getDoorsOfType(type: string): any[] {
+    return Object.values(this.cards.doors[type]);
   }
 }

@@ -1,0 +1,59 @@
+{
+  "cards" : {
+    "doors" : {
+      "classes" : {
+        "card" : {
+          "first_ability_description" : "first dexription",
+          "first_ability_name" : "first name",
+          "img" : "img url",
+          "name" : "name",
+          "second_ability_description" : "second description",
+          "second_ability_name" : "second name"
+        }
+      },
+      "curses" : {
+        "card" : {
+          "bad_stuff" : "bad stuff",
+          "description" : "description",
+          "img" : "img url",
+          "name" : "name"
+        }
+      },
+      "monster_enhancer" : {
+        "card" : {
+          "decription" : "description",
+          "enhancement" : "value",
+          "img" : "img url",
+          "name" : "name"
+        }
+      },
+      "monsters" : {
+	"card": {
+        	"bad_stuff" : "bad stuff",
+	        "description" : "description",
+        	"extra" : "extra",
+	        "img" : "img url",
+	        "level" : 1,
+        	"name" : "name",
+	        "win_levels" : 1,
+        	"win_treasures" : 1
+	}
+      },
+      "others" : {
+        "card" : {
+          "description" : "description",
+          "img" : "img url",
+          "name" : "name"
+        }
+      },
+      "races" : {
+        "card" : {
+          "first_ability" : "first",
+          "img" : "img url",
+          "name" : "name",
+          "second_ability" : "second"
+        }
+      }
+    }
+  }
+}

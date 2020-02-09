@@ -32,6 +32,10 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.afAuth.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
+    this.login();
+}
+
+  login() {
+   this.afAuth.auth.signInAnonymously();
   }
 }
