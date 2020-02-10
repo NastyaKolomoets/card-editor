@@ -1,7 +1,8 @@
-<app-card-item [card]="card" [backgroundImg]="getBackgroundImg()">
-    <div role="header">
-        <p class="card-text text-center">Рівень {{card.level}}</p>
-        <p *ngIf="card.extra" class="card-text text-center">{{card.extra}}</p>
+<app-card-item [backgroundImg]="getBackgroundImg()">
+    <div role="header" class="text-center">
+        <p class="card-level">Рівень {{card.level}}</p>
+        <p class="card-name">{{card.name}}</p>
+        <p *ngIf="card.extra" class="card-extra">{{card.extra}}</p>
     </div>
     <diV role="content">
         <app-img-center [topText]="card.description" [bottomText]="card.badStuff" [img]="card.img"></app-img-center>

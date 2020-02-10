@@ -7,7 +7,6 @@ import { ICard } from 'src/app/cards/models/card';
   styleUrls: ['card.item.component.css']
 })
 export class CardItemComponent {
-  @Input() card: ICard;
   @Input() backgroundImg: string;
 
   constructor() {

@@ -1,28 +1,36 @@
 /* You can add global styles to this file, and also import other style files */
+
 .card-header a:hover {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 .custom-card {
-  position: relative;
+    position: relative;
+}
+
+.custom-card .custom-card-header {
+    position: absolute;
+    top: .75em;
+    left: 0;
+    right: 0;
+}
+
+.custom-card .custom-card-footer {
+    position: absolute;
+    bottom: .75em;
+    left: 0;
+    right: 0;
 }
 
 .custom-card-header p {
     margin: 0;
     font-size: small;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .custom-card-content p {
     margin: 0;
     font-size: x-small;
-}
-
-.custom-card .custom-card-footer {
-  position: absolute;
-  bottom: .75em;
-  left: 0;
-  right: 0;
 }
 
 .custom-card-footer p {

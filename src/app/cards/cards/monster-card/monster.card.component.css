@@ -1,0 +1,14 @@
+.card-level {
+    margin: 0;
+    font-size: small;
+}
+
+.card-name {
+    margin: 0;
+    font-size: smaller;
+}
+
+.card-extra {
+    margin: 0;
+    font-size: x-small;
+}

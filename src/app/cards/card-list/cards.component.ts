@@ -56,7 +56,7 @@ export class CardsComponent implements OnInit {
 
       const uri = `/cards/${kind}/${type}`;
       const id = this.firebase.database.ref(uri).push().key;
-      this.firebase.database.ref(`${uri}/${id}`).set(this.generator.generateCard(type, name)).then(() => {
+      this.firebase.database.ref(`${uri}/${id}`).set(this.generator.generateCard(type, result.name)).then(() => {
         // this.navigateToEdit(type, id);
       });
     });
