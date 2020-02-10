@@ -6,6 +6,7 @@ import { FormsModule } from '@angular/forms';
 import { NgbModalModule, NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CardSelectComponent } from './card-select/card.select.component';
 import { MonsterCardComponent } from './monster-card/monster.card.component';
+import { TemplatesModule } from './templates/templates.module';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { MonsterCardComponent } from './monster-card/monster.card.component';
     AngularFireDatabaseModule,
     FormsModule,
     NgbModule,
-    NgbModalModule
+    NgbModalModule,
+    TemplatesModule
   ],
   exports: [
     CardSelectComponent

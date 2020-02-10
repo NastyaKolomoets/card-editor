@@ -1,4 +1,14 @@
-.card-body.info {
+.card {
+    border: 0;
+}
+
+.card-body.details {
     margin-top: -15em;
     height: 15em;
+    padding: .5em 0;
+}
+
+.card-title {
+    margin: 0;
+    font-size: unset;
 }

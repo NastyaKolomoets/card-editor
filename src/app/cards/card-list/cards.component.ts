@@ -4,6 +4,9 @@ import { Observable } from 'rxjs';
 import { DoorCard } from '../models/doors/door-card';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { AddCardModalComponent } from '../card-list/add-card-modal/add.card.modal.component';
+import { Router } from '@angular/router';
+import { stringify } from 'querystring';
+import { CardGenerator } from '../models/card-generator';
 
 class Cards {
   doors: any[];
@@ -22,16 +25,18 @@ export class CardsComponent implements OnInit {
 
   constructor(
     public firebase: AngularFireDatabase,
-    private modalService: NgbModal
-    ) {
+    private modalService: NgbModal,
+    private router: Router,
+    private generator: CardGenerator
+  ) {
   }
 
   ngOnInit(): void {
-      this.cards$ = this.firebase.list<Cards>('/').valueChanges();
-      this.cards$.subscribe(cards => {
-        this.cards = cards[0];
-        this.doorCardTypes = Object.keys(cards[0].doors);
-      });
+    this.cards$ = this.firebase.list<Cards>('/').valueChanges();
+    this.cards$.subscribe(cards => {
+      this.cards = cards[0];
+      this.doorCardTypes = Object.keys(cards[0].doors);
+    });
   }
 
   getTypeName(type: string): string {
@@ -42,20 +47,23 @@ export class CardsComponent implements OnInit {
     return Object.values(this.cards.doors[type]);
   }
 
-  getDoorsBackgroundImg() {
-    return '../assets/doors_back.png';
-  }
-
   addCard(kind: string, type: string) {
     const modalRef = this.modalService.open(AddCardModalComponent);
     modalRef.result.then(result => {
+      if (result === null) {
+        return;
+      }
+
       const uri = `/cards/${kind}/${type}`;
       const id = this.firebase.database.ref(uri).push().key;
-      this.firebase.database.ref(`${uri}/${id}`).set({
-        name: result.name
+      this.firebase.database.ref(`${uri}/${id}`).set(this.generator.generateCard(type, name)).then(() => {
+        // this.navigateToEdit(type, id);
       });
     });
+  }
 
-    const routerLink = `/editor/${type}`;
+  navigateToEdit(type: string, id: string): void {
+    const routerLink = `/editor/${type}/${id}`;
+    this.router.navigateByUrl(routerLink);
   }
 }

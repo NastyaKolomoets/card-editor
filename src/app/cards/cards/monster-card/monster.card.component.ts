@@ -8,5 +8,16 @@ import { DoorComponent } from '../door/door.component';
 	styleUrls: ['monster.card.component.css']
 })
 export class MonsterCardComponent extends DoorComponent {
-  @Input() card: MonsterCard;
+	@Input() card: MonsterCard;
+
+	get treasuresText() {
+		switch (this.card.winTreasures) {
+			case 1:
+				return 'Скарб';
+			case 2:
+				return 'Скарби';
+			default:
+				return 'Скарбів';
+		}
+	}
 }

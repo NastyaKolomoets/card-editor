@@ -7,6 +7,7 @@ import { NgbModalModule, NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AddCardModalComponent } from './add-card-modal/add.card.modal.component';
 import { CardsModule } from '../cards/cards.module';
 import { CardSelectComponent } from '../cards/card-select/card.select.component';
+import { CardGenerator } from '../models/card-generator';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,9 @@ import { CardSelectComponent } from '../cards/card-select/card.select.component'
     NgbModule,
     NgbModalModule,
     CardsModule
+  ],
+  providers: [
+    CardGenerator
   ],
   entryComponents: [
     AddCardModalComponent

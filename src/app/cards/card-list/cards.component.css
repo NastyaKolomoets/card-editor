@@ -1,3 +1,7 @@
 .card-sm {
     max-width: 18%;
 }
+
+.card p {
+    margin: 0;
+}

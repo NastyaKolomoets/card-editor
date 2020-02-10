@@ -1,1 +1,33 @@
 /* You can add global styles to this file, and also import other style files */
+.card-header a:hover {
+  text-decoration: none;
+}
+
+.custom-card {
+  position: relative;
+}
+
+.custom-card-header p {
+    margin: 0;
+    font-size: small;
+    font-weight: 500;
+}
+
+.custom-card-content p {
+    margin: 0;
+    font-size: x-small;
+}
+
+.custom-card .custom-card-footer {
+  position: absolute;
+  bottom: .75em;
+  left: 0;
+  right: 0;
+}
+
+.custom-card-footer p {
+    margin: 0;
+    font-size: x-small;
+    font-weight: 500;
+    white-space: nowrap;
+}

@@ -1,6 +1,19 @@
 <app-card-item [card]="card" [backgroundImg]="getBackgroundImg()">
-    <div>
-        <p>Monster</p>
-        <p class="card-text text-center">{{card.description}}</p>
+    <div role="header">
+        <p class="card-text text-center">Рівень {{card.level}}</p>
+        <p *ngIf="card.extra" class="card-text text-center">{{card.extra}}</p>
+    </div>
+    <diV role="content">
+        <app-img-center [topText]="card.description" [bottomText]="card.badStuff" [img]="card.img"></app-img-center>
+    </diV>
+    <div role="footer" class="container">
+        <div class="row">
+            <div class="col">
+                <p *ngIf="card.winLevels > 1" class="text-left">{{card.winLevels}} Рівні</p>
+            </div>
+            <div class="col">
+                <p class="text-right">{{card.winTreasures}} {{treasuresText}}</p>
+            </div>
+        </div>
     </div>
 </app-card-item>

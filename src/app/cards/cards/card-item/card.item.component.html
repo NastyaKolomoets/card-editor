@@ -1,8 +1,15 @@
-<div class="card">
+<div class="card custom-card">
     <img class="card-img-top" src="{{backgroundImg}}" alt="background">
-    <div class="card-body info">
+    <div class="card-body details">
         <h4 class="card-title text-center">{{card.name}}</h4>
-        <ng-content></ng-content>
-        <!-- <p class="card-text text-center">{{card.description}}</p> -->
+        <div class="custom-card-header">
+            <ng-content select="div[role=header]"></ng-content>
+        </div>
+        <div class="custom-card-content">
+            <ng-content select="div[role=content]"></ng-content>
+        </div>
+        <div class="custom-card-footer">
+            <ng-content select="div[role=footer]"></ng-content>
+        </div>
     </div>
 </div>
