@@ -1,20 +1,18 @@
 import { ICard } from '../card';
+import { CardTypeDetails } from '../types/card-type-details';
+import { CardType } from '../card-type';
 
 export class DoorCard implements ICard {
   key: string;
-  type: string;
+  type: CardType;
   name: string;
   description: string;
   img: string;
 
-  constructor(name: string, type: string) {
+  constructor(name: string, type: CardType) {
     this.type = type;
     this.name = name;
     this.description = '';
     this.img = '';
-  }
-
-  getBackgroungImg(): string {
-    return '../assets/door_back.png';
   }
 }

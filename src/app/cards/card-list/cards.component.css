@@ -5,3 +5,7 @@
 .card p {
     margin: 0;
 }
+
+.card-deck .card {
+    border: 0;
+}

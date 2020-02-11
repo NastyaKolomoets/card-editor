@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { CardType } from '../../models/card-type';
 
 @Component({
 	selector: 'app-card-select',
@@ -8,7 +9,4 @@ import { Component, Input } from '@angular/core';
 export class CardSelectComponent {
 	@Input() type: string;
 	@Input() card: any;
-
-	constructor() {
-	}
 }

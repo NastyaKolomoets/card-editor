@@ -1,8 +1,8 @@
 export enum CardType {
-  CLASS = 'Клас',
-  CURSE = 'Прокляття',
-  MONSTER_ENHANCER = 'Підсилювач потвори',
-  MONSTER = 'Потвора',
-  OTHER_DOOR = 'Інше',
-  RACE = 'Раса'
+  CLASS = 'class',
+  CURSE = 'curse',
+  MONSTER_ENHANCER = 'monsterEnhancer',
+  MONSTER = 'monster',
+  OTHER_DOOR = 'otherDoor',
+  RACE = 'race'
 }

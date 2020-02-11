@@ -2,11 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { AddCardModalComponent } from '../card-list/add-card-modal/add.card.modal.component';
 import { Router } from '@angular/router';
-import { CardGenerator } from '../models/card-generator';
+import { CardGeneratorHelper } from '../models/helpers/card-generator.helper';
 import { CardsService } from 'src/app/services/cards.service';
 import { ICard } from '../models/card';
 import { CardType } from '../models/card-type';
 import { MonsterCard } from '../models/doors/monster-card';
+import { CardTypes } from '../models/types/card-types';
 
 @Component({
   selector: 'app-cards',
@@ -15,38 +16,39 @@ import { MonsterCard } from '../models/doors/monster-card';
 })
 export class CardsComponent implements OnInit {
   cards: ICard[];
-  doorCardTypes = [];
 
   constructor(
     private cardsService: CardsService,
     private modalService: NgbModal,
     private router: Router,
-    private generator: CardGenerator
+    private generator: CardGeneratorHelper
   ) {
   }
 
   ngOnInit(): void {
     this.cardsService.getAll()
       .subscribe(cards => {
-        this.cards = cards;
-        this.doorCardTypes = Object.keys(cards);
+        this.cards = Object.values(cards[0]);
       });
   }
 
-  getCardTypes(type: string): string[] {
+  getCardTypes(): CardType[] {
     return Object.values(CardType);
   }
 
-  getCardsOfType(type: string): ICard[] {
+  getCardTypeName(type: CardType): string {
+    return CardTypes.getCardTypeDetails(type).pluralUkr;
+  }
+
+  getCardsOfType(type: CardType): ICard[] {
     const cardsOfType = this.cards
       ? this.cards.filter(card => card.type === type)
       : [];
     switch (type) {
       case CardType.MONSTER:
-        const test = cardsOfType as MonsterCard[];
-        return test;
+        return cardsOfType as MonsterCard[];
       default:
-        return [];
+        return cardsOfType;
     }
   }
 

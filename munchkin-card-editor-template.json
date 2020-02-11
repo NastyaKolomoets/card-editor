@@ -1,57 +1,63 @@
 {
-  "cards" : {
-    "doors" : {
-      "classes" : {
-        "card" : {
-          "first_ability_description" : "first dexription",
-          "first_ability_name" : "first name",
-          "img" : "img url",
-          "name" : "name",
-          "second_ability_description" : "second description",
-          "second_ability_name" : "second name"
+  "cards": {
+    "doors": {
+      "classes": {
+        "card": {
+          "key": "card",
+          "firstAbilityDescription": "first description",
+          "firstAbilityName": "first name",
+          "img": "img url",
+          "name": "name",
+          "secondAbilityDescription": "second description",
+          "secondAbilityName": "second name"
         }
       },
-      "curses" : {
-        "card" : {
-          "bad_stuff" : "bad stuff",
-          "description" : "description",
-          "img" : "img url",
-          "name" : "name"
+      "curses": {
+        "card": {
+          "key": "card",
+          "badStuff": "bad stuff",
+          "description": "description",
+          "img": "img url",
+          "name": "name"
         }
       },
-      "monster_enhancer" : {
-        "card" : {
-          "decription" : "description",
-          "enhancement" : "value",
-          "img" : "img url",
-          "name" : "name"
+      "monsterEnhancer": {
+        "card": {
+          "key": "card",
+          "description": "description",
+          "enhancement": "value",
+          "img": "img url",
+          "name": "name"
         }
       },
-      "monsters" : {
-	"card": {
-        	"bad_stuff" : "bad stuff",
-	        "description" : "description",
-        	"extra" : "extra",
-	        "img" : "img url",
-	        "level" : 1,
-        	"name" : "name",
-	        "win_levels" : 1,
-        	"win_treasures" : 1
-	}
-      },
-      "others" : {
-        "card" : {
-          "description" : "description",
-          "img" : "img url",
-          "name" : "name"
+      "monsters": {
+        "card": {
+          "key": "card",
+          "badStuff": "bad stuff",
+          "description": "description",
+          "extra": "extra",
+          "img": "img url",
+          "level": 1,
+          "name": "name",
+          "winLevels": 1,
+          "winTreasures": 1
         }
       },
-      "races" : {
-        "card" : {
-          "first_ability" : "first",
-          "img" : "img url",
-          "name" : "name",
-          "second_ability" : "second"
+      "others": {
+        "card": {
+          "key": "card",
+          "description": "description",
+          "img": "img url",
+          "name": "name"
+        }
+      },
+      "races": {
+        "card": {
+          "key": "card",
+          "firstAbility": "first",
+          "img": "img url",
+          "name": "name",
+          "secondAbility": "second"
         }
       }
     }
