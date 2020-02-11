@@ -1,17 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { AngularFireDatabase } from 'angularfire2/database';
-import { Observable } from 'rxjs';
-import { DoorCard } from '../models/doors/door-card';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { AddCardModalComponent } from '../card-list/add-card-modal/add.card.modal.component';
 import { Router } from '@angular/router';
-import { stringify } from 'querystring';
 import { CardGenerator } from '../models/card-generator';
-
-class Cards {
-  doors: any[];
-  treasures: any[];
-}
+import { CardsService } from 'src/app/services/cards.service';
+import { ICard } from '../models/card';
+import { CardType } from '../models/card-type';
+import { MonsterCard } from '../models/doors/monster-card';
 
 @Component({
   selector: 'app-cards',
@@ -19,12 +14,11 @@ class Cards {
   styleUrls: ['cards.component.css']
 })
 export class CardsComponent implements OnInit {
-  cards$: Observable<any[]>;
-  cards: Cards;
+  cards: ICard[];
   doorCardTypes = [];
 
   constructor(
-    public firebase: AngularFireDatabase,
+    private cardsService: CardsService,
     private modalService: NgbModal,
     private router: Router,
     private generator: CardGenerator
@@ -32,31 +26,38 @@ export class CardsComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.cards$ = this.firebase.list<Cards>('/').valueChanges();
-    this.cards$.subscribe(cards => {
-      this.cards = cards[0];
-      this.doorCardTypes = Object.keys(cards[0].doors);
-    });
+    this.cardsService.getAll()
+      .subscribe(cards => {
+        this.cards = cards;
+        this.doorCardTypes = Object.keys(cards);
+      });
   }
 
-  getTypeName(type: string): string {
-    return type.replace('_', ' ').toUpperCase();
+  getCardTypes(type: string): string[] {
+    return Object.values(CardType);
   }
 
-  getDoorsOfType(type: string): DoorCard[] {
-    return Object.values(this.cards.doors[type]);
+  getCardsOfType(type: string): ICard[] {
+    const cardsOfType = this.cards
+      ? this.cards.filter(card => card.type === type)
+      : [];
+    switch (type) {
+      case CardType.MONSTER:
+        const test = cardsOfType as MonsterCard[];
+        return test;
+      default:
+        return [];
+    }
   }
 
-  addCard(kind: string, type: string) {
+  addCard(type: string) {
     const modalRef = this.modalService.open(AddCardModalComponent);
     modalRef.result.then(result => {
       if (result === null) {
         return;
       }
 
-      const uri = `/cards/${kind}/${type}`;
-      const id = this.firebase.database.ref(uri).push().key;
-      this.firebase.database.ref(`${uri}/${id}`).set(this.generator.generateCard(type, result.name)).then(() => {
+      this.cardsService.add(this.generator.generateCard(type, result.name)).then(() => {
         // this.navigateToEdit(type, id);
       });
     });

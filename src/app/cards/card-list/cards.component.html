@@ -8,25 +8,23 @@
                     </a>
                 </h2>
                 <div class="list-group">
-                    <ng-container *ngFor="let type of doorCardTypes">
+                    <ng-container *ngFor="let type of getCardTypes()">
                         <div id="doors" role="tablist" aria-multiselectable="true">
                             <div class="card">
                                 <div class="card-header" role="tab" id="{{type}}">
                                     <h6 class="mb-0">
-                                        <a data-toggle="collapse" data-parent="#doors" href="#{{type}}_cards"
-                                            aria-expanded="true" [attr.aria-controls]="type + '_cards'">
-                                            {{getTypeName(type)}}
+                                        <a data-toggle="collapse" data-parent="#doors" href="#{{type}}_cards" aria-expanded="true" [attr.aria-controls]="type + '_cards'">
+                                            {{type}}
                                         </a>
-                                        <a class="float-right" (click)="addCard('doors', type)" href="#" role="button">
+                                        <a class="float-right" (click)="addCard(type)" href="#" role="button">
                                             Add <i class="fa fa-plus"></i>
                                         </a>
                                     </h6>
                                 </div>
-                                <div id="{{type}}_cards" class="collapse in" role="tabpanel"
-                                    [attr.aria-labelledby]="type" aria-expanded="true">
+                                <div id="{{type}}_cards" class="collapse in" role="tabpanel" [attr.aria-labelledby]="type" aria-expanded="true">
                                     <div class="card-body">
                                         <div class="card-deck">
-                                            <div class="card card-sm" *ngFor="let card of getDoorsOfType(type)">
+                                            <div class="card card-sm" *ngFor="let card of getCardsOfType(type)">
                                                 <div class="float-right">
                                                     <i class="fa fa-edit float-right"></i>
                                                 </div>

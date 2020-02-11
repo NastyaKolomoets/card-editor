@@ -1,16 +1,13 @@
 import { ICard } from '../card';
 
-export class DoorCard implements ICard {
+export class TreasureCard implements ICard {
   key: string;
   type: string;
-  name: string;
-  description: string;
+  name: string;  description: string;
   img: string;
 
-  constructor(name: string, type: string) {
-    this.type = type;
+  constructor(name: string) {
     this.name = name;
-    this.description = '';
     this.img = '';
   }
 

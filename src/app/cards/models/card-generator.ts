@@ -13,7 +13,7 @@ export class CardGenerator {
       case CardType.MONSTER:
         return new MonsterCard(name);
       default:
-        return new DoorCard(name);
+        return null;
     }
   }
 }
