@@ -1,12 +1,17 @@
 <app-card-item [backgroundImg]="getBackgroundImg()">
     <div role="header" class="text-center">
-        <p class="card-level">Рівень {{card.level}}</p>
-        <p class="card-name">{{card.name}}</p>
-        <p *ngIf="card.extra" class="card-extra">{{card.extra}}</p>
+        <div class="card-level">
+            <app-text-field [text]="card.level"></app-text-field>
+        </div>
+        <div class="card-name">
+            <app-text-field [text]="card.name"></app-text-field>
+        </div>
+        <div *ngIf="card.extra" class="card-extra">
+            <app-text-field [text]="card.extra"></app-text-field>
+        </div>
     </div>
     <div role="content">
-        <app-two-text-fields [firstText]="card.description" [secondText]="card.badStuff" [imgUrl]="card.img"
-            [imgPosition]="'top'">
+        <app-two-text-fields [firstText]="card.description" [secondText]="card.badStuff" [imgUrl]="card.img" [imgPosition]="'top'">
         </app-two-text-fields>
     </div>
     <div role="footer" class="container">

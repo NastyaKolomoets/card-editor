@@ -10,6 +10,7 @@ import { environment } from '../environments/environment';
 import { AuthService } from './services/auth.service';
 import { CardsModule } from './cards/cards.module';
 import { CardListModule } from './card-list/card-list.module';
+import 'froala-editor/js/plugins.pkgd.min.js';
 
 @NgModule({
   declarations: [

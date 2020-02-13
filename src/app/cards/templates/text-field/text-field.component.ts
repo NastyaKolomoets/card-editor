@@ -8,10 +8,22 @@ import { Component, OnInit, Input } from '@angular/core';
 
 export class TextFieldComponent {
   @Input() text: string;
-  text1 = 'test1';
 
-  options = {
-    toolbarButtonsXS: ['bold', 'italic', 'underline', 'paragraphFormat', 'alert'],
-    editInPopup: true
+  options: object = {
+    toolbarButtons: {
+      moreText: {
+        buttons: ['bold', 'italic', 'underline']
+      },
+      moreParagraph: {
+        buttons: ['alignLeft', 'alignCenter', 'alignRight', 'alignJustify']
+      },
+      moreMisc: {
+        buttons: ['undo', 'redo', 'print'],
+        align: 'right'
+      }
+    },
+    toolbarInline: true,
+    charCounterCount: false,
+    attribution: false
   };
 }

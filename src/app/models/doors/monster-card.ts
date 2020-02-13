@@ -10,7 +10,7 @@ export class MonsterCard extends DoorCard {
 
   constructor(name: string) {
     super(name, CardType.MONSTER);
-    this.level = '1';
+    this.level = 'Рівень 1';
     this.extra = '';
     this.baddStuff = '';
     this.winLevels = 1;
