@@ -21,7 +21,11 @@ export class CardsService {
     return this.firebase.database.ref(`${this.uri}/${CardTypes.getCardType(card).getUri()}/${key}`).set(card);
   }
 
-  updateCard(card: ICard): Promise<any> {
+  addOrUpdateCard(card: ICard): Promise<any> {
+    if (card.key === null) {
+      card.key = this.firebase.database.ref(this.uri).push().key;
+    }
+
     return this.firebase.database.ref(`${this.uri}/${CardTypes.getCardType(card).getUri()}/${card.key}`).set(card);
   }
 

@@ -7,10 +7,10 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class CardGeneratorHelper {
-  generateCard(type: string, name: string): ICard {
+  static generateCard(type: string): ICard {
     switch (type) {
       case CardType.MONSTER:
-        return new MonsterCard(name);
+        return new MonsterCard();
       default:
         return null;
     }

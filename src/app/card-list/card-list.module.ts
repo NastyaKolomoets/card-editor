@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { FormsModule } from '@angular/forms';
 import { NgbModalModule, NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { AddCardModalComponent } from './add-card-modal/add-card-modal.component';
+import { AddCardModalComponent } from './edit-card-modal/edit-card-modal.component';
 import { CardsModule } from '../cards/cards.module';
 import { CardGeneratorHelper } from '../models/helpers/card-generator.helper';
 import { CardsService } from 'src/app/services/cards.service';

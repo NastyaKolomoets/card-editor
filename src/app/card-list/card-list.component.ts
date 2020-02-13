@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { AddCardModalComponent } from './add-card-modal/add-card-modal.component';
+import { AddCardModalComponent } from './edit-card-modal/edit-card-modal.component';
 import { Router } from '@angular/router';
 import { CardGeneratorHelper } from '../models/helpers/card-generator.helper';
 import { CardsService } from 'src/app/services/cards.service';
@@ -20,8 +20,7 @@ export class CardsComponent implements OnInit {
   constructor(
     private cardsService: CardsService,
     private modalService: NgbModal,
-    private router: Router,
-    private generator: CardGeneratorHelper
+    private router: Router
   ) {
   }
 
@@ -48,15 +47,8 @@ export class CardsComponent implements OnInit {
 
   addCard(type: string) {
     const modalRef = this.modalService.open(AddCardModalComponent);
-    modalRef.result.then(result => {
-      if (result === null) {
-        return;
-      }
-
-      this.cardsService.add(this.generator.generateCard(type, result.name)).then(() => {
-        // this.navigateToEdit(type, id);
-      });
-    });
+    const modal = modalRef.componentInstance as AddCardModalComponent;
+    modal.card = CardGeneratorHelper.generateCard(type);
   }
 
   navigateToEdit(type: string, id: string): void {

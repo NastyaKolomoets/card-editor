@@ -13,8 +13,7 @@
                             <div class="card">
                                 <div class="card-header" role="tab" id="{{type}}">
                                     <h6 class="mb-0">
-                                        <a data-toggle="collapse" data-parent="#doors" href="#{{type}}_cards"
-                                            aria-expanded="true" [attr.aria-controls]="type + '_cards'">
+                                        <a data-toggle="collapse" data-parent="#doors" href="#{{type}}_cards" aria-expanded="true" [attr.aria-controls]="type + '_cards'">
                                             {{getCardTypeName(type)}}
                                         </a>
                                         <a class="float-right" (click)="addCard(type)" href="#" role="button">
@@ -22,15 +21,14 @@
                                         </a>
                                     </h6>
                                 </div>
-                                <div id="{{type}}_cards" class="collapse in" role="tabpanel"
-                                    [attr.aria-labelledby]="type" aria-expanded="true">
+                                <div id="{{type}}_cards" class="collapse in" role="tabpanel" [attr.aria-labelledby]="type" aria-expanded="true">
                                     <div class="card-body">
                                         <div class="card-deck" *ngIf="cards">
                                             <div class="card m-1 card-sm" *ngFor="let card of getCardsOfType(type)">
                                                 <!-- <div class="float-right">
                                                     <i class="fa fa-edit float-right"></i>
                                                 </div> -->
-                                                <app-card-select [type]="type" [card]="card"></app-card-select>
+                                                <app-card-select [card]="card"></app-card-select>
                                             </div>
                                         </div>
                                     </div>
