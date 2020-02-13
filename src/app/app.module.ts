@@ -8,8 +8,8 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { AngularFireModule } from '@angular/fire';
 import { environment } from '../environments/environment';
 import { AuthService } from './services/auth.service';
-import { CardsModule } from './cards/cards/cards.module';
-import { CardListModule } from './cards/card-list/card.list.module';
+import { CardsModule } from './cards/cards.module';
+import { CardListModule } from './card-list/card-list.module';
 
 @NgModule({
   declarations: [

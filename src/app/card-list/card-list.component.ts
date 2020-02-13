@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { AddCardModalComponent } from '../card-list/add-card-modal/add.card.modal.component';
+import { AddCardModalComponent } from './add-card-modal/add-card-modal.component';
 import { Router } from '@angular/router';
 import { CardGeneratorHelper } from '../models/helpers/card-generator.helper';
 import { CardsService } from 'src/app/services/cards.service';
@@ -11,8 +11,8 @@ import { CardTypes } from '../models/types/card-types';
 
 @Component({
   selector: 'app-cards',
-  templateUrl: 'cards.component.html',
-  styleUrls: ['cards.component.css']
+  templateUrl: 'card-list.component.html',
+  styleUrls: ['card-list.component.css']
 })
 export class CardsComponent implements OnInit {
   cards: ICard[];

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { MonsterCard } from 'src/app/cards/models/doors/monster-card';
 import { AngularFireDatabase } from 'angularfire2/database';
+import { MonsterCard } from 'src/app/models/doors/monster-card';
 
 @Component({
   selector: 'app-monster-edit',
