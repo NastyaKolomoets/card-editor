@@ -1,0 +1,12 @@
+<ng-container [ngSwitch]="imgPosition">
+  <ng-container *ngSwitchCase="'top'">
+    <img src="{{imgUrl}}" alt="img" />
+    <app-text-field [text]="firstText"></app-text-field>
+    <app-text-field [text]="secondText"></app-text-field>
+  </ng-container>
+  <ng-container *ngSwitchDefault>
+    <img src="{{imgUrl}}" alt="img" />
+    <app-text-field [text]="firstText"></app-text-field>
+    <app-text-field [text]="secondText"></app-text-field>
+  </ng-container>
+</ng-container>

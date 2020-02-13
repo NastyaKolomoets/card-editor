@@ -4,9 +4,11 @@
         <p class="card-name">{{card.name}}</p>
         <p *ngIf="card.extra" class="card-extra">{{card.extra}}</p>
     </div>
-    <diV role="content">
-        <app-img-center [topText]="card.description" [bottomText]="card.badStuff" [img]="card.img"></app-img-center>
-    </diV>
+    <div role="content">
+        <app-two-text-fields [firstText]="card.description" [secondText]="card.badStuff" [imgUrl]="card.img"
+            [imgPosition]="'top'">
+        </app-two-text-fields>
+    </div>
     <div role="footer" class="container">
         <div class="row">
             <div class="col">

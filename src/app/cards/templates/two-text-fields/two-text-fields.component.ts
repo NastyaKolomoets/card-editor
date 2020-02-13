@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-two-text-fields',
@@ -7,5 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class TwoTextFieldsComponent {
-
+  @Input() imgUrl: string;
+  @Input() imgPosition: string;
+  @Input() firstText: string;
+  @Input() secondText: string;
 }

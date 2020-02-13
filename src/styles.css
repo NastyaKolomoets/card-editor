@@ -9,10 +9,18 @@
 }
 
 .custom-card .custom-card-header {
-    position: absolute;
+    position: relative;
     top: .75em;
     left: 0;
     right: 0;
+}
+
+.custom-card .custom-card-content {
+    position: relative;
+    top: .75em;
+    left: 0;
+    right: 0;
+    padding: 0 .75em;
 }
 
 .custom-card .custom-card-footer {
