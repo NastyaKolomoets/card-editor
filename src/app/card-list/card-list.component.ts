@@ -41,15 +41,9 @@ export class CardsComponent implements OnInit {
   }
 
   getCardsOfType(type: CardType): ICard[] {
-    const cardsOfType = this.cards
+    return this.cards
       ? this.cards.filter(card => card.type === type)
       : [];
-    switch (type) {
-      case CardType.MONSTER:
-        return cardsOfType as MonsterCard[];
-      default:
-        return cardsOfType;
-    }
   }
 
   addCard(type: string) {
