@@ -6,6 +6,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 
 export class TextFieldComponent {
+  @Input() isEditing = false;
   textValue: string;
   @Output() textChange = new EventEmitter();
 
@@ -36,4 +37,8 @@ export class TextFieldComponent {
     charCounterCount: false,
     attribution: false
   };
+
+  get showField(): boolean {
+    return this.isEditing || (this.textValue !== null && this.textValue !== '');
+  }
 }

@@ -9,7 +9,7 @@ import { MonsterCard } from 'src/app/models/doors/monster-card';
 })
 export class MonsterCardComponent extends DoorCardComponent {
 	@Input() card: MonsterCard;
-	@Input() editing: boolean;
+	@Input() isEditing: boolean;
 
 	get treasuresText() {
 		switch (this.card.winTreasures) {

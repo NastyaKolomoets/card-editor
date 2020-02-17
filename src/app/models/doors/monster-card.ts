@@ -4,7 +4,7 @@ import { CardType } from '../card-type';
 export class MonsterCard extends DoorCard {
   level: string;
   extra: string;
-  baddStuff: string;
+  badStuff: string;
   winLevels: number;
   winTreasures: number;
 
@@ -12,7 +12,7 @@ export class MonsterCard extends DoorCard {
     super(CardType.MONSTER);
     this.level = 'Рівень 1';
     this.extra = '';
-    this.baddStuff = '';
+    this.badStuff = '<p><strong>Паскудство:</strong> </p>';
     this.winLevels = 1;
     this.winTreasures = 1;
   }

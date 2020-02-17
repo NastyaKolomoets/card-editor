@@ -8,6 +8,6 @@ import { CardType } from '../../models/card-type';
 })
 export class CardSelectComponent {
 	@Input() type: string;
-	@Input() editing = false;
+	@Input() isEditing = false;
 	@Input() card: any;
 }

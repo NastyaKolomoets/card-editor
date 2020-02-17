@@ -1,2 +1,4 @@
-<div [froalaEditor]="options" [(froalaModel)]="text">
-</div>
+<ng-container *ngIf="showField">
+    <div [froalaEditor]="options" [(froalaModel)]="text">
+    </div>
+</ng-container>

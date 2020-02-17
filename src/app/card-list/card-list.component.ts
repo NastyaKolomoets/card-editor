@@ -46,9 +46,18 @@ export class CardsComponent implements OnInit {
   }
 
   addCard(type: string) {
+    const card = CardGeneratorHelper.generateCard(type);
+    this.openModal(card);
+  }
+
+  editCard(card: ICard) {
+    this.openModal(card);
+  }
+
+  private openModal(card: ICard) {
     const modalRef = this.modalService.open(AddCardModalComponent);
     const modal = modalRef.componentInstance as AddCardModalComponent;
-    modal.card = CardGeneratorHelper.generateCard(type);
+    modal.card = card;
   }
 
   navigateToEdit(type: string, id: string): void {

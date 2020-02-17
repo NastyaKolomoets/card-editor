@@ -1,6 +1,6 @@
 <ng-container [ngSwitch]="card.type">
     <ng-container *ngSwitchCase="'monster'">
-        <app-monster-card [card]="card" [editing]="editing"></app-monster-card>
+        <app-monster-card [card]="card" [isEditing]="isEditing"></app-monster-card>
     </ng-container>
     <ng-container *ngSwitchDefault>
         <app-card-item></app-card-item>

@@ -13,8 +13,7 @@
                             <div class="list-group-item">
                                 <div role="tab" id="{{type}}" class="text-capitalize">
                                     <h6>
-                                        <a data-toggle="collapse" data-parent="#doors" href="#{{type}}_cards"
-                                            aria-expanded="true" [attr.aria-controls]="type + '_cards'">
+                                        <a data-toggle="collapse" data-parent="#doors" href="#{{type}}_cards" aria-expanded="true" [attr.aria-controls]="type + '_cards'">
                                             {{getCardTypeName(type)}}
                                             <span
                                                 class="badge badge-secondary badge-pill">{{getCardsOfType(type).length}}</span>
@@ -24,20 +23,15 @@
                                         </a>
                                     </h6>
                                 </div>
-                                <div id="{{type}}_cards" class="collapse in show" role="tabpanel"
-                                    [attr.aria-labelledby]="type">
+                                <div id="{{type}}_cards" class="collapse in show" role="tabpanel" [attr.aria-labelledby]="type">
                                     <div>
                                         <div class="card-deck" *ngIf="cards">
                                             <div class="card m-1 card-sm" *ngFor="let card of getCardsOfType(type)">
                                                 <app-card-select [card]="card"></app-card-select>
-                                                <div class="card-sm-hover bg-secondary text-white">
-                                                    <div class="m-3">
-                                                        <div>
-                                                            <a>Edit <i class="fa fa-edit"></i></a>
-                                                        </div>
-                                                        <div>
-                                                            <a>Delete <i class="fa fa-trash"></i></a>
-                                                        </div>
+                                                <div class="card-sm-hover text-center">
+                                                    <div class="float-right">
+                                                        <button class="btn btn-sm btn-primary" (click)="editCard(card)"><i class="fa fa-pencil"></i></button>
+                                                        <button class="btn btn-sm btn-danger"><i class="fa fa-trash-o"></i></button>
                                                     </div>
                                                 </div>
                                             </div>

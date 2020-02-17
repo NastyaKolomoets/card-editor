@@ -1,4 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
+
 .card-md {
     max-width: 72%;
     font-size: 2em;
@@ -42,9 +43,8 @@
 .custom-card .custom-card-footer {
     position: absolute;
     bottom: 5%;
-    left: 0;
-    right: 0;
-    padding: 0 1em;
+    left: 10%;
+    right: 10%;
 }
 
 .custom-card-header p {
