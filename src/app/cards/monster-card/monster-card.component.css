@@ -1,14 +1,18 @@
 .card-level {
     margin: 0;
-    font-size: small;
+    font-size: .75em;
 }
 
 .card-name {
     margin: 0;
-    font-size: smaller;
+    font-size: 1em;
 }
 
 .card-extra {
     margin: 0;
-    font-size: x-small;
+    font-size: .75em;
+}
+
+div[role=footer] {
+    padding: 0;
 }

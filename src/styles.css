@@ -1,4 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+.card-md {
+    max-width: 72%;
+    font-size: 2em;
+    margin: 0 auto;
+}
+
+.card-sm {
+    max-width: 18%;
+    font-size: 1em;
+}
 
 .card-header a:hover {
     text-decoration: none;
@@ -10,40 +20,41 @@
 
 .custom-card .custom-card-header {
     position: relative;
-    top: .75em;
+    top: 2%;
     left: 0;
     right: 0;
 }
 
 .custom-card .custom-card-content {
     position: relative;
-    top: .75em;
+    top: 2%;
     left: 0;
     right: 0;
-    padding: 0 .75em;
+    padding: 0 5%;
 }
 
 .custom-card .custom-card-footer {
     position: absolute;
-    bottom: .75em;
+    bottom: 5%;
     left: 0;
     right: 0;
+    padding: 0 1em;
 }
 
 .custom-card-header p {
     margin: 0;
-    font-size: small;
+    font-size: .75em;
     font-weight: 600;
 }
 
 .custom-card-content p {
     margin: 0;
-    font-size: x-small;
+    font-size: .5em;
 }
 
 .custom-card-footer p {
     margin: 0;
-    font-size: x-small;
+    font-size: .5em;
     font-weight: 500;
     white-space: nowrap;
 }
