@@ -12,7 +12,7 @@ export class AddCardModalComponent {
 	@Input() card: ICard;
 
 	constructor(
-		private activeModal: NgbActiveModal,
+		public activeModal: NgbActiveModal,
 		private cardsService: CardsService
 	) {
 	}
