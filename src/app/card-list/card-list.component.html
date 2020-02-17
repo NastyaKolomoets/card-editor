@@ -29,10 +29,17 @@
                                     <div>
                                         <div class="card-deck" *ngIf="cards">
                                             <div class="card m-1 card-sm" *ngFor="let card of getCardsOfType(type)">
-                                                <!-- <div class="float-right">
-                                                    <i class="fa fa-edit float-right"></i>
-                                                </div> -->
                                                 <app-card-select [card]="card"></app-card-select>
+                                                <div class="card-sm-hover bg-secondary text-white">
+                                                    <div class="m-3">
+                                                        <div>
+                                                            <a>Edit <i class="fa fa-edit"></i></a>
+                                                        </div>
+                                                        <div>
+                                                            <a>Delete <i class="fa fa-trash"></i></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>

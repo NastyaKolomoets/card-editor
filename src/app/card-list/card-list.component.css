@@ -9,3 +9,19 @@ div.container-fluid {
 .card-deck .card {
     border: 0;
 }
+
+div.card-sm-hover {
+    display: none;
+    z-index: 10;
+    height: 130%;
+    margin-top: -135%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 86%;
+    border-radius: 1em;
+    align-items: center;
+}
+
+.card-sm:hover > div.card-sm-hover {
+    display: block;
+}
