@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container-fluid">
     <div class="row">
         <div class="col list-group">
             <div class="list-group-item">
@@ -7,22 +7,26 @@
                         Двері
                     </a>
                 </h2>
-                <div class="list-group">
+                <div class="list-group list-group-flush">
                     <ng-container *ngFor="let type of getCardTypes()">
                         <div id="doors" role="tablist" aria-multiselectable="true">
-                            <div class="card">
-                                <div class="card-header" role="tab" id="{{type}}">
-                                    <h6 class="mb-0">
-                                        <a data-toggle="collapse" data-parent="#doors" href="#{{type}}_cards" aria-expanded="true" [attr.aria-controls]="type + '_cards'">
+                            <div class="list-group-item">
+                                <div role="tab" id="{{type}}" class="text-capitalize">
+                                    <h6>
+                                        <a data-toggle="collapse" data-parent="#doors" href="#{{type}}_cards"
+                                            aria-expanded="true" [attr.aria-controls]="type + '_cards'">
                                             {{getCardTypeName(type)}}
+                                            <span
+                                                class="badge badge-secondary badge-pill">{{getCardsOfType(type).length}}</span>
                                         </a>
                                         <a class="float-right" (click)="addCard(type)" href="#" role="button">
                                             Add <i class="fa fa-plus"></i>
                                         </a>
                                     </h6>
                                 </div>
-                                <div id="{{type}}_cards" class="collapse in" role="tabpanel" [attr.aria-labelledby]="type" aria-expanded="true">
-                                    <div class="card-body">
+                                <div id="{{type}}_cards" class="collapse in show" role="tabpanel"
+                                    [attr.aria-labelledby]="type">
+                                    <div>
                                         <div class="card-deck" *ngIf="cards">
                                             <div class="card m-1 card-sm" *ngFor="let card of getCardsOfType(type)">
                                                 <!-- <div class="float-right">

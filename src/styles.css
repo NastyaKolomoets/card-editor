@@ -6,16 +6,22 @@
 }
 
 .card-sm {
-    max-width: 18%;
-    font-size: 1em;
+    max-width: 15%;
+    font-size: 1.25em;
 }
 
-.card-header a:hover {
+.list-group a {
+    color: #343a40;
+}
+
+.list-group a:hover {
     text-decoration: none;
+    color: black;
 }
 
 .custom-card {
     position: relative;
+    color: black;
 }
 
 .custom-card .custom-card-header {

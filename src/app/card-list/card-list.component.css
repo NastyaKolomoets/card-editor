@@ -1,3 +1,7 @@
+div.container-fluid {
+    width: 80%;
+}
+
 .card p {
     margin: 0;
 }
