@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
 
 @Component({
-	selector: 'app-door'
+  selector: 'app-door',
+  templateUrl: 'door-card.component.html',
+  styleUrls: ['door-card.component.css'] 
 })
 export class DoorCardComponent {
   getBackgroundImg(): string {

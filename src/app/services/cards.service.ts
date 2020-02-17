@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { AngularFireDatabase } from 'angularfire2/database';
+import { AngularFireDatabase } from '@angular/fire/database';
 import { Observable } from 'rxjs';
 import { CardTypes } from '../models/types/card-types';
 import { ICard } from '../models/card';

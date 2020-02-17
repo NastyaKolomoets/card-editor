@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CardsComponent } from './card-list.component';
 import { BrowserModule } from '@angular/platform-browser';
-import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { FormsModule } from '@angular/forms';
 import { NgbModalModule, NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AddCardModalComponent } from './edit-card-modal/edit-card-modal.component';
