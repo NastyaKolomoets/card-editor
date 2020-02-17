@@ -6,7 +6,6 @@ import { FormsModule } from '@angular/forms';
 import { NgbModalModule, NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CardSelectComponent } from './card-select/card-select.component';
 import { MonsterCardComponent } from './monster-card/monster-card.component';
-import { TemplatesModule } from './templates/templates.module';
 import { FroalaEditorModule, FroalaViewModule } from 'angular-froala-wysiwyg';
 import { TextFieldComponent } from './templates/text-field/text-field.component';
 import { TwoTextFieldsComponent } from './templates/two-text-fields/two-text-fields.component';
@@ -28,8 +27,7 @@ import { TwoTextFieldsComponent } from './templates/two-text-fields/two-text-fie
     NgbModule,
     NgbModalModule,
     FroalaEditorModule.forRoot(),
-    FroalaViewModule.forRoot(),
-    TemplatesModule
+    FroalaViewModule.forRoot()
   ],
   exports: [
     CardSelectComponent

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-two-text-fields',
@@ -7,8 +7,41 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 
 export class TwoTextFieldsComponent {
-  @Input() imgUrl: string;
   @Input() imgPosition: string;
-  @Input() firstText: string;
-  @Input() secondText: string;
+
+  firstTextValue: string;
+  @Output() firstTextChange = new EventEmitter();
+
+  @Input()
+  get firstText() {
+    return this.firstTextValue;
+  }
+  set firstText(val) {
+    this.firstTextValue = val;
+    this.firstTextChange.emit(this.firstTextValue);
+  }
+
+  secondTextValue: string;
+  @Output() secondTextChange = new EventEmitter();
+
+  @Input()
+  get secondText() {
+    return this.secondTextValue;
+  }
+  set secondText(val) {
+    this.secondTextValue = val;
+    this.secondTextChange.emit(this.secondTextValue);
+  }
+
+  imgUrlValue: string;
+  @Output() imgUrlChange = new EventEmitter();
+
+  @Input()
+  get imgUrl() {
+    return this.imgUrlValue;
+  }
+  set imgUrl(val) {
+    this.imgUrlValue = val;
+    this.imgUrlChange.emit(this.imgUrlValue);
+  }
 }

@@ -16,3 +16,17 @@
 div[role=footer] {
     padding: 0;
 }
+
+.editing {
+    position: absolute;
+}
+
+.fa-xs {
+    font-size: 1em;
+}
+
+input {
+    width: 1.75em;
+    border: 0;
+    background-color: transparent;
+}
