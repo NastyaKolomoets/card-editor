@@ -1,13 +1,13 @@
 <ng-container [ngSwitch]="imgPosition">
-  <ng-container *ngSwitchCase="'top'">
-    <!-- <img src="{{imgUrl}}" alt="img" /> -->
-    <app-img-field [(imgUrl)]="imgUrl"></app-img-field>
-    <app-text-field [(text)]="firstText" [isEditing]="isEditing"></app-text-field>
-    <app-text-field [(text)]="secondText" [isEditing]="isEditing"></app-text-field>
-  </ng-container>
-  <ng-container *ngSwitchDefault>
-    <img src="{{imgUrl}}" alt="img" />
-    <app-text-field [(text)]="firstText" [isEditing]="isEditing"></app-text-field>
-    <app-text-field [(text)]="secondText" [isEditing]="isEditing"></app-text-field>
-  </ng-container>
+    <ng-container *ngSwitchCase="'top'">
+        <!-- <img src="{{imgUrl}}" alt="img" /> -->
+        <app-img-field [(img)]="imgUrl"></app-img-field>
+        <app-text-field [(text)]="firstText" [isEditing]="isEditing"></app-text-field>
+        <app-text-field [(text)]="secondText" [isEditing]="isEditing"></app-text-field>
+    </ng-container>
+    <ng-container *ngSwitchDefault>
+        <img src="{{imgUrl}}" alt="img" />
+        <app-text-field [(text)]="firstText" [isEditing]="isEditing"></app-text-field>
+        <app-text-field [(text)]="secondText" [isEditing]="isEditing"></app-text-field>
+    </ng-container>
 </ng-container>

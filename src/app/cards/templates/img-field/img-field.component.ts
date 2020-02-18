@@ -7,31 +7,30 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 export class ImgFieldComponent {
   @Input() isEditing = false;
-  imgUrlValue: string;
-  @Output() imgUrlChange = new EventEmitter();
+  imgValue: string;
+  @Output() imgChange = new EventEmitter();
 
   @Input()
-  get imgUrl() {
-    return this.imgUrlValue;
+  get img() {
+    return this.imgValue;
   }
-  set imgUrl(val) {
-    this.imgUrlValue = val;
-    this.imgUrlChange.emit(this.imgUrl);
+  set img(val) {
+    this.imgValue = val;
+    this.imgObj = {
+      ...this.imgObj,
+      src: this.imgValue
+    };
+    this.imgChange.emit(this.img);
   }
 
+  imgObj = {
+      src: this.imgValue
+  };
 
   options: object = {
-    imageEditButtons: [
-      'imageDisplay', 'imageStyle', 'imageAlt', 'imageSize'
-    ],
-    // imageUploadURL: this.imgUrl,
-    imageAllowedTypes: ['jpeg', 'jpg', 'png'],
+    toolbarButtons: ['alignLeft', 'alignCenter', 'alignRight'],
     toolbarInline: true,
     charCounterCount: false,
     attribution: false
-  };
-
-  img: object = {
-    src: this.imgUrl
   };
 }
