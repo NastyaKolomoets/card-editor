@@ -21,15 +21,11 @@ export class ImgFieldComponent {
 
 
   options: object = {
-    toolbarButtons: {
-      moreParagraph: {
-        buttons: ['alignLeft', 'alignCenter', 'alignRight', 'alignJustify']
-      },
-      moreMisc: {
-        buttons: ['undo', 'redo'],
-        align: 'right'
-      }
-    },
+    imageEditButtons: [
+      'imageDisplay', 'imageStyle', 'imageAlt', 'imageSize'
+    ],
+    // imageUploadURL: this.imgUrl,
+    imageAllowedTypes: ['jpeg', 'jpg', 'png'],
     toolbarInline: true,
     charCounterCount: false,
     attribution: false

@@ -8,6 +8,7 @@ import { AddCardModalComponent } from './edit-card-modal/edit-card-modal.compone
 import { CardsModule } from '../cards/cards.module';
 import { CardGeneratorHelper } from '../models/helpers/card-generator.helper';
 import { CardsService } from 'src/app/services/cards.service';
+import { FroalaViewModule } from 'angular-froala-wysiwyg';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { CardsService } from 'src/app/services/cards.service';
     FormsModule,
     NgbModule,
     NgbModalModule,
-    CardsModule
+    CardsModule,
+    FroalaViewModule
   ],
   providers: [
     CardGeneratorHelper,
