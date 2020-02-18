@@ -1,0 +1,32 @@
+.card-level {
+  margin: 0;
+  font-size: .75em;
+}
+
+.card-name {
+  margin: 0;
+  font-size: 1em;
+}
+
+.card-extra {
+  margin: 0;
+  font-size: .75em;
+}
+
+div[role=footer] {
+  padding: 0;
+}
+
+.editing {
+  position: absolute;
+}
+
+.fa-xs {
+  font-size: 1em;
+}
+
+input {
+  width: 1.75em;
+  border: 0;
+  background-color: transparent;
+}
