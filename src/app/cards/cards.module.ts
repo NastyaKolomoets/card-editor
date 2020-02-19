@@ -10,6 +10,7 @@ import { FroalaEditorModule, FroalaViewModule } from 'angular-froala-wysiwyg';
 import { TextFieldComponent } from './templates/text-field/text-field.component';
 import { TwoTextFieldsComponent } from './templates/two-text-fields/two-text-fields.component';
 import { ImgFieldComponent } from './templates/img-field/img-field.component';
+import { ClassCardComponent } from './class-card/class-card.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { ImgFieldComponent } from './templates/img-field/img-field.component';
     TextFieldComponent,
     ImgFieldComponent,
     TwoTextFieldsComponent,
+    ClassCardComponent
   ],
   entryComponents: [
   ],

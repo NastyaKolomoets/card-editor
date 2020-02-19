@@ -18,7 +18,7 @@ export class AddCardModalComponent {
 	}
 
 	submit(): void {
-		if (this.card.name === null || this.card.name === '') {
+		if (this.card.name === undefined || this.card.name === null || this.card.name === '') {
 			return;
 		}
 
