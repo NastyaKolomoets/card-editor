@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { AddCardModalComponent } from './edit-card-modal/edit-card-modal.component';
+import { EditCardModalComponent } from './edit-card-modal/edit-card-modal.component';
 import { Router } from '@angular/router';
 import { CardGeneratorHelper } from '../models/helpers/card-generator.helper';
 import { CardsService } from 'src/app/services/cards.service';
@@ -55,13 +55,8 @@ export class CardsComponent implements OnInit {
   }
 
   private openModal(card: ICard) {
-    const modalRef = this.modalService.open(AddCardModalComponent);
-    const modal = modalRef.componentInstance as AddCardModalComponent;
+    const modalRef = this.modalService.open(EditCardModalComponent, { size: 'lg' });
+    const modal = modalRef.componentInstance as EditCardModalComponent;
     modal.card = card;
-  }
-
-  navigateToEdit(type: string, id: string): void {
-    const routerLink = `/editor/${type}/${id}`;
-    this.router.navigateByUrl(routerLink);
   }
 }
