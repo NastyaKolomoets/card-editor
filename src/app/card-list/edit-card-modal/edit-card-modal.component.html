@@ -1,9 +1,17 @@
 <form (ngSubmit)="submit()" class="form-group">
     <div class="modal-header">
-        {{card.name || "New card"}}
     </div>
-    <div class="modal-body card-md d-flex justify-content-center">
-        <app-card-select [card]="card" [isEditing]="'true'"></app-card-select>
+    <div class="modal-body">
+        <div class="container p-3">
+            <div class="row p-3">
+                <div class="col">
+                    <app-edit-card [card]="card"></app-edit-card>
+                </div>
+                <div class="col card-md d-flex justify-content-center">
+                    <app-card-select [card]="card"></app-card-select>
+                </div>
+            </div>
+        </div>
     </div>
     <div class="modal-footer">
         <button type="submit" class="btn btn-success">

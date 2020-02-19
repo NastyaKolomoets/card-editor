@@ -8,7 +8,7 @@ import { CardsService } from 'src/app/services/cards.service';
 	templateUrl: 'edit-card-modal.component.html',
 	styleUrls: ['edit-card-modal.component.css']
 })
-export class AddCardModalComponent {
+export class EditCardModalComponent {
 	@Input() card: ICard;
 
 	constructor(

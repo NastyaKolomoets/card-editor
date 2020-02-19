@@ -8,7 +8,6 @@ import { getDoorsBackgroundImg } from 'src/app/models/helpers/helpers';
 })
 export class ClassCardComponent {
   @Input() card: ClassCard;
-  @Input() isEditing: boolean;
 
   public readonly classText: string = 'Клас';
 
