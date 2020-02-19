@@ -27,7 +27,7 @@ export class CardsComponent implements OnInit {
   ngOnInit(): void {
     this.cardsService.getAll()
       .subscribe(cards => {
-        this.cards = Object.values((cards as Array<any>).reduce((aggr, next) => aggr = {...aggr, ...next}));
+        this.cards = Object.values((cards as Array<any>).reduce((aggr, next) => aggr = { ...aggr, ...next }));
       });
   }
 

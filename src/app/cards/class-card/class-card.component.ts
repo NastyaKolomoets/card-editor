@@ -1,19 +1,18 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ClassCard } from 'src/app/models/doors/class-card';
-import { DoorCardComponent } from '../door-card/door-card.component';
-
+import { getDoorsBackgroundImg } from 'src/app/models/helpers/helpers';
 @Component({
   selector: 'app-class-card',
   templateUrl: './class-card.component.html',
   styleUrls: ['./class-card.component.css']
 })
-export class ClassCardComponent extends DoorCardComponent {
+export class ClassCardComponent {
   @Input() card: ClassCard;
   @Input() isEditing: boolean;
 
-  public readonly classText: string = "Клас";
+  public readonly classText: string = 'Клас';
 
-  ngOnInit(): void {
+  get backgroundImg() {
+    return getDoorsBackgroundImg();
   }
-
 }

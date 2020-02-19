@@ -9,7 +9,7 @@ import { MonsterCardComponent } from './monster-card/monster-card.component';
 import { FroalaEditorModule, FroalaViewModule } from 'angular-froala-wysiwyg';
 import { TextFieldComponent } from './templates/text-field/text-field.component';
 import { TwoTextFieldsComponent } from './templates/two-text-fields/two-text-fields.component';
-import { DoorCardComponent } from './door-card/door-card.component';
+import { ImgFieldComponent } from './templates/img-field/img-field.component';
 import { ClassCardComponent } from './class-card/class-card.component';
 
 @NgModule({
@@ -18,8 +18,8 @@ import { ClassCardComponent } from './class-card/class-card.component';
     MonsterCardComponent,
     CardItemComponent,
     TextFieldComponent,
+    ImgFieldComponent,
     TwoTextFieldsComponent,
-    DoorCardComponent,
     ClassCardComponent
   ],
   entryComponents: [

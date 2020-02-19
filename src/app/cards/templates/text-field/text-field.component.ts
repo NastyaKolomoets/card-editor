@@ -35,7 +35,8 @@ export class TextFieldComponent {
     },
     toolbarInline: true,
     charCounterCount: false,
-    attribution: false
+    attribution: false,
+    quickInsertEnabled: false
   };
 
   get showField(): boolean {

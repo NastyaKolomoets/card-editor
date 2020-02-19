@@ -1,13 +1,13 @@
 import { Component, Input } from '@angular/core';
-import { DoorCardComponent } from '../door-card/door-card.component';
 import { MonsterCard } from 'src/app/models/doors/monster-card';
+import { getDoorsBackgroundImg } from '../../models/helpers/helpers';
 
 @Component({
 	selector: 'app-monster-card',
 	templateUrl: 'monster-card.component.html',
 	styleUrls: ['monster-card.component.css']
 })
-export class MonsterCardComponent extends DoorCardComponent {
+export class MonsterCardComponent {
 	@Input() card: MonsterCard;
 	@Input() isEditing: boolean;
 
@@ -22,5 +22,9 @@ export class MonsterCardComponent extends DoorCardComponent {
 			default:
 				return 'Скарбів';
 		}
+	}
+
+	get backgroundImg() {
+		return getDoorsBackgroundImg();
 	}
 }
