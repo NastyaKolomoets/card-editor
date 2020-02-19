@@ -1,14 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
 
 .card-md {
-    max-width: 64%;
-    font-size: 2em;
+    max-width: 45%;
+    font-size: 36px;
     margin: 0 auto;
 }
 
 .card-sm {
     max-width: 15%;
-    font-size: 1.25em;
+    font-size: 22px;
 }
 
 .list-group a {
@@ -63,4 +63,16 @@
     font-size: .5em;
     font-weight: 500;
     white-space: nowrap;
+}
+
+.input {
+    margin-bottom: 1em;
+    padding: .2em .5em;
+    border: 1px grey;
+    border-radius: 10px;
+    background-color: #f7f7f7;
+}
+
+.input p {
+    margin: 0;
 }

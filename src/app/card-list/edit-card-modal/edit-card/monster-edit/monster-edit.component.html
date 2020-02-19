@@ -1,0 +1,24 @@
+<div>
+  <app-editable-text-field [(text)]="card.name" [label]="'name'"></app-editable-text-field>
+  <app-editable-text-field [(text)]="card.level" [label]="'level'"></app-editable-text-field>
+  <app-editable-text-field [(text)]="card.extra" [label]="'extra'"></app-editable-text-field>
+
+  <app-editable-text-field [(text)]="card.description" [label]="'description'" [multiline]="'true'">
+  </app-editable-text-field>
+  <app-editable-text-field [(text)]="card.badStuff" [label]="'bad stuff'" [multiline]="'true'">
+  </app-editable-text-field>
+
+  <label>Win Levels</label>
+  <div>
+    <input type="number" [(ngModel)]="card.winLevels" min="1" max="2" class="input" />
+  </div>
+
+  <label>Win Treasures</label>
+  <div>
+    <input type="number" [(ngModel)]="card.winTreasures" min="0" max="10" class="input" />
+  </div>
+
+  <div>
+    <button class="btn btn-secondary">Upload</button>
+  </div>
+</div>

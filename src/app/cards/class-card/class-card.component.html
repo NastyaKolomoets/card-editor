@@ -1,15 +1,14 @@
 <app-card-item [backgroundImg]="backgroundImg">
   <div role="header" class="text-center">
     <div class="card-name">
-      <app-text-field [(text)]="card.name" [isEditing]="isEditing"></app-text-field>
+      <app-text-field [(text)]="card.name"></app-text-field>
     </div>
   </div>
   <div role="content">
-    <app-two-text-fields [(firstText)]="card.firstAbilityName" [(secondText)]="card.firstAbilityDescription"
-      [isEditing]="isEditing">
+    <app-two-text-fields [(firstText)]="card.firstAbilityName" [(secondText)]="card.firstAbilityDescription">
     </app-two-text-fields>
     <app-two-text-fields [(firstText)]="card.secondAbilityName" [(secondText)]="card.secondAbilityDescription"
-      [(imgUrl)]="card.img" [imgPosition]="'bottom'" [isEditing]="isEditing">
+      [(imgUrl)]="card.img" [imgPosition]="'bottom'">
     </app-two-text-fields>
   </div>
   <div role="footer" class="container">

@@ -1,0 +1,8 @@
+<ng-container [ngSwitch]="card.type">
+  <ng-container *ngSwitchCase="'monster'">
+    <app-monster-edit [card]="card"></app-monster-edit>
+  </ng-container>
+  <!-- <ng-container *ngSwitchCase="'class'">
+    <app-class-edit [card]="card"></app-class-edit>
+  </ng-container> -->
+</ng-container>

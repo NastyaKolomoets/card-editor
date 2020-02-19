@@ -1,38 +1,28 @@
 <app-card-item [backgroundImg]="backgroundImg">
     <div role="header" class="text-center">
         <div class="card-level">
-            <app-text-field [(text)]="card.level" [isEditing]="isEditing"></app-text-field>
+            <app-text-field [(text)]="card.level"></app-text-field>
         </div>
         <div class="card-name">
-            <app-text-field [(text)]="card.name" [isEditing]="isEditing"></app-text-field>
+            <app-text-field [(text)]="card.name"></app-text-field>
         </div>
         <div class="card-extra">
-            <app-text-field [(text)]="card.extra" [isEditing]="isEditing"></app-text-field>
+            <app-text-field [(text)]="card.extra"></app-text-field>
         </div>
     </div>
     <div role="content">
         <app-two-text-fields [(firstText)]="card.description" [(secondText)]="card.badStuff" [(imgUrl)]="card.img"
-            [imgPosition]="'top'" [isEditing]="isEditing">
+            [imgPosition]="'top'">
         </app-two-text-fields>
     </div>
     <div role="footer" class="container">
         <div class="row">
             <div class="col win-levels">
-                <p *ngIf="isEditing" class="float-left">
-                    <input type="number" [(ngModel)]="card.winLevels" min="1" max="2" />Рівні
+                <p *ngIf="card.winLevels > 1" class="text-left">{{card.winLevels}} Рівні
                 </p>
-                <ng-template #staticWinLevels>
-                    <p *ngIf="card.winLevels > 1" class="text-left">{{card.winLevels}} Рівні
-                    </p>
-                </ng-template>
             </div>
             <div class="col">
-                <p *ngIf="isEditing; else staticWinTreasures" class="float-right">
-                    <input type="number" [(ngModel)]="card.winTreasures" min="0" max="10" />{{treasuresText}}
-                </p>
-                <ng-template #staticWinTreasures>
-                    <p class="text-right">{{card.winTreasures}} {{treasuresText}}</p>
-                </ng-template>
+                <p class="text-right">{{card.winTreasures}} {{treasuresText}}</p>
             </div>
         </div>
     </div>

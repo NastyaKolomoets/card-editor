@@ -9,7 +9,6 @@ import { getDoorsBackgroundImg } from '../../models/helpers/helpers';
 })
 export class MonsterCardComponent {
 	@Input() card: MonsterCard;
-	@Input() isEditing: boolean;
 
 	get treasuresText() {
 		switch (this.card.winTreasures) {

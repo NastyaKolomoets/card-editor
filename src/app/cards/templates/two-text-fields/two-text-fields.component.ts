@@ -8,7 +8,6 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 export class TwoTextFieldsComponent {
   @Input() imgPosition: string;
-  @Input() isEditing: boolean;
 
   firstTextValue: string;
   @Output() firstTextChange = new EventEmitter();
