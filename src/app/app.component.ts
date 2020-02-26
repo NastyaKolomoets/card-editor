@@ -25,17 +25,14 @@ export class AppComponent implements OnInit {
     this.user.subscribe((user: firebase.User) => {
       console.log(user);
       this.currentUser = user;
-
-      if (user) {
-      }
     });
   }
 
   ngOnInit(): void {
     this.login();
-}
+  }
 
   login() {
-   this.afAuth.auth.signInAnonymously();
+    this.afAuth.auth.signInAnonymously();
   }
 }
