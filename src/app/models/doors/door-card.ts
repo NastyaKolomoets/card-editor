@@ -1,5 +1,4 @@
 import { ICard } from '../card';
-import { CardTypeDetails } from '../types/card-type-details';
 import { CardType } from '../card-type';
 
 export class DoorCard implements ICard {
@@ -8,6 +7,7 @@ export class DoorCard implements ICard {
   name: string;
   description: string;
   img: string;
+  layout: string;
 
   constructor(type: CardType) {
     this.key = null;
@@ -15,5 +15,6 @@ export class DoorCard implements ICard {
     this.name = '';
     this.description = '';
     this.img = '';
+    this.layout = null;
   }
 }
