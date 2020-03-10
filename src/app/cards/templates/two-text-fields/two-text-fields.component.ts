@@ -7,7 +7,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 })
 
 export class TwoTextFieldsComponent {
-  @Input() imgPosition: string;
+  @Input() imgPosition: number;
 
   firstTextValue: string;
   @Output() firstTextChange = new EventEmitter();

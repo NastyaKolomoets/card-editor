@@ -8,7 +8,10 @@
                     <app-edit-card [card]="card"></app-edit-card>
                 </div>
                 <div class="col card-md d-flex justify-content-center">
-                    <app-card-select [card]="card"></app-card-select>
+                    <div>
+                        <app-layouts [(current)]="card.layout" class="text-center"></app-layouts>
+                        <app-card-select [card]="card"></app-card-select>
+                    </div>
                 </div>
             </div>
         </div>

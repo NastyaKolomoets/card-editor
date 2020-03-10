@@ -7,7 +7,7 @@ export class DoorCard implements ICard {
   name: string;
   description: string;
   img: string;
-  layout: string;
+  layout: number;
 
   constructor(type: CardType) {
     this.key = null;

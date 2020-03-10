@@ -1,5 +1,6 @@
 import { CardType } from '../card-type';
 import { DoorCard } from './door-card';
+import { TwoTextFieldsLayout } from '../layouts/two-text-fields-layout';
 
 /**
  * Represents a class card. Extends [[DoorCard]].
@@ -18,5 +19,6 @@ export class ClassCard extends DoorCard {
     this.firstAbilityName = o?.firstAbilityName || '';
     this.secondAbilityDescription = o?.secondAbilityDescription || '';
     this.secondAbilityName = o?.secondAbilityName || '';
+    this.layout = o?.layout || TwoTextFieldsLayout.IMAGE_BOTTOM;
   }
 }

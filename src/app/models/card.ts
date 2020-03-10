@@ -7,5 +7,5 @@ export interface ICard {
   name: string;
   description: string;
   img: string;
-  layout: string;
+  layout: number;
 }
