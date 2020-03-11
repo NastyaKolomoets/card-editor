@@ -2,6 +2,8 @@ import { Component, Input } from '@angular/core';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 import { ICard } from 'src/app/models/card';
 import { CardsService } from 'src/app/services/cards.service';
+import { LayoutType } from 'src/app/models/layouts/layout';
+import { CardTypes } from 'src/app/models/types/card-types';
 
 @Component({
 	selector: 'app-edit-card-modal',
@@ -15,6 +17,10 @@ export class EditCardModalComponent {
 		public activeModal: NgbActiveModal,
 		private cardsService: CardsService
 	) {
+	}
+
+	get layoutType(): LayoutType {
+		return CardTypes.getCardTypeDetails(this.card.type).layoutType;
 	}
 
 	submit(): void {

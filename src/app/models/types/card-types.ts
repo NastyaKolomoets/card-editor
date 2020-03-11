@@ -1,6 +1,7 @@
 import { CardType } from '../card-type';
 import { CardTypeDetails } from './card-type-details';
 import { ICard } from '../card';
+import { LayoutType } from '../layouts/layout';
 
 const door = {
   name: 'door',
@@ -20,7 +21,8 @@ export class CardTypes {
         plural: 'classes',
         nameUkr: 'Клас',
         pluralUkr: 'Класи',
-        parent: door
+        parent: door,
+        layoutType: LayoutType.TWO_TEXT_FIELDS
       })
     ],
     [
@@ -30,7 +32,8 @@ export class CardTypes {
         plural: 'curses',
         nameUkr: 'Прокляття',
         pluralUkr: 'Прокляття',
-        parent: door
+        parent: door,
+        layoutType: LayoutType.TWO_TEXT_FIELDS
       })
     ],
     [
@@ -40,7 +43,8 @@ export class CardTypes {
         plural: 'monsterEnhancers',
         nameUkr: 'Підсилювач потвори',
         pluralUkr: 'Підсилювачі потвори',
-        parent: door
+        parent: door,
+        layoutType: LayoutType.TWO_TEXT_FIELDS
       })
     ],
     [
@@ -50,7 +54,8 @@ export class CardTypes {
         plural: 'monsters',
         nameUkr: 'Потвора',
         pluralUkr: 'Потвори',
-        parent: door
+        parent: door,
+        layoutType: LayoutType.TWO_TEXT_FIELDS
       })
     ],
     [
@@ -60,7 +65,8 @@ export class CardTypes {
         plural: 'otherDoors',
         nameUkr: 'Інше',
         pluralUkr: 'Інше',
-        parent: door
+        parent: door,
+        layoutType: LayoutType.ONE_TEXT_FIELD
       })
     ],
     [
@@ -70,7 +76,8 @@ export class CardTypes {
         plural: 'races',
         nameUkr: 'Раса',
         pluralUkr: 'Раси',
-        parent: door
+        parent: door,
+        layoutType: LayoutType.TWO_TEXT_FIELDS
       })
     ],
   ]);
