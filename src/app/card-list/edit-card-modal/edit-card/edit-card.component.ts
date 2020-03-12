@@ -22,6 +22,8 @@ export class EditCardComponent {
     const uploadTask = this.imagesService.upload(file[0]);
     uploadTask
       .then(img => img.ref.getDownloadURL()
-        .then(url => this.card.img = url));
+        .then(url => this.card.img = url)
+        .catch(error => alert(`Failed to upload. ${error}`))
+      .catch(error => alert(`Failed to upload. ${error}`)));
   }
 }
