@@ -2,13 +2,19 @@
 
 .card-md {
     max-width: 45%;
-    font-size: 36px;
     margin: 0 auto;
 }
 
 .card-sm {
     max-width: 15%;
-    font-size: 22px;
+}
+
+.card-sm .custom-card {
+    font-size: 1rem;
+}
+
+.card-md .custom-card {
+    font-size: 2.25rem;
 }
 
 .list-group a {
@@ -23,6 +29,7 @@
 .custom-card {
     position: relative;
     color: black;
+    font-size: 1rem;
 }
 
 .custom-card .custom-card-header {
