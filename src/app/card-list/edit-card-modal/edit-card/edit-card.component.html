@@ -1,8 +1,14 @@
-<ng-container [ngSwitch]="card.type">
-  <ng-container *ngSwitchCase="'monster'">
-    <app-monster-edit [card]="card"></app-monster-edit>
+<div>
+  <ng-container [ngSwitch]="card.type">
+    <ng-container *ngSwitchCase="'monster'">
+      <app-monster-edit [card]="card"></app-monster-edit>
+    </ng-container>
+    <!-- <ng-container *ngSwitchCase="'class'">
+      <app-class-edit [card]="card"></app-class-edit>
+    </ng-container> -->
   </ng-container>
-  <!-- <ng-container *ngSwitchCase="'class'">
-    <app-class-edit [card]="card"></app-class-edit>
-  </ng-container> -->
-</ng-container>
+  <div>
+    <label *ngIf="card.img">{{getImageName()}}</label>
+    <input type="file" id="img" (change)="handleFileInput($event.target.files)" />
+  </div>
+</div>

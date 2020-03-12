@@ -12,6 +12,8 @@ import { FroalaViewModule, FroalaEditorModule } from 'angular-froala-wysiwyg';
 import { EditCardComponent } from './edit-card-modal/edit-card/edit-card.component';
 import { EditableTextFieldComponent } from './edit-card-modal/edit-card/editable-text-field/editable-text-field.component';
 import { MonsterEditComponent } from './edit-card-modal/edit-card/monster-edit/monster-edit.component';
+import { ImagesService } from '../services/images.service';
+import { AngularFireStorageModule } from '@angular/fire/storage';
 
 @NgModule({
   declarations: [
@@ -24,6 +26,7 @@ import { MonsterEditComponent } from './edit-card-modal/edit-card/monster-edit/m
   imports: [
     BrowserModule,
     AngularFireDatabaseModule,
+    AngularFireStorageModule,
     FormsModule,
     NgbModule,
     NgbModalModule,
@@ -33,7 +36,8 @@ import { MonsterEditComponent } from './edit-card-modal/edit-card/monster-edit/m
   ],
   providers: [
     CardGeneratorHelper,
-    CardsService
+    CardsService,
+    ImagesService
   ],
   entryComponents: [
     EditCardModalComponent
