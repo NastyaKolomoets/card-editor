@@ -9,8 +9,7 @@
     <app-image-overlap-1 [imgUrl]="imgUrl" [text]="firstText"></app-image-overlap-1>
   </ng-container>
   <ng-container *ngSwitchCase="4">
-    <app-large-text-1 [imgUrl]="imgUrl" [text]="firstText">
-    </app-large-text-1>
+    <app-large-text-1 [imgUrl]="imgUrl" [text]="firstText"></app-large-text-1>
   </ng-container>
   <ng-container *ngSwitchCase="5">
     <app-image-top-2 [imgUrl]="imgUrl" [firstText]="firstText" [secondText]="secondText"></app-image-top-2>
@@ -26,7 +25,8 @@
     </app-image-overlap-2>
   </ng-container>
   <ng-container *ngSwitchCase="9">
-    <app-large-text-2 [imgUrl]="imgUrl" [firstText]="firstText" [secondText]="secondText"></app-large-text-2>
+    <app-large-text-1 [imgUrl]="imgUrl" [text]="firstText"></app-large-text-1>
+    <!-- <app-large-text-2 [imgUrl]="imgUrl" [firstText]="firstText" [secondText]="secondText"></app-large-text-2> -->
   </ng-container>
   <ng-container *ngSwitchDefault>
     <app-img-field [img]="imgUrl"></app-img-field>
