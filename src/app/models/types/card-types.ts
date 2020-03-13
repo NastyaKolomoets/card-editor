@@ -1,17 +1,17 @@
 import { CardType } from '../card-type';
 import { CardTypeDetails } from './card-type-details';
 import { ICard } from '../card';
-import { LayoutType } from '../layouts/layout';
+import { AvailableLayouts } from '../layouts/available-layouts';
 
-const door = {
-  name: 'door',
-  plural: 'doors',
-  nameUkr: 'Двері',
-  pluralUkr: 'Двері',
-  parent: null
-};
 
 export class CardTypes {
+  static door = {
+    name: 'door',
+    plural: 'doors',
+    nameUkr: 'Двері',
+    pluralUkr: 'Двері',
+    parent: null
+  };
 
   static cardTypes = new Map<CardType, CardTypeDetails>([
     [
@@ -21,8 +21,8 @@ export class CardTypes {
         plural: 'classes',
         nameUkr: 'Клас',
         pluralUkr: 'Класи',
-        parent: door,
-        layoutType: LayoutType.TWO_TEXT_FIELDS
+        parent: CardTypes.door,
+        layouts: AvailableLayouts.TwoTextFieldsLayouts
       })
     ],
     [
@@ -32,8 +32,8 @@ export class CardTypes {
         plural: 'curses',
         nameUkr: 'Прокляття',
         pluralUkr: 'Прокляття',
-        parent: door,
-        layoutType: LayoutType.TWO_TEXT_FIELDS
+        parent: CardTypes.door,
+        layouts: AvailableLayouts.MixedLayouts
       })
     ],
     [
@@ -43,8 +43,8 @@ export class CardTypes {
         plural: 'monsterEnhancers',
         nameUkr: 'Підсилювач потвори',
         pluralUkr: 'Підсилювачі потвори',
-        parent: door,
-        layoutType: LayoutType.TWO_TEXT_FIELDS
+        parent: CardTypes.door,
+        layouts: AvailableLayouts.TwoTextFieldsLayouts
       })
     ],
     [
@@ -54,8 +54,8 @@ export class CardTypes {
         plural: 'monsters',
         nameUkr: 'Потвора',
         pluralUkr: 'Потвори',
-        parent: door,
-        layoutType: LayoutType.TWO_TEXT_FIELDS
+        parent: CardTypes.door,
+        layouts: AvailableLayouts.TwoTextFieldsLayouts
       })
     ],
     [
@@ -65,8 +65,8 @@ export class CardTypes {
         plural: 'otherDoors',
         nameUkr: 'Інше',
         pluralUkr: 'Інше',
-        parent: door,
-        layoutType: LayoutType.ONE_TEXT_FIELD
+        parent: CardTypes.door,
+        layouts: AvailableLayouts.OneTextFieldLayouts
       })
     ],
     [
@@ -76,8 +76,8 @@ export class CardTypes {
         plural: 'races',
         nameUkr: 'Раса',
         pluralUkr: 'Раси',
-        parent: door,
-        layoutType: LayoutType.TWO_TEXT_FIELDS
+        parent: CardTypes.door,
+        layouts: AvailableLayouts.TwoTextFieldsLayouts
       })
     ],
   ]);

@@ -20,7 +20,6 @@ import { ImageTop2Component } from './templates/content-layouts/two-text-fields/
 import { ImageCenter2Component } from './templates/content-layouts/two-text-fields/image-center/image-center.component';
 import { ImageBottom2Component } from './templates/content-layouts/two-text-fields/image-bottom/image-bottom.component';
 import { ImageOverlap2Component } from './templates/content-layouts/two-text-fields/image-overlap/image-overlap.component';
-import { LargeText2Component } from './templates/content-layouts/two-text-fields/large-text/large-text.component';
 import { ContentLayoutsComponent } from './templates/content-layouts/content-layouts.component';
 
 @NgModule({
@@ -41,7 +40,6 @@ import { ContentLayoutsComponent } from './templates/content-layouts/content-lay
     ImageCenter2Component,
     ImageBottom2Component,
     ImageOverlap2Component,
-    LargeText2Component,
     ContentLayoutsComponent
   ],
   entryComponents: [

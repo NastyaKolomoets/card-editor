@@ -1,6 +1,6 @@
 export enum OneTextFieldLayout {
-  IMAGE_TOP = 1,
-  IMAGE_BOTTOM = 2,
-  IMAGE_OVERLAP = 3,
-  LARGE_TEXT = 4
+  IMAGE_TOP = 0,
+  IMAGE_BOTTOM = 1,
+  IMAGE_OVERLAP = 2,
+  LARGE_TEXT = 3
 }

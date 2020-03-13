@@ -9,7 +9,8 @@
                 </div>
                 <div class="col card-md d-flex justify-content-center">
                     <div>
-                        <app-layouts [(current)]="card.layout" [type]="layoutType" class="text-center"></app-layouts>
+                        <app-layouts [(current)]="card.layout" [available]="availableLayouts" class="text-center">
+                        </app-layouts>
                         <app-card-select [card]="card"></app-card-select>
                     </div>
                 </div>
