@@ -11,9 +11,9 @@
         </div>
     </div>
     <div role="content">
-        <app-two-text-fields [(firstText)]="card.description" [(secondText)]="card.badStuff" [(imgUrl)]="card.img"
-            [imgPosition]="card.layout">
-        </app-two-text-fields>
+        <app-content-layouts [(firstText)]="card.description" [(secondText)]="card.badStuff" [(imgUrl)]="card.img"
+            [layoutType]="card.layout">
+        </app-content-layouts>
     </div>
     <div role="footer" class="container">
         <div class="row">

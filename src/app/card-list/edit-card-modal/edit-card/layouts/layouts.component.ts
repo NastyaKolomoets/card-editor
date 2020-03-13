@@ -1,5 +1,5 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { ILayout, Layouts } from 'src/app/models/layouts/layout';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { ILayout } from 'src/app/models/layouts/layout';
 
 @Component({
   selector: 'app-layouts',
@@ -7,7 +7,7 @@ import { ILayout, Layouts } from 'src/app/models/layouts/layout';
   styleUrls: ['./layouts.component.css']
 })
 
-export class LayoutsComponent implements OnInit {
+export class LayoutsComponent {
   currentValue: number;
   @Output() currentChange = new EventEmitter();
   @Input()
@@ -19,12 +19,8 @@ export class LayoutsComponent implements OnInit {
     this.currentChange.emit(this.currentValue);
   }
 
+  @Input()
   available: ILayout[];
-
-  ngOnInit() {
-    const current = Layouts.layouts[this.currentValue - 1];
-    this.available = Layouts.layouts.filter(x => x.type === current.type);
-  }
 
   changeLayout(id: number) {
     this.current = id;
