@@ -7,9 +7,11 @@ export class TreasureCard implements ICard {
   name: string;
   description: string;
   img: string;
+  layout: string;
 
   constructor(name: string) {
     this.name = name;
     this.img = '';
+    this.layout = null;
   }
 }

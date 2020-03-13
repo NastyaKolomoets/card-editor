@@ -5,11 +5,11 @@
     </div>
   </div>
   <div role="content">
-    <app-two-text-fields [(firstText)]="card.firstAbilityName" [(secondText)]="card.firstAbilityDescription">
-    </app-two-text-fields>
-    <app-two-text-fields [(firstText)]="card.secondAbilityName" [(secondText)]="card.secondAbilityDescription"
-      [(imgUrl)]="card.img" [imgPosition]="'bottom'">
-    </app-two-text-fields>
+    <app-content-layouts [(firstText)]="card.firstAbilityName" [(secondText)]="card.firstAbilityDescription">
+    </app-content-layouts>
+    <app-content-layouts [(firstText)]="card.secondAbilityName" [(secondText)]="card.secondAbilityDescription"
+      [(imgUrl)]="card.img" [layoutType]="card.layout">
+    </app-content-layouts>
   </div>
   <div role="footer" class="container">
     <div class="row">
