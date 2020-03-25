@@ -14,6 +14,7 @@ import { EditableTextFieldComponent } from './edit-card-modal/edit-card/editable
 import { MonsterEditComponent } from './edit-card-modal/edit-card/monster-edit/monster-edit.component';
 import { ImagesService } from '../services/images.service';
 import { AngularFireStorageModule } from '@angular/fire/storage';
+import { LayoutsComponent } from './edit-card-modal/edit-card/layouts/layouts.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { AngularFireStorageModule } from '@angular/fire/storage';
     EditCardModalComponent,
     EditableTextFieldComponent,
     EditCardComponent,
+    LayoutsComponent,
     MonsterEditComponent
   ],
   imports: [

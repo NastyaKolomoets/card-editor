@@ -14,11 +14,16 @@ export class EditCardComponent {
 
   constructor(private imagesService: ImagesService) { }
 
+  getImageName() {
+    return this.card.img.substring(this.card.img.lastIndexOf('/') + 1, this.card.img.indexOf('?'));
+  }
+
   handleFileInput(file: any) {
     const uploadTask = this.imagesService.upload(file[0]);
     uploadTask
-      .snapshotChanges()
-      .subscribe(img => img.ref.getDownloadURL()
-        .then(url => this.card.img = url));
+      .then(img => img.ref.getDownloadURL()
+        .then(url => this.card.img = url)
+        .catch(error => alert(`Failed to upload. ${error}`))
+        .catch(error => alert(`Failed to upload. ${error}`)));
   }
 }
