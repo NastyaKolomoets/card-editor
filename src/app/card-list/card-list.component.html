@@ -24,9 +24,9 @@
                   </h6>
                 </div>
                 <div id="{{type}}_cards" class="collapse in show" role="tabpanel" [attr.aria-labelledby]="type">
-                  <div>
-                    <div class="card-deck" *ngIf="cards">
-                      <div class="card m-1 card-sm" *ngFor="let card of getCardsOfType(type)">
+                  <div class="card-deck m-0" *ngIf="cards">
+                    <div class="card m-2 card-sm justify-content-center" *ngFor="let card of getCardsOfType(type)">
+                      <div class="card-body p-0">
                         <app-card-select [card]="card"></app-card-select>
                         <div class="card-sm-hover text-center">
                           <div class="float-right">
