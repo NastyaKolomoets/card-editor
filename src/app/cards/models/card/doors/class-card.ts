@@ -1,6 +1,6 @@
 import { CardType } from '../card-type';
 import { DoorCard } from './door-card';
-import { TwoTextFieldsLayout } from '../layouts/two-text-fields-layout';
+import { TwoTextFieldsLayout } from '../../layout/two-text-fields-layout';
 
 /**
  * Represents a class card. Extends [[DoorCard]].

@@ -1,7 +1,7 @@
-import { CardType } from '../card-type';
-import { CardTypeDetails } from './card-type-details';
-import { ICard } from '../card';
-import { AvailableLayouts } from '../layouts/available-layouts';
+import { CardType } from '../models/card/card-type';
+import { CardTypeDetails } from '../models/card/card-type-details';
+import { ICard } from '../models/card/card';
+import { AvailableLayouts } from './available-layouts';
 
 
 export class CardTypes {

@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
-import { ICard } from 'src/app/models/card';
-import { ImagesService } from 'src/app/services/images.service';
+import { ICard } from 'src/app/cards/models/card/card';
+import { ImagesService } from 'src/app/shared/image-management/images.service';
 
 @Component({
   selector: 'app-edit-card',

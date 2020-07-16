@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { MonsterCard } from 'src/app/models/doors/monster-card';
+import { MonsterCard } from 'src/app/cards/models/card/doors/monster-card';
 
 @Component({
   selector: 'app-monster-edit',

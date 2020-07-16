@@ -1,5 +1,5 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { ILayout } from 'src/app/models/layouts/layout';
+import { ILayout } from 'src/app/cards/models/layout/layout';
 
 @Component({
   selector: 'app-layouts',

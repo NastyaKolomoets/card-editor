@@ -1,6 +1,6 @@
 import { DoorCard } from './door-card';
 import { CardType } from '../card-type';
-import { TwoTextFieldsLayout } from '../layouts/two-text-fields-layout';
+import { TwoTextFieldsLayout } from '../../layout/two-text-fields-layout';
 
 export class MonsterCard extends DoorCard {
   level: string;

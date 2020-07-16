@@ -2,12 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { EditCardModalComponent } from './edit-card-modal/edit-card-modal.component';
 import { Router } from '@angular/router';
-import { CardGeneratorHelper } from '../models/helpers/card-generator.helper';
-import { CardsService } from 'src/app/services/cards.service';
-import { ICard } from '../models/card';
-import { CardType } from '../models/card-type';
-import { MonsterCard } from '../models/doors/monster-card';
-import { CardTypes } from '../models/types/card-types';
+import { CardFactory } from '../cards/models/card/card-factory';
+import { CardsService } from 'src/app/card-list/services/cards.service';
+import { ICard } from '../cards/models/card/card';
+import { CardType } from '../cards/models/card/card-type';
+import { MonsterCard } from '../cards/models/card/doors/monster-card';
+import { CardTypes } from '../cards/data/card-types';
 
 @Component({
   selector: 'app-cards',
@@ -46,7 +46,7 @@ export class CardsComponent implements OnInit {
   }
 
   addCard(type: string) {
-    const card = CardGeneratorHelper.generateCard(type);
+    const card = CardFactory.createCard(type);
     this.openModal(card);
   }
 

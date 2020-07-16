@@ -1,4 +1,3 @@
-import { CardTypeDetails } from './types/card-type-details';
 import { CardType } from './card-type';
 
 export interface ICard {

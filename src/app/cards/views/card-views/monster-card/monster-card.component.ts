@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
-import { MonsterCard } from 'src/app/models/doors/monster-card';
-import { getDoorsBackgroundImg } from '../../models/helpers/helpers';
+import { MonsterCard } from 'src/app/cards/models/card/doors/monster-card';
+import { getDoorsBackgroundImg } from '../helpers/helpers';
 
 @Component({
 	selector: 'app-monster-card',
@@ -24,6 +24,7 @@ export class MonsterCardComponent {
 	}
 
 	get backgroundImg() {
+		// return this.card.backgroundImage();
 		return getDoorsBackgroundImg();
 	}
 }

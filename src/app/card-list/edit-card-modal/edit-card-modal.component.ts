@@ -1,9 +1,9 @@
 import { Component, Input } from '@angular/core';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
-import { ICard } from 'src/app/models/card';
-import { CardsService } from 'src/app/services/cards.service';
-import { ILayout } from 'src/app/models/layouts/layout';
-import { CardTypes } from 'src/app/models/types/card-types';
+import { ICard } from 'src/app/cards/models/card/card';
+import { CardsService } from 'src/app/card-list/services/cards.service';
+import { ILayout } from 'src/app/cards/models/layout/layout';
+import { CardTypes } from 'src/app/cards/data/card-types';
 
 @Component({
 	selector: 'app-edit-card-modal',

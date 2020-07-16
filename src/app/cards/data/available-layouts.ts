@@ -1,6 +1,6 @@
-import { OneTextFieldLayout } from './one-text-field-layout';
-import { TwoTextFieldsLayout } from './two-text-fields-layout';
-import { Layouts } from './layout';
+import { OneTextFieldLayout } from '../models/layout/one-text-field-layout';
+import { TwoTextFieldsLayout } from '../models/layout/two-text-fields-layout';
+import { Layouts } from '../models/layout/layout';
 
 export class AvailableLayouts {
   static OneTextFieldLayouts = [

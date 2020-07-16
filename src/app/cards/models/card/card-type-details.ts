@@ -1,4 +1,4 @@
-import { ILayout } from '../layouts/layout';
+import { ILayout } from '../layout/layout';
 
 export class CardTypeDetails {
   readonly parent: CardTypeDetails;

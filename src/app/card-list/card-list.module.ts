@@ -6,13 +6,13 @@ import { FormsModule } from '@angular/forms';
 import { NgbModalModule, NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { EditCardModalComponent } from './edit-card-modal/edit-card-modal.component';
 import { CardsModule } from '../cards/cards.module';
-import { CardGeneratorHelper } from '../models/helpers/card-generator.helper';
-import { CardsService } from 'src/app/services/cards.service';
+import { CardFactory } from '../cards/models/card/card-factory';
+import { CardsService } from 'src/app/card-list/services/cards.service';
 import { FroalaViewModule, FroalaEditorModule } from 'angular-froala-wysiwyg';
 import { EditCardComponent } from './edit-card-modal/edit-card/edit-card.component';
 import { EditableTextFieldComponent } from './edit-card-modal/edit-card/editable-text-field/editable-text-field.component';
 import { MonsterEditComponent } from './edit-card-modal/edit-card/monster-edit/monster-edit.component';
-import { ImagesService } from '../services/images.service';
+import { ImagesService } from '../shared/image-management/images.service';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { LayoutsComponent } from './edit-card-modal/edit-card/layouts/layouts.component';
 
@@ -37,7 +37,7 @@ import { LayoutsComponent } from './edit-card-modal/edit-card/layouts/layouts.co
     FroalaEditorModule
   ],
   providers: [
-    CardGeneratorHelper,
+    CardFactory,
     CardsService,
     ImagesService
   ],
