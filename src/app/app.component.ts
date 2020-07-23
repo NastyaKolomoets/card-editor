@@ -23,7 +23,6 @@ export class AppComponent implements OnInit {
   constructor(public db: AngularFireDatabase, public afAuth: AngularFireAuth) {
     this.user = afAuth.authState;
     this.user.subscribe((user: firebase.User) => {
-      console.log(user);
       this.currentUser = user;
     });
   }

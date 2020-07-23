@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { CardsComponent } from './card-list/card-list.component';
+import { ListViewComponent } from './cards/munchkin/views/list-view.component';
 
 const routes: Routes = [
   {
     path: '',
     pathMatch: 'full',
-    component: CardsComponent
+    component: ListViewComponent
   }
 ];
 
