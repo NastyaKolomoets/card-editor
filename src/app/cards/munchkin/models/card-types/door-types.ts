@@ -1,5 +1,5 @@
 import { CardType } from '../../../infrastructure/models/card-type';
-import { FieldsPosition } from '../../../infrastructure/models/layouts/fields-position';
+import { FieldsPlacement } from '../../../infrastructure/models/layouts/fields-placement';
 
 export const ClassType: CardType = {
   name: 'class',
@@ -7,10 +7,10 @@ export const ClassType: CardType = {
   displayName: 'Клас',
   displayNamePlural: 'Класи',
   availableLayouts: [
-    FieldsPosition.IMAGE_TOP,
-    FieldsPosition.IMAGE_CENTER,
-    FieldsPosition.IMAGE_BOTTOM,
-    FieldsPosition.IMAGE_OVERLAP
+    FieldsPlacement.IMAGE_TOP,
+    FieldsPlacement.IMAGE_CENTER,
+    FieldsPlacement.IMAGE_BOTTOM,
+    FieldsPlacement.IMAGE_OVERLAP
   ],
 };
 
@@ -20,10 +20,10 @@ export const RaceType: CardType = {
   displayName: 'Раса',
   displayNamePlural: 'Раси',
   availableLayouts: [
-    FieldsPosition.IMAGE_TOP,
-    FieldsPosition.IMAGE_CENTER,
-    FieldsPosition.IMAGE_BOTTOM,
-    FieldsPosition.IMAGE_OVERLAP
+    FieldsPlacement.IMAGE_TOP,
+    FieldsPlacement.IMAGE_CENTER,
+    FieldsPlacement.IMAGE_BOTTOM,
+    FieldsPlacement.IMAGE_OVERLAP
   ]
 };
 
@@ -33,10 +33,10 @@ export const MonsterType: CardType = {
   displayName: 'Потвора',
   displayNamePlural: 'Потвори',
   availableLayouts: [
-    FieldsPosition.IMAGE_TOP,
-    FieldsPosition.IMAGE_CENTER,
-    FieldsPosition.IMAGE_BOTTOM,
-    FieldsPosition.IMAGE_OVERLAP
+    FieldsPlacement.IMAGE_TOP,
+    FieldsPlacement.IMAGE_CENTER,
+    FieldsPlacement.IMAGE_BOTTOM,
+    FieldsPlacement.IMAGE_OVERLAP
   ]
 };
 
@@ -46,11 +46,11 @@ export const CurseType: CardType = {
   displayName: 'Прокляття',
   displayNamePlural: 'Прокляття',
   availableLayouts: [
-    FieldsPosition.IMAGE_TOP,
-    FieldsPosition.IMAGE_CENTER,
-    FieldsPosition.IMAGE_BOTTOM,
-    FieldsPosition.IMAGE_OVERLAP,
-    FieldsPosition.LARGE_TEXT
+    FieldsPlacement.IMAGE_TOP,
+    FieldsPlacement.IMAGE_CENTER,
+    FieldsPlacement.IMAGE_BOTTOM,
+    FieldsPlacement.IMAGE_OVERLAP,
+    FieldsPlacement.LARGE_TEXT
   ]
 };
 
@@ -60,10 +60,10 @@ export const MonsterEnhancerType: CardType = {
   displayName: 'Підсилювач потвори',
   displayNamePlural: 'Підсилювачі потвори',
   availableLayouts: [
-    FieldsPosition.IMAGE_TOP,
-    FieldsPosition.IMAGE_CENTER,
-    FieldsPosition.IMAGE_BOTTOM,
-    FieldsPosition.IMAGE_OVERLAP
+    FieldsPlacement.IMAGE_TOP,
+    FieldsPlacement.IMAGE_CENTER,
+    FieldsPlacement.IMAGE_BOTTOM,
+    FieldsPlacement.IMAGE_OVERLAP
   ]
 };
 
@@ -73,9 +73,9 @@ export const OtherDoorType: CardType = {
   displayName: 'Інше',
   displayNamePlural: 'Інше',
   availableLayouts: [
-    FieldsPosition.IMAGE_TOP,
-    FieldsPosition.IMAGE_CENTER,
-    FieldsPosition.IMAGE_BOTTOM,
-    FieldsPosition.IMAGE_OVERLAP
+    FieldsPlacement.IMAGE_TOP,
+    FieldsPlacement.IMAGE_CENTER,
+    FieldsPlacement.IMAGE_BOTTOM,
+    FieldsPlacement.IMAGE_OVERLAP
   ]
 };

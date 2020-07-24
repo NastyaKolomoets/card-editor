@@ -10,11 +10,9 @@
             <app-text-field [(text)]="card.extra"></app-text-field>
         </div>
     </div>
-    <div role="content">
-        <app-content-layouts [(firstText)]="card.description" [(secondText)]="card.badStuff" [(imgUrl)]="card.img"
-            [layoutType]="card.layout">
-        </app-content-layouts>
-    </div>
+    <app-content-layout [(firstText)]="card.description" [(secondText)]="card.badStuff" [(imgUrl)]="card.img"
+        [fieldsPlacement]="card.layout">
+    </app-content-layout>
     <div role="footer" class="container">
         <div class="row">
             <div class="col win-levels">

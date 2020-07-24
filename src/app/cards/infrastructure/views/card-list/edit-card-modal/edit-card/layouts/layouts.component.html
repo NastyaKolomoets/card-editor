@@ -1,8 +1,10 @@
 <div class="btn-group btn-group-toggle btn-group-sm" data-toggle="buttons">
   <ng-container *ngFor="let layout of available">
-    <label class="btn btn-secondary {{layout.id === current ? 'active' : ''}}" (click)="changeLayout(layout.id)">
-      <input type="radio" name="layout" id="{{layout.id}}" value="{{layout.id}}" [(ngModel)]="current">
-      {{layout.imagePosition}}
+    <label class="btn btn-secondary {{layout.fieldsPlacement === current ? 'active' : ''}}"
+      (click)="changeLayout(layout.fieldsPlacement)">
+      <input type="radio" name="layout" id="{{layout.fieldsPlacement}}" value="{{layout.fieldsPlacement}}"
+        [(ngModel)]="current">
+      {{layout.fieldsPlacement}}
     </label>
   </ng-container>
 </div>

@@ -11,17 +11,11 @@ import { CardContainerComponent } from './views/card/card-container/card-contain
 import { CardBodyComponent } from './views/card/card-body/card-body.component';
 import { TextFieldComponent } from './views/card/fields/text-field/text-field.component';
 import { ImgFieldComponent } from './views/card/fields/img-field/img-field.component';
-import { OneTextFieldComponent } from './views/card/layouts/content/one-text-field/one-text-field.component';
-import { ImageTopComponent } from './views/card/layouts/content/one-text-field/image-top/image-top.component';
-import { ImageBottomComponent } from './views/card/layouts/content/one-text-field/image-bottom/image-bottom.component';
-import { ImageOverlapComponent } from './views/card/layouts/content/one-text-field/image-overlap/image-overlap.component';
-import { LargeTextComponent } from './views/card/layouts/content/one-text-field/large-text/large-text.component';
-import { TwoTextFieldsComponent } from './views/card/layouts/content/two-text-fields/two-text-fields.component';
-import { ImageTop2Component } from './views/card/layouts/content/two-text-fields/image-top/image-top.component';
-import { ImageCenter2Component } from './views/card/layouts/content/two-text-fields/image-center/image-center.component';
-import { ImageBottom2Component } from './views/card/layouts/content/two-text-fields/image-bottom/image-bottom.component';
-import { ImageOverlap2Component } from './views/card/layouts/content/two-text-fields/image-overlap/image-overlap.component';
-import { ContentLayoutsComponent } from './views/card/layouts/content/content-layouts.component';
+import { ImageTopComponent } from './views/card/layouts/content/image-top/image-top.component';
+import { ImageBottomComponent } from './views/card/layouts/content/image-bottom/image-bottom.component';
+import { ImageOverlapComponent } from './views/card/layouts/content/image-overlap/image-overlap.component';
+import { LargeTextComponent } from './views/card/layouts/content/large-text/large-text.component';
+import { ImageCenterComponent } from './views/card/layouts/content/image-center/image-center.component';
 import { TemplateDirective } from './template/template.directive';
 import { CardsComponent } from './views/card-list/card-list.component';
 import { EditCardModalComponent } from './views/card-list/edit-card-modal/edit-card-modal.component';
@@ -34,6 +28,8 @@ import { ImagesService } from './services/images.service';
 import { EditTemplateService } from './services/edit-template.service';
 import { CardTemplateService } from './services/card-template.service';
 import { TemplateComponentFactory } from './services/template-component-factory';
+import { ContentLayoutBaseComponent } from './views/card/layouts/content/content-layout-base.component';
+import { ContentLayoutComponent } from './views/card/layouts/content/content-layout.component';
 
 @NgModule({
   declarations: [
@@ -41,17 +37,13 @@ import { TemplateComponentFactory } from './services/template-component-factory'
     CardBodyComponent,
     TextFieldComponent,
     ImgFieldComponent,
-    OneTextFieldComponent,
     ImageTopComponent,
     ImageBottomComponent,
     ImageOverlapComponent,
     LargeTextComponent,
-    TwoTextFieldsComponent,
-    ImageTop2Component,
-    ImageCenter2Component,
-    ImageBottom2Component,
-    ImageOverlap2Component,
-    ContentLayoutsComponent,
+    ImageCenterComponent,
+    ContentLayoutBaseComponent,
+    ContentLayoutComponent,
     TemplateDirective,
     CardsComponent,
     EditCardModalComponent,
@@ -75,7 +67,7 @@ import { TemplateComponentFactory } from './services/template-component-factory'
     CardBodyComponent,
     TextFieldComponent,
     ImgFieldComponent,
-    ContentLayoutsComponent,
+    ContentLayoutComponent,
     CardsComponent
   ],
   providers: [

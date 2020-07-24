@@ -1,4 +1,4 @@
-export enum FieldsPosition {
+export enum FieldsPlacement {
   IMAGE_TOP,
   IMAGE_CENTER,
   IMAGE_BOTTOM,

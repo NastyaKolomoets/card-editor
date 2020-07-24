@@ -1,18 +1,9 @@
-import { FieldsPosition } from './layouts/fields-position';
+import { FieldsPlacement } from './layouts/fields-placement';
 
 export class CardType {
   name: string;
   namePlural: string;
   displayName: string;
   displayNamePlural: string;
-  availableLayouts: FieldsPosition[];
+  availableLayouts: FieldsPlacement[];
 }
-
-// export enum CardType {
-//   CLASS = 'class',
-//   CURSE = 'curse',
-//   MONSTER_ENHANCER = 'monsterEnhancer',
-//   MONSTER = 'monster',
-//   OTHER_DOOR = 'otherDoor',
-//   RACE = 'race'
-// }

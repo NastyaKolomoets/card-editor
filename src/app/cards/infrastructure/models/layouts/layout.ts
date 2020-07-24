@@ -1,6 +1,6 @@
-import { FieldsPosition } from './fields-position';
+import { FieldsPlacement } from './fields-placement';
 
 export class Layout {
-  fieldsPosition: FieldsPosition;
+  fieldsPlacement: FieldsPlacement;
   icon: string;
 }

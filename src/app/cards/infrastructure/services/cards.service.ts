@@ -33,6 +33,6 @@ export class CardsService {
   }
 
   mapToDto(card: Card): any {
-    return { ...card, type: card.type.name, layout: card.layout.fieldsPosition };
+    return { ...card, type: card.type.name };
   }
 }

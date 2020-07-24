@@ -1,5 +1,6 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Layout } from 'src/app/cards/infrastructure/models/layouts/layout';
+import { FieldsPlacement } from 'src/app/cards/infrastructure/models/layouts/fields-placement';
 
 @Component({
   selector: 'app-layouts',
@@ -22,7 +23,7 @@ export class LayoutsComponent {
   @Input()
   available: Layout[];
 
-  changeLayout(id: number) {
-    this.current = id;
+  changeLayout(fieldsPlacement: FieldsPlacement) {
+    this.current = fieldsPlacement;
   }
 }

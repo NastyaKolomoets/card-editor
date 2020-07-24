@@ -1,27 +1,27 @@
 import { Layout } from './layout';
-import { FieldsPosition } from './fields-position';
+import { FieldsPlacement } from './fields-placement';
 
 export const ImageTopLayout: Layout = {
-  fieldsPosition: FieldsPosition.IMAGE_TOP,
+  fieldsPlacement: FieldsPlacement.IMAGE_TOP,
   icon: ''
 };
 
 export const ImageCenterLayout: Layout = {
-  fieldsPosition: FieldsPosition.IMAGE_CENTER,
+  fieldsPlacement: FieldsPlacement.IMAGE_CENTER,
   icon: ''
 };
 
 export const ImageBottomLayout: Layout = {
-  fieldsPosition: FieldsPosition.IMAGE_BOTTOM,
+  fieldsPlacement: FieldsPlacement.IMAGE_BOTTOM,
   icon: ''
 };
 
 export const LargeTextLayout: Layout = {
-  fieldsPosition: FieldsPosition.LARGE_TEXT,
+  fieldsPlacement: FieldsPlacement.LARGE_TEXT,
   icon: ''
 };
 
 export const ImageOverlapLayout: Layout = {
-  fieldsPosition: FieldsPosition.IMAGE_OVERLAP,
+  fieldsPlacement: FieldsPlacement.IMAGE_OVERLAP,
   icon: ''
 };
