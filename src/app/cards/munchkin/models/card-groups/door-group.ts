@@ -1,4 +1,4 @@
-import { CardGroup } from 'src/app/cards/infrastructure/models/card-group';
+import { CardGroup } from 'src/app/cards/infrastructure/card-deck/deck-model/card-group';
 import { RaceType, ClassType, MonsterType, CurseType, MonsterEnhancerType, OtherDoorType } from '../card-types/door-types';
 export const Doors: CardGroup = {
   name: 'door',

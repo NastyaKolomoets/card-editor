@@ -1,6 +1,6 @@
 import { DoorCard } from './door-card';
 import { MonsterType } from '../card-types/door-types';
-import { ImageTopLayout } from '../../../infrastructure/models/layouts/layouts';
+import { ImageTopLayout } from '../../../infrastructure/card-deck/edit-card-modal/edit-card/layouts/layout-model/layouts';
 
 export class MonsterCard extends DoorCard {
   level: string;

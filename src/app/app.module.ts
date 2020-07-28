@@ -11,7 +11,7 @@ import { AuthService } from './core/auth/auth.service';
 import { MunchkinModule } from './cards/munchkin/munchkin.module';
 import 'froala-editor/js/plugins.pkgd.min.js';
 import { RouterModule } from '@angular/router';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 
 @NgModule({
@@ -27,6 +27,7 @@ import { AngularFireStorageModule } from '@angular/fire/storage';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireStorageModule,
     FormsModule,
+    ReactiveFormsModule,
     MunchkinModule
   ],
   providers: [

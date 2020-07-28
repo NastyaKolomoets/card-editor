@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Card } from '../../infrastructure/models/card';
-import { CardsService } from '../../infrastructure/services/cards.service';
-import { MunchkinCardFactory } from '../models/card-factory';
-import { ConfigService } from '../../infrastructure/services/config.service';
+// import { Card } from '../../infrastructure/card/card-model/card';
+// import { CardsService } from '../../infrastructure/card-deck/services/cards.service';
+// import { MunchkinCardResolver } from ../ models / munchkin - card - resolvery';
+// import { DeckService } from '../../infrastructure/card-deck/services/deck.service';
 
 @Component({
   selector: 'app-list-view',

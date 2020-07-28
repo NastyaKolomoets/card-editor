@@ -1,13 +1,13 @@
 import { Component, Input } from '@angular/core';
 import { MonsterCard } from '../../../models/doors/monster-card';
-import { Template } from 'src/app/cards/infrastructure/template/template';
+import { CardTemplate } from 'src/app/cards/infrastructure/cards';
 
 @Component({
 	selector: 'app-monster-card',
 	templateUrl: 'monster-card.component.html',
 	styleUrls: ['monster-card.component.css']
 })
-export class MonsterCardComponent implements Template {
+export class MonsterCardComponent implements CardTemplate {
 	@Input() card: MonsterCard;
 
 	get treasuresText() {
