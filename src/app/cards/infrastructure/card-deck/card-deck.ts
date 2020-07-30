@@ -1,8 +1,6 @@
 import { CardGroup } from './deck-config/card-group';
 import { DeckConfig } from './deck-config/deck-config';
-import { CardResolver } from './deck-config/card-resolver';
 import { CardDeckComponent } from './card-deck.component';
-import { CardFactory } from './services/card-factory';
 import { DeckConfigService } from './deck-config/deck-config.service';
 import { CardsService } from './services/cards.service';
 import { ImagesService } from './services/images.service';
@@ -14,13 +12,13 @@ import { LayoutsComponent } from './edit-card-modal/edit-card/layouts/layouts.co
 import {
   ImageTopLayout, ImageCenterLayout, ImageBottomLayout, LargeTextLayout, ImageOverlapLayout
 } from './edit-card-modal/edit-card/layouts/layout-model/layouts';
+import { CardTypeConfig } from './deck-config/card-type-config';
 
 export {
   CardGroup,
+  CardTypeConfig,
   DeckConfig,
-  CardResolver,
   CardDeckComponent,
-  CardFactory,
   DeckConfigService,
   CardsService,
   ImagesService,

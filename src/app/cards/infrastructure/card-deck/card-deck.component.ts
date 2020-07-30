@@ -5,7 +5,6 @@ import { Card, CardType } from '../card/card';
 import { CardGroup } from './deck-config/card-group';
 import { CardsService } from './services/cards.service';
 import { DeckConfigService } from './deck-config/deck-config.service';
-import { CardFactory } from './services/card-factory';
 
 @Component({
   selector: 'app-card-deck',
@@ -20,8 +19,7 @@ export class CardDeckComponent implements OnInit {
   constructor(
     private modalService: NgbModal,
     private cardsService: CardsService,
-    private deckService: DeckConfigService,
-    // private cardFactory: CardFactory
+    private deckService: DeckConfigService
   ) {
     this.groups = deckService.groups;
     this.cardTypes = deckService.cardTypes;
@@ -45,7 +43,6 @@ export class CardDeckComponent implements OnInit {
   }
 
   addCard(type: CardType) {
-    // const card = this.cardFactory.createCard(type);
     const card = this.deckService.cards.get(type.name);
     this.openModal(new card());
   }

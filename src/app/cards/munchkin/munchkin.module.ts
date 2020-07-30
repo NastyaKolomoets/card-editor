@@ -4,12 +4,9 @@ import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgbModalModule, NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FroalaEditorModule, FroalaViewModule } from 'angular-froala-wysiwyg';
-import { CardsModule, DeckConfig } from '../infrastructure/cards';
+import { CardsModule } from '../infrastructure/cards';
 
 import { MunchkinDeckComponent } from './deck/munchkin-deck.component';
-import { MunchkinCardTemplateResolver } from './munchkin-card-template-resolver';
-import { MunchkinEditTemplateResolver } from './munchkin-edit-template-resolver';
-import { MunchkinCardResolver } from './munchkin-card-resolver';
 import { MonsterCardComponent, MonsterEditComponent, MonsterType, MonsterCard } from './cards/doors/monster/monster';
 import { ClassCardComponent, ClassType, ClassCard } from './cards/doors/class/class';
 import { Doors } from './cards/doors/door-group';
@@ -47,9 +44,6 @@ import { Doors } from './cards/doors/door-group';
         useCardTemplate: ClassCardComponent
       }
     ])
-    // new MunchkinCardResolver(),
-    // new MunchkinCardTemplateResolver(),
-    // new MunchkinEditTemplateResolver())
   ]
 })
 export class MunchkinModule { }
