@@ -1,3 +1,4 @@
+import { CardGroup } from './deck-model/card-group';
 import { Deck } from './deck-model/deck';
 import { CardResolver } from './deck-model/card-resolver';
 import { CardDeckComponent } from './card-deck.component';
@@ -10,8 +11,12 @@ import { EditCardModalComponent } from './edit-card-modal/edit-card-modal.compon
 import { EditableTextFieldComponent } from './edit-card-modal/edit-card/editable-text-field/editable-text-field.component';
 import { EditCardComponent } from './edit-card-modal/edit-card/edit-card.component';
 import { LayoutsComponent } from './edit-card-modal/edit-card/layouts/layouts.component';
+import {
+  ImageTopLayout, ImageCenterLayout, ImageBottomLayout, LargeTextLayout, ImageOverlapLayout
+} from './edit-card-modal/edit-card/layouts/layout-model/layouts';
 
 export {
+  CardGroup,
   Deck,
   CardResolver,
   CardDeckComponent,
@@ -23,5 +28,10 @@ export {
   EditCardModalComponent,
   EditableTextFieldComponent,
   EditCardComponent,
-  LayoutsComponent
+  LayoutsComponent,
+  ImageTopLayout,
+  ImageCenterLayout,
+  ImageBottomLayout,
+  ImageOverlapLayout,
+  LargeTextLayout
 };

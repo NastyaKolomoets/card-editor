@@ -1,5 +1,4 @@
-import { Card } from '../../../infrastructure/card/card-model/card';
-import { CardType } from '../../../infrastructure/card/card-model/card-type';
+import { Card, CardType } from 'src/app/cards/infrastructure/cards';
 
 export class DoorCard extends Card {
   constructor(type: CardType, obj: any) {

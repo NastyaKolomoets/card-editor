@@ -1,8 +1,9 @@
-import { TemplateResolver } from 'src/app/cards/infrastructure/template/template-resolver';
-import { CardType } from 'src/app/cards/infrastructure/card/card-model/card-type';
 import { Type } from '@angular/core';
-import { MonsterType, ClassType } from '../../models/card-types/door-types';
-import { MonsterEditComponent } from './monster-edit/monster-edit.component';
+import { TemplateResolver } from '../infrastructure/template/template';
+import { CardType } from '../infrastructure/cards';
+import { MonsterType, MonsterEditComponent } from './cards/doors/monster/monster';
+import { ClassType } from './cards/doors/class/class';
+
 
 export class MunchkinEditTemplateResolver implements TemplateResolver<CardType> {
   getTemplateType(cardType: CardType): Type<any> {

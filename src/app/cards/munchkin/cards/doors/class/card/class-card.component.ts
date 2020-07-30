@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
-import { ClassCard } from '../../../models/doors/class-card';
 import { CardTemplate } from 'src/app/cards/infrastructure/cards';
+import { ClassCard } from '../model/class-card';
 
 @Component({
   selector: 'app-class-card',

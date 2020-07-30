@@ -1,6 +1,6 @@
-import { DoorCard } from './door-card';
-import { ClassType } from '../card-types/door-types';
-import { ImageBottomLayout } from '../../../infrastructure/card-deck/edit-card-modal/edit-card/layouts/layout-model/layouts';
+import { DoorCard } from '../../door-card';
+import { ClassType } from '../../../../models/card-types/door-types';
+import { ImageBottomLayout } from 'src/app/cards/infrastructure/cards';
 
 /**
  * Represents a class card. Extends [[DoorCard]].

@@ -10,7 +10,7 @@ import {
   CardDeckComponent,
   EditCardModalComponent, EditableTextFieldComponent, EditCardComponent, LayoutsComponent,
   DeckService, ImagesService, EditTemplateService, CardsService,
-  CardFactory, CardResolver
+  CardFactory, CardResolver, Deck
 } from './card-deck/card-deck';
 
 import {
@@ -83,6 +83,7 @@ import {
 })
 export class CardsModule {
   static forRoot(
+    deck: Deck,
     cardResolver: CardResolver,
     cardTemplateResolver: TemplateResolver<CardType>,
     editTemplateResolver: TemplateResolver<CardType>
@@ -90,6 +91,7 @@ export class CardsModule {
     return {
       ngModule: CardsModule,
       providers: [
+        { provide: DeckService, useValue: new DeckService(deck) },
         { provide: CardFactory, useFactory: () => new CardFactory(cardResolver) },
         { provide: CardTemplateService, useFactory: () => new CardTemplateService(cardTemplateResolver) },
         { provide: EditTemplateService, useFactory: () => new EditTemplateService(editTemplateResolver) },

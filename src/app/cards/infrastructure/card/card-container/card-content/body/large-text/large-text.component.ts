@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 import { BodyLayoutBaseComponent } from '../body-layout-base.component';
 
 @Component({
@@ -7,6 +7,4 @@ import { BodyLayoutBaseComponent } from '../body-layout-base.component';
 	styleUrls: ['large-text.component.css']
 })
 export class LargeTextComponent extends BodyLayoutBaseComponent {
-	// @Input() textFields: string[];
-	// @Input() imgUrl: string;
 }

@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
-import { MonsterCard } from '../../../models/doors/monster-card';
 import { CardTemplate } from 'src/app/cards/infrastructure/cards';
+import { MonsterCard } from '../model/monster-card';
 
 @Component({
 	selector: 'app-monster-card',

@@ -1,7 +1,10 @@
-import { DoorCard } from './door-card';
-import { MonsterType } from '../card-types/door-types';
-import { ImageTopLayout } from '../../../infrastructure/card-deck/edit-card-modal/edit-card/layouts/layout-model/layouts';
+import { DoorCard } from '../../door-card';
+import { MonsterType } from '../../../../models/card-types/door-types';
+import { ImageTopLayout } from 'src/app/cards/infrastructure/cards';
 
+/**
+ * Represents a monster card. Extends [[DoorCard]].
+ */
 export class MonsterCard extends DoorCard {
   level: string;
   extra: string;
@@ -11,7 +14,7 @@ export class MonsterCard extends DoorCard {
 
   constructor(o: any = null) {
     super(MonsterType, o);
-    this.level = o?.level || 'Рівень 1';
+    this.level = o?.level || '<p>Рівень 1</p>';
     this.extra = o?.extra || '';
     this.badStuff = o?.badStuff || '<p><strong>Паскудство:</strong> </p>';
     this.winLevels = o?.winLevels || 1;
