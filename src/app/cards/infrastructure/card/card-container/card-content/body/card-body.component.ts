@@ -1,26 +1,26 @@
 import { Component, Input, ViewChild, OnChanges, SimpleChanges } from '@angular/core';
 import { TemplateDirective, TemplateComponentFactory } from 'src/app/cards/infrastructure/template/template';
-import { ContentLayoutBaseComponent } from './content-layout-base.component';
+import { BodyLayoutBaseComponent } from './body-layout-base.component';
 import { LayoutType } from '../../../card-model/layout-type';
-import { ContentLayoutService } from './content-layout.service';
+import { BodyLayoutService } from './body-layout.service';
 
 @Component({
-  selector: 'app-card-content',
-  templateUrl: './card-content.component.html'
+  selector: 'app-card-body',
+  templateUrl: './card-body.component.html'
 })
 
-export class CardContentComponent extends ContentLayoutBaseComponent implements OnChanges {
+export class CardBodyComponent extends BodyLayoutBaseComponent implements OnChanges {
   @Input() fieldsPlacement: LayoutType;
 
   @ViewChild(TemplateDirective, { static: true }) layoutTemplate: TemplateDirective;
 
   constructor(
-    private templateService: ContentLayoutService,
-    private templateFactory: TemplateComponentFactory<LayoutType, ContentLayoutBaseComponent>) {
+    private templateService: BodyLayoutService,
+    private templateFactory: TemplateComponentFactory<LayoutType, BodyLayoutBaseComponent>) {
     super();
   }
 
-  ngOnChanges(changes: SimpleChanges): void {
+  ngOnChanges(_: SimpleChanges): void {
     this.loadLayoutComponent();
   }
 

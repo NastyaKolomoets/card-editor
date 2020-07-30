@@ -4,7 +4,7 @@ import { Component, Input } from '@angular/core';
   selector: 'app-layout',
   template: ''
 })
-export class ContentLayoutBaseComponent {
+export class BodyLayoutBaseComponent {
   @Input() firstText: string;
   @Input() secondText: string;
   @Input() imgUrl: string;

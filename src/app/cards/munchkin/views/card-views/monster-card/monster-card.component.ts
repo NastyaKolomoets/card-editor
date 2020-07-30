@@ -4,22 +4,30 @@ import { CardTemplate } from 'src/app/cards/infrastructure/cards';
 
 @Component({
 	selector: 'app-monster-card',
-	templateUrl: 'monster-card.component.html',
-	styleUrls: ['monster-card.component.css']
+	templateUrl: 'monster-card.component.html'
 })
 export class MonsterCardComponent implements CardTemplate {
 	@Input() card: MonsterCard;
 
-	get treasuresText() {
+	get winLevelsText() {
+		return this.card.winLevels > 1 ? `${this.card.winLevels} Рівні` : '';
+	}
+
+	get winTreasuresText() {
+		let text = '';
 		switch (this.card.winTreasures) {
 			case 1:
-				return 'Скарб';
+				text = 'Скарб';
+				break;
 			case 2:
 			case 3:
 			case 4:
-				return 'Скарби';
+				text = 'Скарби';
+				break;
 			default:
-				return 'Скарбів';
+				text = 'Скарбів';
 		}
+
+		return `${this.card.winTreasures} ${text}`;
 	}
 }

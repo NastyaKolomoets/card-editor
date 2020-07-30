@@ -42,7 +42,7 @@
     right: 0;
 }
 
-.custom-card .custom-card-content {
+.custom-card .custom-card-body {
     position: relative;
     top: 2%;
     left: 0;
@@ -64,7 +64,7 @@
     font-weight: 600;
 }
 
-.custom-card-content p {
+.custom-card-body p {
     margin: 0;
     font-size: .5em;
 }

@@ -20,16 +20,18 @@ import {
 import {
   CardType, CardContainerComponent, CardTemplateService,
   CardBodyComponent, CardContentComponent,
-  ContentLayoutBaseComponent,
+  BodyLayoutBaseComponent,
   TextFieldComponent, ImgFieldComponent,
   ImageTopComponent, ImageBottomComponent, ImageOverlapComponent, LargeTextComponent, ImageCenterComponent,
-  ContentLayoutResolver, ContentLayoutService
+  BodyLayoutResolver, BodyLayoutService, CardHeaderComponent, CardFooterComponent
 } from './card/card';
 
 @NgModule({
   declarations: [
     CardContainerComponent,
+    CardHeaderComponent,
     CardBodyComponent,
+    CardFooterComponent,
     TextFieldComponent,
     ImgFieldComponent,
     ImageTopComponent,
@@ -37,7 +39,7 @@ import {
     ImageOverlapComponent,
     LargeTextComponent,
     ImageCenterComponent,
-    ContentLayoutBaseComponent,
+    BodyLayoutBaseComponent,
     CardContentComponent,
     CardDeckComponent,
     EditCardModalComponent,
@@ -59,7 +61,9 @@ import {
   ],
   exports: [
     CardContainerComponent,
+    CardHeaderComponent,
     CardBodyComponent,
+    CardFooterComponent,
     CardContentComponent,
     TextFieldComponent,
     ImgFieldComponent,
@@ -67,14 +71,11 @@ import {
     EditableTextFieldComponent
   ],
   providers: [
-    // CardFactory,
     DeckService,
     CardsService,
     ImagesService,
-    // CardTemplateService,
     EditTemplateService,
-    { provide: ContentLayoutService, useValue: new ContentLayoutService(new ContentLayoutResolver()) }
-    // TemplateComponentFactory
+    { provide: BodyLayoutService, useValue: new BodyLayoutService(new BodyLayoutResolver()) }
   ],
   entryComponents: [
     EditCardModalComponent

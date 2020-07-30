@@ -2,13 +2,13 @@
     <img src="{{backgroundImg}}" alt="background">
     <div class="card-body details card-img-overlay">
         <div class="custom-card-header">
-            <ng-content select="div[role=header]"></ng-content>
+            <ng-content select="app-card-header"></ng-content>
         </div>
-        <div class="custom-card-content">
-            <ng-content select="app-card-content"></ng-content>
+        <div class="custom-card-body">
+            <ng-content select="app-card-body"></ng-content>
         </div>
         <div class="custom-card-footer">
-            <ng-content select="div[role=footer]"></ng-content>
+            <ng-content select="app-card-footer"></ng-content>
         </div>
     </div>
 </div>
