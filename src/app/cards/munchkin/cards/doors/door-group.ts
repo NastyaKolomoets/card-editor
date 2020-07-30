@@ -7,12 +7,12 @@ export const Doors: CardGroup = {
   name: 'door',
   displayName: 'Двері',
   displayNamePlural: 'Двері',
-  cardTypes: [
-    // RaceType,
-    ClassType,
-    MonsterType
-    // CurseType,
-    // MonsterEnhancerType,
-    // OtherDoorType
-  ]
+  // cardTypes: [
+  //   // RaceType,
+  //   ClassType,
+  //   MonsterType
+  //   // CurseType,
+  //   // MonsterEnhancerType,
+  //   // OtherDoorType
+  // ]
 };

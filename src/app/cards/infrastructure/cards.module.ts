@@ -1,4 +1,4 @@
-import { NgModule, ModuleWithProviders } from '@angular/core';
+import { NgModule, ModuleWithProviders, Type } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { AngularFireStorageModule } from '@angular/fire/storage';
@@ -9,8 +9,8 @@ import { FroalaViewModule, FroalaEditorModule } from 'angular-froala-wysiwyg';
 import {
   CardDeckComponent,
   EditCardModalComponent, EditableTextFieldComponent, EditCardComponent, LayoutsComponent,
-  DeckService, ImagesService, EditTemplateService, CardsService,
-  CardFactory, CardResolver, Deck
+  DeckConfigService, ImagesService, EditTemplateService, CardsService,
+  CardFactory, CardResolver, DeckConfig, CardGroup
 } from './card-deck/card-deck';
 
 import {
@@ -23,8 +23,12 @@ import {
   BodyLayoutBaseComponent,
   TextFieldComponent, ImgFieldComponent,
   ImageTopComponent, ImageBottomComponent, ImageOverlapComponent, LargeTextComponent, ImageCenterComponent,
-  BodyLayoutResolver, BodyLayoutService, CardHeaderComponent, CardFooterComponent
+  BodyLayoutResolver, BodyLayoutService, CardHeaderComponent, CardFooterComponent, CardTemplate, Card
 } from './card/card';
+import { EditCardTemplate } from './card-deck/edit-card-modal/edit-card/edit-card-template';
+import { CardTypeConfig } from './cards';
+import { CardTemplateResolver } from './card/card-container/card-template-resolver';
+import { EditTemplateResolver } from './card-deck/edit-card-modal/edit-card/edit-template-resolver';
 
 @NgModule({
   declarations: [
@@ -71,9 +75,12 @@ import {
     EditableTextFieldComponent
   ],
   providers: [
-    DeckService,
+    DeckConfigService,
     CardsService,
     ImagesService,
+    CardTemplateResolver,
+    CardTemplateService,
+    EditTemplateResolver,
     EditTemplateService,
     { provide: BodyLayoutService, useValue: new BodyLayoutService(new BodyLayoutResolver()) }
   ],
@@ -82,19 +89,26 @@ import {
   ]
 })
 export class CardsModule {
-  static forRoot(
-    deck: Deck,
-    cardResolver: CardResolver,
-    cardTemplateResolver: TemplateResolver<CardType>,
-    editTemplateResolver: TemplateResolver<CardType>
+  static forRoot(config: CardTypeConfig[]
+    // deck: Deck,
+    // cardResolver: CardResolver,
+    // cardTemplateResolver: TemplateResolver<CardType>,
+    // editTemplateResolver: TemplateResolver<CardType>
   ): ModuleWithProviders {
+    // registerCardGroup(cardGroup: CardGroup) {
+    //   this.deck.groups.push(cardGroup);
+    // }
+
+    // registerCardType(cardType: CardType, cardGroup: CardGroup) {
+    //   this.deck.groups.find(x => x.name === cardGroup.name).cardTypes.push(cardType);
+    // }
     return {
       ngModule: CardsModule,
       providers: [
-        { provide: DeckService, useValue: new DeckService(deck) },
-        { provide: CardFactory, useFactory: () => new CardFactory(cardResolver) },
-        { provide: CardTemplateService, useFactory: () => new CardTemplateService(cardTemplateResolver) },
-        { provide: EditTemplateService, useFactory: () => new EditTemplateService(editTemplateResolver) },
+        { provide: DeckConfigService, useValue: new DeckConfigService(new DeckConfig(config)) },
+        // { provide: CardFactory, useFactory: () => new CardFactory(cardResolver) },
+        // { provide: CardTemplateService, useFactory: () => new CardTemplateService(cardTemplateResolver) },
+        // { provide: EditTemplateService, useFactory: () => new EditTemplateService(editTemplateResolver) },
       ]
     };
   }

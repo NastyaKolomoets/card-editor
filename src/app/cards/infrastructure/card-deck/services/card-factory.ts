@@ -1,4 +1,4 @@
-import { CardResolver } from '../deck-model/card-resolver';
+import { CardResolver } from '../deck-config/card-resolver';
 import { CardType, Card } from '../../card/card';
 
 export class CardFactory {

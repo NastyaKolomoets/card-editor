@@ -9,7 +9,7 @@
           </a>
         </h2>
         <div class="list-group">
-          <ng-container *ngFor="let type of group.cardTypes">
+          <ng-container *ngFor="let type of cardTypes.get(group.name)">
             <div id="doors" role="tablist" aria-multiselectable="true">
               <div class="list-group-item">
                 <div role="tab" id="{{type.name}}" class="text-capitalize">

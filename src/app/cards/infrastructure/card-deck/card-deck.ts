@@ -1,9 +1,9 @@
-import { CardGroup } from './deck-model/card-group';
-import { Deck } from './deck-model/deck';
-import { CardResolver } from './deck-model/card-resolver';
+import { CardGroup } from './deck-config/card-group';
+import { DeckConfig } from './deck-config/deck-config';
+import { CardResolver } from './deck-config/card-resolver';
 import { CardDeckComponent } from './card-deck.component';
 import { CardFactory } from './services/card-factory';
-import { DeckService } from './services/deck.service';
+import { DeckConfigService } from './deck-config/deck-config.service';
 import { CardsService } from './services/cards.service';
 import { ImagesService } from './services/images.service';
 import { EditTemplateService } from './edit-card-modal/edit-card/edit-template.service';
@@ -17,11 +17,11 @@ import {
 
 export {
   CardGroup,
-  Deck,
+  DeckConfig,
   CardResolver,
   CardDeckComponent,
   CardFactory,
-  DeckService,
+  DeckConfigService,
   CardsService,
   ImagesService,
   EditTemplateService,

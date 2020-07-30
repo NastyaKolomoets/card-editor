@@ -4,5 +4,5 @@ export class CardGroup {
   name: string;
   displayName: string;
   displayNamePlural: string;
-  cardTypes: CardType[];
+  // cardTypes: CardType[];
 }
