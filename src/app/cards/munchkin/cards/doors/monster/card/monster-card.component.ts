@@ -9,6 +9,10 @@ import { MonsterCard } from '../model/monster-card';
 export class MonsterCardComponent implements CardTemplate {
 	@Input() card: MonsterCard;
 
+	get levelText() {
+		return `Рівень ${this.card.level}`;
+	}
+
 	get winLevelsText() {
 		return this.card.winLevels > 1 ? `${this.card.winLevels} Рівні` : '';
 	}
