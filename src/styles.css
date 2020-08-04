@@ -6,15 +6,18 @@
 }
 
 .card-sm {
-    max-width: 15%;
+    min-width: 200px;
+    max-width: 200px;
 }
 
 .card-sm .custom-card {
-    font-size: 1rem;
+    width: 200px;
+    font-size: 1.5em;
 }
 
 .card-md .custom-card {
-    font-size: 2.25rem;
+    width: 300px;
+    font-size: 2.25em;
 }
 
 .list-group a {
@@ -39,7 +42,7 @@
     right: 0;
 }
 
-.custom-card .custom-card-content {
+.custom-card .custom-card-body {
     position: relative;
     top: 2%;
     left: 0;
@@ -61,7 +64,7 @@
     font-weight: 600;
 }
 
-.custom-card-content p {
+.custom-card-body p {
     margin: 0;
     font-size: .5em;
 }

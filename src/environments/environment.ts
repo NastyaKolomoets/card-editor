@@ -8,7 +8,7 @@ export const environment = {
     // ***********************************************************************************************************************
     // * TODO(DEVELOPER): Update values according to: Firebase Console > Overview > Add Firebase to your web app. *
     // ***********************************************************************************************************************
-    apiKey: '',
+    apiKey: 'AIzaSyCEU5aF2drSOR6u3TEBx0bOg3L0slz- 7i0',
     authDomain: 'localhost',
     databaseURL: 'https://munchkin-card-editor.firebaseio.com',
     projectId: 'munchkin-card-editor',

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from './services/auth.service';
+import { AuthService } from './core/auth/auth.service';
 import { Observable } from 'rxjs';
 import { AngularFireDatabase } from '@angular/fire/database';
 import { AngularFireAuth } from '@angular/fire/auth';
@@ -23,7 +23,6 @@ export class AppComponent implements OnInit {
   constructor(public db: AngularFireDatabase, public afAuth: AngularFireAuth) {
     this.user = afAuth.authState;
     this.user.subscribe((user: firebase.User) => {
-      console.log(user);
       this.currentUser = user;
     });
   }
