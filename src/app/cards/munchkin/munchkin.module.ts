@@ -11,6 +11,7 @@ import { MonsterCardComponent, MonsterEditComponent, MonsterType, MonsterCard } 
 import { ClassCardComponent, ClassType, ClassCard, ClassEditComponent } from './cards/doors/class/class';
 import { Doors } from './cards/doors/door-group';
 import { RaceType, RaceCard, RaceCardComponent, RaceEditComponent } from './cards/doors/race/race';
+import { CurseCardComponent, CurseEditComponent, CurseType, CurseCard } from './cards/doors/curse/curse';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,9 @@ import { RaceType, RaceCard, RaceCardComponent, RaceEditComponent } from './card
     ClassCardComponent,
     ClassEditComponent,
     RaceCardComponent,
-    RaceEditComponent
+    RaceEditComponent,
+    CurseCardComponent,
+    CurseEditComponent
   ],
   entryComponents: [
   ],
@@ -54,6 +57,13 @@ import { RaceType, RaceCard, RaceCardComponent, RaceEditComponent } from './card
         useCard: MonsterCard,
         useCardTemplate: MonsterCardComponent,
         useEditTemplate: MonsterEditComponent
+      },
+      {
+        cardType: CurseType,
+        belongsToGroup: Doors,
+        useCard: CurseCard,
+        useCardTemplate: CurseCardComponent,
+        useEditTemplate: CurseEditComponent
       }
     ])
   ]
