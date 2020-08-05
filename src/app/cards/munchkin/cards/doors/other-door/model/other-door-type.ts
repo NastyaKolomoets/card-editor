@@ -7,7 +7,6 @@ export const OtherDoorType: CardType = {
   displayNamePlural: 'Інше',
   availableLayouts: [
     LayoutType.IMAGE_TOP,
-    LayoutType.IMAGE_CENTER,
     LayoutType.IMAGE_BOTTOM,
     LayoutType.IMAGE_OVERLAP
   ]
