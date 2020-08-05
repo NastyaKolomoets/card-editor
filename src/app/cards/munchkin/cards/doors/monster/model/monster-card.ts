@@ -1,5 +1,5 @@
 import { DoorCard } from '../../door-card';
-import { MonsterType } from '../../../../models/card-types/door-types';
+import { MonsterType } from './monster-type';
 import { ImageTopLayout } from 'src/app/cards/infrastructure/cards';
 
 /**
