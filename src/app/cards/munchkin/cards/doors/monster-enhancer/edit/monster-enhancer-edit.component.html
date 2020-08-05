@@ -1,0 +1,9 @@
+<div>
+  <app-editable-string [(string)]="card.name" [label]="'name'"></app-editable-string>
+
+  <app-editable-number [(number)]="card.enhancerValue" [min]="-10" [max]="10" [step]="5" [label]="'enhancer'">
+  </app-editable-number>
+
+  <app-editable-rich-text [(text)]="card.description" [label]="'description'" [multiline]="'true'">
+  </app-editable-rich-text>
+</div>

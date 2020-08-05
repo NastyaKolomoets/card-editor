@@ -3,6 +3,10 @@ app-curse-card .extra-top p {
   font-size: 1em;
 }
 
+app-monster-enhancer-card .extra-bottom p {
+  font-size: 1em;
+}
+
 .card-md {
     max-width: 45%;
     margin: 0 auto;

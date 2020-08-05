@@ -8,10 +8,11 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 export class EditableNumberComponent {
 
   @Input() label: string;
-  @Input() min: string;
-  @Input() max: string;
+  @Input() min: number;
+  @Input() max: number;
+  @Input() step: number;
 
-  numberValue: string;
+  numberValue: number;
   @Output() numberChange = new EventEmitter();
   @Input()
   get number() {
