@@ -3,7 +3,7 @@ import { OtherDoorType } from './other-door-type';
 import { ImageBottomLayout } from 'src/app/cards/infrastructure/cards';
 
 /**
- * Represents a other door card. Extends [[DoorCard]].
+ * Represents an other door card. Extends [[DoorCard]].
  */
 export class OtherDoorCard extends DoorCard {
 
