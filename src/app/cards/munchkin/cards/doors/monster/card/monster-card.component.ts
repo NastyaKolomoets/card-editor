@@ -16,7 +16,6 @@ export class MonsterCardComponent implements CardTemplate {
 
 	get badStuff() {
 		return prependRichText(this.card.badStuff, '<strong>Паскудство:</strong>', 'p');
-		// return `<p><strong>Паскудство: </strong>${trimTag(this.card.badStuff, 'p')}</p>`;
 	}
 
 	get winLevels() {
