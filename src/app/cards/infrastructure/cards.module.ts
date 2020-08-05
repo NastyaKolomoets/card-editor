@@ -8,10 +8,13 @@ import { FroalaViewModule, FroalaEditorModule } from 'angular-froala-wysiwyg';
 
 import {
   CardDeckComponent,
-  EditCardModalComponent, EditableTextFieldComponent, EditCardComponent, LayoutsComponent,
+  EditCardModalComponent, EditCardComponent, LayoutsComponent,
   DeckConfigService, ImagesService, EditTemplateService, CardsService,
   DeckConfig,
-  CardTypeConfig
+  CardTypeConfig,
+  EditableRichTextComponent,
+  EditableStringComponent,
+  EditableNumberComponent
 } from './card-deck/card-deck';
 
 import {
@@ -46,7 +49,9 @@ import { EditTemplateResolver } from './card-deck/edit-card-modal/edit-card/edit
     CardContentComponent,
     CardDeckComponent,
     EditCardModalComponent,
-    EditableTextFieldComponent,
+    EditableRichTextComponent,
+    EditableStringComponent,
+    EditableNumberComponent,
     EditCardComponent,
     LayoutsComponent
   ],
@@ -71,7 +76,9 @@ import { EditTemplateResolver } from './card-deck/edit-card-modal/edit-card/edit
     TextFieldComponent,
     ImgFieldComponent,
     CardDeckComponent,
-    EditableTextFieldComponent
+    EditableRichTextComponent,
+    EditableStringComponent,
+    EditableNumberComponent
   ],
   providers: [
     DeckConfigService,

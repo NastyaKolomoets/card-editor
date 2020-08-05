@@ -10,16 +10,8 @@ export class ClassCard extends DoorCard {
   firstAbilityName: string;
   firstAbilityDescription: string;
 
-  public get firstAbilityText(): string {
-    return `<p><strong>${this.firstAbilityName}:</strong> ${this.firstAbilityDescription}`;
-  }
-
   secondAbilityName: string;
   secondAbilityDescription: string;
-
-  public get secondAbilityText(): string {
-    return `<p><strong>${this.secondAbilityName}:</strong> ${this.secondAbilityDescription}`;
-  }
 
   constructor(o: any = null) {
     super(ClassType, o);

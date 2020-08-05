@@ -1,0 +1,12 @@
+<div>
+  <app-editable-string [(string)]="card.name" [label]="'name'"></app-editable-string>
+
+  <app-editable-string [(string)]="card.firstAbilityName" [label]="'first ability name'"></app-editable-string>
+  <app-editable-rich-text [(text)]="card.firstAbilityDescription" [label]="'first ability description'"
+    [multiline]="'true'">
+  </app-editable-rich-text>
+  <app-editable-string [(string)]="card.secondAbilityName" [label]="'second ability name'"></app-editable-string>
+  <app-editable-rich-text [(text)]="card.secondAbilityDescription" [label]="'second ability description'"
+    [multiline]="'true'">
+  </app-editable-rich-text>
+</div>

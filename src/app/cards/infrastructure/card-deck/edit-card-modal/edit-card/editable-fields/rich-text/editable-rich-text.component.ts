@@ -1,10 +1,11 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
-  selector: 'app-editable-text-field',
-  templateUrl: './editable-text-field.component.html'
+  selector: 'app-editable-rich-text',
+  templateUrl: './editable-rich-text.component.html',
+  styleUrls: ['./editable-rich-text.component.css']
 })
-export class EditableTextFieldComponent {
+export class EditableRichTextComponent {
 
   @Input()
   multiline = false;

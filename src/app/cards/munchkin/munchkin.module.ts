@@ -10,13 +10,15 @@ import { MunchkinDeckComponent } from './deck/munchkin-deck.component';
 import { MonsterCardComponent, MonsterEditComponent, MonsterType, MonsterCard } from './cards/doors/monster/monster';
 import { ClassCardComponent, ClassType, ClassCard } from './cards/doors/class/class';
 import { Doors } from './cards/doors/door-group';
+import { ClassEditComponent } from './cards/doors/class/edit/class-edit.component';
 
 @NgModule({
   declarations: [
     MunchkinDeckComponent,
     MonsterCardComponent,
     MonsterEditComponent,
-    ClassCardComponent
+    ClassCardComponent,
+    ClassEditComponent
   ],
   entryComponents: [
   ],
@@ -41,7 +43,8 @@ import { Doors } from './cards/doors/door-group';
         cardType: ClassType,
         belongsToGroup: Doors,
         useCard: ClassCard,
-        useCardTemplate: ClassCardComponent
+        useCardTemplate: ClassCardComponent,
+        useEditTemplate: ClassEditComponent
       }
     ])
   ]
