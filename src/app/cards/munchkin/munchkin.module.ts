@@ -8,9 +8,9 @@ import { CardsModule } from '../infrastructure/cards';
 
 import { MunchkinDeckComponent } from './deck/munchkin-deck.component';
 import { MonsterCardComponent, MonsterEditComponent, MonsterType, MonsterCard } from './cards/doors/monster/monster';
-import { ClassCardComponent, ClassType, ClassCard } from './cards/doors/class/class';
+import { ClassCardComponent, ClassType, ClassCard, ClassEditComponent } from './cards/doors/class/class';
 import { Doors } from './cards/doors/door-group';
-import { ClassEditComponent } from './cards/doors/class/edit/class-edit.component';
+import { RaceType, RaceCard, RaceCardComponent, RaceEditComponent } from './cards/doors/race/race';
 
 @NgModule({
   declarations: [
@@ -18,7 +18,9 @@ import { ClassEditComponent } from './cards/doors/class/edit/class-edit.componen
     MonsterCardComponent,
     MonsterEditComponent,
     ClassCardComponent,
-    ClassEditComponent
+    ClassEditComponent,
+    RaceCardComponent,
+    RaceEditComponent
   ],
   entryComponents: [
   ],
@@ -33,11 +35,11 @@ import { ClassEditComponent } from './cards/doors/class/edit/class-edit.componen
     FroalaViewModule.forRoot(),
     CardsModule.forRoot([
       {
-        cardType: MonsterType,
+        cardType: RaceType,
         belongsToGroup: Doors,
-        useCard: MonsterCard,
-        useCardTemplate: MonsterCardComponent,
-        useEditTemplate: MonsterEditComponent
+        useCard: RaceCard,
+        useCardTemplate: RaceCardComponent,
+        useEditTemplate: RaceEditComponent
       },
       {
         cardType: ClassType,
@@ -45,6 +47,13 @@ import { ClassEditComponent } from './cards/doors/class/edit/class-edit.componen
         useCard: ClassCard,
         useCardTemplate: ClassCardComponent,
         useEditTemplate: ClassEditComponent
+      },
+      {
+        cardType: MonsterType,
+        belongsToGroup: Doors,
+        useCard: MonsterCard,
+        useCardTemplate: MonsterCardComponent,
+        useEditTemplate: MonsterEditComponent
       }
     ])
   ]
