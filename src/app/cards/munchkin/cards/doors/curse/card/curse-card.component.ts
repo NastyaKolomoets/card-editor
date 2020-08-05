@@ -4,8 +4,7 @@ import { CurseCard } from '../model/curse-card';
 
 @Component({
   selector: 'app-curse-card',
-  templateUrl: './curse-card.component.html',
-  styleUrls: ['./curse-card.component.css']
+  templateUrl: './curse-card.component.html'
 })
 export class CurseCardComponent implements CardTemplate {
   @Input() card: CurseCard;
