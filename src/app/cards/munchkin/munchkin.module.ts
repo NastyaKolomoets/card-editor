@@ -16,6 +16,7 @@ import {
   MonsterEnhancerCardComponent, MonsterEnhancerEditComponent, MonsterEnhancerType, MonsterEnhancerCard
 } from './cards/doors/monster-enhancer/monster-enhancer';
 import { OtherDoorCardComponent, OtherDoorEditComponent, OtherDoorType, OtherDoorCard } from './cards/doors/other-door/other-door';
+import { HirelingCardComponent, HirelingEditComponent, HirelingType, HirelingCard } from './cards/doors/hireling/hireling';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,9 @@ import { OtherDoorCardComponent, OtherDoorEditComponent, OtherDoorType, OtherDoo
     MonsterEnhancerCardComponent,
     MonsterEnhancerEditComponent,
     OtherDoorCardComponent,
-    OtherDoorEditComponent
+    OtherDoorEditComponent,
+    HirelingCardComponent,
+    HirelingEditComponent
   ],
   entryComponents: [
   ],
@@ -79,6 +82,13 @@ import { OtherDoorCardComponent, OtherDoorEditComponent, OtherDoorType, OtherDoo
         useCard: MonsterEnhancerCard,
         useCardTemplate: MonsterEnhancerCardComponent,
         useEditTemplate: MonsterEnhancerEditComponent
+      },
+      {
+        cardType: HirelingType,
+        belongsToGroup: Doors,
+        useCard: HirelingCard,
+        useCardTemplate: HirelingCardComponent,
+        useEditTemplate: HirelingEditComponent
       },
       {
         cardType: OtherDoorType,
