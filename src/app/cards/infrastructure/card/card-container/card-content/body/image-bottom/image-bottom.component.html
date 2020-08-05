@@ -1,3 +1,3 @@
-<app-text-field [(text)]="firstText"></app-text-field>
-<app-text-field [(text)]="secondText"></app-text-field>
+<app-text-field *ngIf="firstText" [(text)]="firstText"></app-text-field>
+<app-text-field *ngIf="secondText" [(text)]="secondText"></app-text-field>
 <app-img-field [(img)]="imgUrl"></app-img-field>
