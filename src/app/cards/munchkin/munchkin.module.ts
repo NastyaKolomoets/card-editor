@@ -15,6 +15,7 @@ import { CurseCardComponent, CurseEditComponent, CurseType, CurseCard } from './
 import {
   MonsterEnhancerCardComponent, MonsterEnhancerEditComponent, MonsterEnhancerType, MonsterEnhancerCard
 } from './cards/doors/monster-enhancer/monster-enhancer';
+import { OtherDoorCardComponent, OtherDoorEditComponent, OtherDoorType, OtherDoorCard } from './cards/doors/other-door/other-door';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,9 @@ import {
     CurseCardComponent,
     CurseEditComponent,
     MonsterEnhancerCardComponent,
-    MonsterEnhancerEditComponent
+    MonsterEnhancerEditComponent,
+    OtherDoorCardComponent,
+    OtherDoorEditComponent
   ],
   entryComponents: [
   ],
@@ -76,6 +79,13 @@ import {
         useCard: MonsterEnhancerCard,
         useCardTemplate: MonsterEnhancerCardComponent,
         useEditTemplate: MonsterEnhancerEditComponent
+      },
+      {
+        cardType: OtherDoorType,
+        belongsToGroup: Doors,
+        useCard: OtherDoorCard,
+        useCardTemplate: OtherDoorCardComponent,
+        useEditTemplate: OtherDoorEditComponent
       }
     ])
   ]

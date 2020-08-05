@@ -1,4 +1,4 @@
-import { RaceType } from '../../../models/card-types/door-types';
+import { RaceType } from './model/race-type';
 import { RaceCard } from './model/race-card';
 import { RaceCardComponent } from './card/race-card.component';
 import { RaceEditComponent } from './edit/race-edit.component';

@@ -1,5 +1,5 @@
 import { DoorCard } from '../../door-card';
-import { ClassType } from '../../../../models/card-types/door-types';
+import { ClassType } from './class-type';
 import { ImageBottomLayout } from 'src/app/cards/infrastructure/cards';
 
 /**
