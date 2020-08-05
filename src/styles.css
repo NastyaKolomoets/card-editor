@@ -1,4 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
+app-curse-card .extra-top p {
+  font-size: 1em;
+}
 
 .card-md {
     max-width: 45%;
