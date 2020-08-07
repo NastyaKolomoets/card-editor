@@ -21,6 +21,9 @@ import {
   PermanentItemCardComponent, PermanentItemEditComponent, PermanentItemType, PermanentItemCard
 } from './cards/treasures/permanent-item/permanent-item';
 import { Treasures } from './cards/treasures/treasure-group';
+import {
+  DisposableItemCardComponent, DisposableItemEditComponent, DisposableItemType, DisposableItemCard
+} from './cards/treasures/disposable-item/disposable-item';
 
 @NgModule({
   declarations: [
@@ -40,7 +43,9 @@ import { Treasures } from './cards/treasures/treasure-group';
     HirelingCardComponent,
     HirelingEditComponent,
     PermanentItemCardComponent,
-    PermanentItemEditComponent
+    PermanentItemEditComponent,
+    DisposableItemCardComponent,
+    DisposableItemEditComponent
   ],
   entryComponents: [
   ],
@@ -109,6 +114,13 @@ import { Treasures } from './cards/treasures/treasure-group';
         useCard: PermanentItemCard,
         useCardTemplate: PermanentItemCardComponent,
         useEditTemplate: PermanentItemEditComponent
+      },
+      {
+        cardType: DisposableItemType,
+        belongsToGroup: Treasures,
+        useCard: DisposableItemCard,
+        useCardTemplate: DisposableItemCardComponent,
+        useEditTemplate: DisposableItemEditComponent
       }
     ])
   ]
