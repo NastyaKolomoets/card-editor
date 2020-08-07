@@ -36,35 +36,6 @@ app-monster-enhancer-card .extra-bottom p {
     color: black;
 }
 
-.custom-card {
-    position: relative;
-    color: black;
-    font-size: 1rem;
-}
-
-.custom-card .custom-card-header {
-    position: relative;
-    top: 2%;
-    left: 0;
-    right: 0;
-}
-
-.custom-card .custom-card-body {
-    position: relative;
-    top: 2%;
-    left: 0;
-    right: 0;
-    padding: 0 5%;
-    height: 75%;
-}
-
-.custom-card .custom-card-footer {
-    position: absolute;
-    bottom: 5%;
-    left: 10%;
-    right: 10%;
-}
-
 .custom-card-header p {
     margin: 0;
     font-size: .75em;
@@ -74,11 +45,4 @@ app-monster-enhancer-card .extra-bottom p {
 .custom-card-body p {
     margin: 0;
     font-size: .5em;
-}
-
-.custom-card-footer p {
-    margin: 0;
-    font-size: .5em;
-    font-weight: 500;
-    white-space: nowrap;
 }

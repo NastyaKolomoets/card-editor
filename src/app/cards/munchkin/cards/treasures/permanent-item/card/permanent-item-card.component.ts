@@ -10,6 +10,16 @@ export class PermanentItemCardComponent implements CardTemplate {
   @Input() card: PermanentItemCard;
 
   get bonus() {
-    return `Бонус +${this.card.bonus}`;
+    return this.card.bonus ? `Бонус +${this.card.bonus}` : '';
+  }
+
+  get huge() {
+    return this.card.isHuge ? 'Велика' : '';
+  }
+
+  get leftText() {
+    return this.card.isHuge
+      ? `${this.card.kind} ${this.huge}`
+      : this.card.kind;
   }
 }
