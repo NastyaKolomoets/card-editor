@@ -17,6 +17,10 @@ import {
 } from './cards/doors/monster-enhancer/monster-enhancer';
 import { OtherDoorCardComponent, OtherDoorEditComponent, OtherDoorType, OtherDoorCard } from './cards/doors/other-door/other-door';
 import { HirelingCardComponent, HirelingEditComponent, HirelingType, HirelingCard } from './cards/doors/hireling/hireling';
+import {
+  PermanentItemCardComponent, PermanentItemEditComponent, PermanentItemType, PermanentItemCard
+} from './cards/treasures/permanent-item/permanent-item';
+import { Treasures } from './cards/treasures/treasure-group';
 
 @NgModule({
   declarations: [
@@ -34,7 +38,9 @@ import { HirelingCardComponent, HirelingEditComponent, HirelingType, HirelingCar
     OtherDoorCardComponent,
     OtherDoorEditComponent,
     HirelingCardComponent,
-    HirelingEditComponent
+    HirelingEditComponent,
+    PermanentItemCardComponent,
+    PermanentItemEditComponent
   ],
   entryComponents: [
   ],
@@ -96,6 +102,13 @@ import { HirelingCardComponent, HirelingEditComponent, HirelingType, HirelingCar
         useCard: OtherDoorCard,
         useCardTemplate: OtherDoorCardComponent,
         useEditTemplate: OtherDoorEditComponent
+      },
+      {
+        cardType: PermanentItemType,
+        belongsToGroup: Treasures,
+        useCard: PermanentItemCard,
+        useCardTemplate: PermanentItemCardComponent,
+        useEditTemplate: PermanentItemEditComponent
       }
     ])
   ]
