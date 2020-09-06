@@ -24,6 +24,7 @@ import { Treasures } from './cards/treasures/treasure-group';
 import {
   DisposableItemCardComponent, DisposableItemEditComponent, DisposableItemType, DisposableItemCard
 } from './cards/treasures/disposable-item/disposable-item';
+import { LevelUpCardComponent, LevelUpEditComponent, LevelUpType, LevelUpCard } from './cards/treasures/level-up/level-up';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,9 @@ import {
     PermanentItemCardComponent,
     PermanentItemEditComponent,
     DisposableItemCardComponent,
-    DisposableItemEditComponent
+    DisposableItemEditComponent,
+    LevelUpCardComponent,
+    LevelUpEditComponent
   ],
   entryComponents: [
   ],
@@ -121,6 +124,13 @@ import {
         useCard: DisposableItemCard,
         useCardTemplate: DisposableItemCardComponent,
         useEditTemplate: DisposableItemEditComponent
+      },
+      {
+        cardType: LevelUpType,
+        belongsToGroup: Treasures,
+        useCard: LevelUpCard,
+        useCardTemplate: LevelUpCardComponent,
+        useEditTemplate: LevelUpEditComponent
       }
     ])
   ]
