@@ -4,7 +4,7 @@ import { ImageBottomLayout } from 'src/app/cards/infrastructure/cards';
 import { TreasureCard } from '../../treasure-card';
 
 /**
- * Represents a disposable item card. Extends [[DoorCard]].
+ * Represents a disposable item card. Extends [[TreasureCard]].
  */
 export class DisposableItemCard extends TreasureCard {
 
