@@ -18,12 +18,12 @@ import {
 import { OtherDoorCardComponent, OtherDoorEditComponent, OtherDoorType, OtherDoorCard } from './cards/doors/other-door/other-door';
 import { HirelingCardComponent, HirelingEditComponent, HirelingType, HirelingCard } from './cards/doors/hireling/hireling';
 import {
-  PermanentItemCardComponent, PermanentItemEditComponent, PermanentItemType, PermanentItemCard
-} from './cards/treasures/permanent-item/permanent-item';
+  ReusableItemCardComponent, ReusableItemEditComponent, ReusableItemType, ReusableItemCard
+} from './cards/treasures/reusable-item/reusable-item';
 import { Treasures } from './cards/treasures/treasure-group';
 import {
-  DisposableItemCardComponent, DisposableItemEditComponent, DisposableItemType, DisposableItemCard
-} from './cards/treasures/disposable-item/disposable-item';
+  SingleUseItemCardComponent, SingleUseItemEditComponent, SingleUseItemType, SingleUseItemCard
+} from './cards/treasures/single-use-item/single-use-item';
 import { LevelUpCardComponent, LevelUpEditComponent, LevelUpType, LevelUpCard } from './cards/treasures/level-up/level-up';
 
 @NgModule({
@@ -43,10 +43,10 @@ import { LevelUpCardComponent, LevelUpEditComponent, LevelUpType, LevelUpCard } 
     OtherDoorEditComponent,
     HirelingCardComponent,
     HirelingEditComponent,
-    PermanentItemCardComponent,
-    PermanentItemEditComponent,
-    DisposableItemCardComponent,
-    DisposableItemEditComponent,
+    ReusableItemCardComponent,
+    ReusableItemEditComponent,
+    SingleUseItemCardComponent,
+    SingleUseItemEditComponent,
     LevelUpCardComponent,
     LevelUpEditComponent
   ],
@@ -112,18 +112,18 @@ import { LevelUpCardComponent, LevelUpEditComponent, LevelUpType, LevelUpCard } 
         useEditTemplate: OtherDoorEditComponent
       },
       {
-        cardType: PermanentItemType,
+        cardType: ReusableItemType,
         belongsToGroup: Treasures,
-        useCard: PermanentItemCard,
-        useCardTemplate: PermanentItemCardComponent,
-        useEditTemplate: PermanentItemEditComponent
+        useCard: ReusableItemCard,
+        useCardTemplate: ReusableItemCardComponent,
+        useEditTemplate: ReusableItemEditComponent
       },
       {
-        cardType: DisposableItemType,
+        cardType: SingleUseItemType,
         belongsToGroup: Treasures,
-        useCard: DisposableItemCard,
-        useCardTemplate: DisposableItemCardComponent,
-        useEditTemplate: DisposableItemEditComponent
+        useCard: SingleUseItemCard,
+        useCardTemplate: SingleUseItemCardComponent,
+        useEditTemplate: SingleUseItemEditComponent
       },
       {
         cardType: LevelUpType,

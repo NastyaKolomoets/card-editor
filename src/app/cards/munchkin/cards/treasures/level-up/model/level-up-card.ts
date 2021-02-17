@@ -4,7 +4,7 @@ import { LargeTextLayout } from 'src/app/cards/infrastructure/cards';
 import { TreasureCard } from '../../treasure-card';
 
 /**
- * Represents a disposable item card. Extends [[TreasureCard]].
+ * Represents a single-use item card. Extends [[TreasureCard]].
  */
 export class LevelUpCard extends TreasureCard {
 
