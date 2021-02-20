@@ -6,38 +6,30 @@
     width: 100%;
 }
 
-.card-body.details {
-    padding: 5%;
-}
-
-.card-title {
-    margin: 0;
-    font-size: unset;
+.card-body {
+    padding: 10%;
 }
 
 .custom-card {
+    width: 100%;
     position: relative;
     color: black;
-    font-size: 1rem;
 }
 
-.custom-card .custom-card-header {
+.custom-card-header {
     position: relative;
-    top: 2%;
     left: 0;
     right: 0;
 }
 
-.custom-card .custom-card-body {
+.custom-card-body {
     position: relative;
-    top: 2%;
     left: 0;
     right: 0;
-    padding: 0 5%;
     height: 75%;
 }
 
-.custom-card .custom-card-footer {
+.custom-card-footer {
     position: absolute;
     bottom: 5%;
     left: 10%;
