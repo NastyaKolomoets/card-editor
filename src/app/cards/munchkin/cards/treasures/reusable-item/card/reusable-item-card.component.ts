@@ -10,6 +10,16 @@ export class ReusableItemCardComponent implements CardTemplate {
   @Input() card: ReusableItemCard;
 
   get bonus() {
-    return `Бонус +${this.card.bonus}`;
+    return this.card.bonus ? `Бонус +${this.card.bonus}` : '';
+  }
+
+  get huge() {
+    return this.card.isHuge ? 'Велика' : '';
+  }
+
+  get leftText() {
+    return this.card.isHuge
+      ? `${this.card.kind} ${this.huge}`
+      : this.card.kind;
   }
 }

@@ -11,12 +11,14 @@ export class ReusableItemCard extends TreasureCard {
   bonus: string;
   specificity: string;
   kind: string;
+  isHuge: boolean;
 
   constructor(o: any = null) {
     super(ReusableItemType, o);
     this.bonus = o?.bonus || '1';
     this.specificity = o?.specificity || '';
     this.kind = o?.kind || '';
+    this.isHuge = o?.isHuge || false;
     this.layout = o?.layout || ImageBottomLayout;
   }
 }

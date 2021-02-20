@@ -9,6 +9,7 @@
   </app-editable-rich-text>
   <app-editable-string [(string)]="card.kind" [label]="'kind'">
   </app-editable-string>
+  <input type="checkbox" [(ngModel)]="card.isHuge" [value]="card.isHuge"> Huge
   <app-editable-number [(number)]="card.price" min="0" max="2000" step="100" [label]="'price'">
   </app-editable-number>
 </div>
