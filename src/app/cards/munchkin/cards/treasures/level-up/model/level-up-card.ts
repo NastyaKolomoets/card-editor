@@ -11,5 +11,6 @@ export class LevelUpCard extends TreasureCard {
   constructor(o: any = null) {
     super(LevelUpType, o);
     this.layout = o?.layout || LargeTextLayout;
+    this.price = 1000;
   }
 }

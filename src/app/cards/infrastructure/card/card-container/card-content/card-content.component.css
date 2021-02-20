@@ -16,19 +16,6 @@
     color: black;
 }
 
-.custom-card-header {
-    position: relative;
-    left: 0;
-    right: 0;
-}
-
-.custom-card-body {
-    position: relative;
-    left: 0;
-    right: 0;
-    height: 75%;
-}
-
 .custom-card-footer {
     position: absolute;
     bottom: 5%;
