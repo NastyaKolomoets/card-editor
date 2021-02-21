@@ -1,4 +1,4 @@
-<div class="btn-group btn-group-toggle btn-group-sm" data-toggle="buttons">
+<div class="layouts p-1 btn-group btn-group-toggle btn-group-sm" data-toggle="buttons">
   <ng-container *ngFor="let layout of available">
     <label class="btn btn-secondary {{layout.fieldsPlacement === current ? 'active' : ''}}"
       (click)="changeLayout(layout.fieldsPlacement)">

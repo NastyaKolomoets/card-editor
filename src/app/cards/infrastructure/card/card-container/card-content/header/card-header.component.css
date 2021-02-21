@@ -1,13 +1,15 @@
 .extra-top {
-    margin-bottom: -.25em;
+    margin-bottom: -0.25em;
 }
 
 .card-name {
     margin: 0;
-    font-size: .95em;
 }
 
-.card-extra {
+.extra-bottom {
+    margin-top: -0.25em;
+}
+
+p {
     margin: 0;
-    font-size: .65em;
 }

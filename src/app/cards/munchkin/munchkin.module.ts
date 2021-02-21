@@ -17,6 +17,14 @@ import {
 } from './cards/doors/monster-enhancer/monster-enhancer';
 import { OtherDoorCardComponent, OtherDoorEditComponent, OtherDoorType, OtherDoorCard } from './cards/doors/other-door/other-door';
 import { HirelingCardComponent, HirelingEditComponent, HirelingType, HirelingCard } from './cards/doors/hireling/hireling';
+import {
+  ReusableItemCardComponent, ReusableItemEditComponent, ReusableItemType, ReusableItemCard
+} from './cards/treasures/reusable-item/reusable-item';
+import { Treasures } from './cards/treasures/treasure-group';
+import {
+  SingleUseItemCardComponent, SingleUseItemEditComponent, SingleUseItemType, SingleUseItemCard
+} from './cards/treasures/single-use-item/single-use-item';
+import { LevelUpCardComponent, LevelUpEditComponent, LevelUpType, LevelUpCard } from './cards/treasures/level-up/level-up';
 
 @NgModule({
   declarations: [
@@ -34,7 +42,13 @@ import { HirelingCardComponent, HirelingEditComponent, HirelingType, HirelingCar
     OtherDoorCardComponent,
     OtherDoorEditComponent,
     HirelingCardComponent,
-    HirelingEditComponent
+    HirelingEditComponent,
+    ReusableItemCardComponent,
+    ReusableItemEditComponent,
+    SingleUseItemCardComponent,
+    SingleUseItemEditComponent,
+    LevelUpCardComponent,
+    LevelUpEditComponent
   ],
   entryComponents: [
   ],
@@ -96,6 +110,27 @@ import { HirelingCardComponent, HirelingEditComponent, HirelingType, HirelingCar
         useCard: OtherDoorCard,
         useCardTemplate: OtherDoorCardComponent,
         useEditTemplate: OtherDoorEditComponent
+      },
+      {
+        cardType: ReusableItemType,
+        belongsToGroup: Treasures,
+        useCard: ReusableItemCard,
+        useCardTemplate: ReusableItemCardComponent,
+        useEditTemplate: ReusableItemEditComponent
+      },
+      {
+        cardType: SingleUseItemType,
+        belongsToGroup: Treasures,
+        useCard: SingleUseItemCard,
+        useCardTemplate: SingleUseItemCardComponent,
+        useEditTemplate: SingleUseItemEditComponent
+      },
+      {
+        cardType: LevelUpType,
+        belongsToGroup: Treasures,
+        useCard: LevelUpCard,
+        useCardTemplate: LevelUpCardComponent,
+        useEditTemplate: LevelUpEditComponent
       }
     ])
   ]

@@ -1,6 +1,4 @@
 p {
     margin: 0;
-    font-size: .5em;
-    font-weight: 500;
-    white-space: nowrap;
+    word-wrap: none;
 }

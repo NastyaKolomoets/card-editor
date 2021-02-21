@@ -14,6 +14,11 @@ div.container-fluid {
     border: 0;
 }
 
+.card-sm {
+    max-width: 200px;
+    font-size: 16px;
+}
+
 div.card-sm-hover {
     display: none;
     z-index: 10;

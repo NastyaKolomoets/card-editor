@@ -6,11 +6,19 @@
     width: 100%;
 }
 
-.card-body.details {
-    padding: 5%;
+.card-body {
+    padding: 10%;
 }
 
-.card-title {
-    margin: 0;
-    font-size: unset;
+.custom-card {
+    width: 100%;
+    position: relative;
+    color: black;
+}
+
+.custom-card-footer {
+    position: absolute;
+    bottom: 5%;
+    left: 10%;
+    right: 10%;
 }
