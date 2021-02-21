@@ -1,31 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-app-curse-card .extra-top p {
-  font-size: 1em;
-}
-
-app-monster-enhancer-card .extra-bottom p {
-  font-size: 1em;
-}
-
-.card-md {
-    max-width: 45%;
-    margin: 0 auto;
-}
-
-.card-sm {
-    min-width: 200px;
-    max-width: 200px;
-}
-
-.card-sm .custom-card {
-    width: 200px;
-    font-size: 1.5em;
-}
-
-.card-md .custom-card {
-    width: 300px;
-    font-size: 2.25em;
-}
+@import "./app/cards/munchkin/munchkin-styles.css";
 
 .list-group a {
     color: #343a40;
@@ -34,15 +8,4 @@ app-monster-enhancer-card .extra-bottom p {
 .list-group a:hover {
     text-decoration: none;
     color: black;
-}
-
-.custom-card-header p {
-    margin: 0;
-    font-size: .75em;
-    font-weight: 600;
-}
-
-.custom-card-body p {
-    margin: 0;
-    font-size: .5em;
 }

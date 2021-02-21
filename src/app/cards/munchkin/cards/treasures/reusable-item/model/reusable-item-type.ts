@@ -1,8 +1,8 @@
 import { CardType, LayoutType } from 'src/app/cards/infrastructure/cards';
 
-export const PermanentItemType: CardType = {
-  name: 'permanentItem',
-  namePlural: 'permanentItems',
+export const ReusableItemType: CardType = {
+  name: 'reusableItem',
+  namePlural: 'reusableItems',
   displayName: 'Багаторазова манатка',
   displayNamePlural: 'Багаторазові манатки',
   availableLayouts: [

@@ -1,13 +1,13 @@
 import { Component, Input } from '@angular/core';
 import { CardTemplate } from 'src/app/cards/infrastructure/cards';
-import { PermanentItemCard } from '../model/permanent-item-card';
+import { ReusableItemCard } from '../model/reusable-item-card';
 
 @Component({
-  selector: 'app-permanent-item-card',
-  templateUrl: './permanent-item-card.component.html'
+  selector: 'app-reusable-item-card',
+  templateUrl: './reusable-item-card.component.html'
 })
-export class PermanentItemCardComponent implements CardTemplate {
-  @Input() card: PermanentItemCard;
+export class ReusableItemCardComponent implements CardTemplate {
+  @Input() card: ReusableItemCard;
 
   get bonus() {
     return this.card.bonus ? `Бонус +${this.card.bonus}` : '';
