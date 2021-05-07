@@ -95,7 +95,7 @@ import { EditTemplateResolver } from './card-deck/edit-card-modal/edit-card/edit
   ]
 })
 export class CardsModule {
-  static forRoot(config: CardTypeConfig[]): ModuleWithProviders {
+  static forRoot(config: CardTypeConfig[]): ModuleWithProviders<CardsModule> {
     return {
       ngModule: CardsModule,
       providers: [
