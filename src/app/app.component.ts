@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from './core/auth/auth.service';
+import {filter, mapTo, switchMap} from 'rxjs/operators';
 import { Observable } from 'rxjs';
 import { AngularFireDatabase } from '@angular/fire/database';
 import { AngularFireAuth } from '@angular/fire/auth';
-import * as firebase from 'firebase';
+import firebase from 'firebase/app';
 
 @Component({
   selector: 'app-root',
@@ -15,13 +16,18 @@ export class AppComponent implements OnInit {
 
   user: Observable<firebase.User>;
   currentUser: firebase.User;
-  messages: Observable<any[]>;
-  profilePicStyles: {};
+  // messages: Observable<any[]>;
+  // profilePicStyles: {};
   topics = '';
   value = '';
 
-  constructor(public db: AngularFireDatabase, public afAuth: AngularFireAuth) {
-    this.user = afAuth.authState;
+  constructor(
+    public db: AngularFireDatabase,
+    public afAuth: AngularFireAuth,
+    public auth: firebase.auth.Auth) {
+
+    this.user = afAuth.authState.pipe(
+      filter((user: firebase.User | null) => user !== null));
     this.user.subscribe((user: firebase.User) => {
       this.currentUser = user;
     });
@@ -32,6 +38,6 @@ export class AppComponent implements OnInit {
   }
 
   login() {
-    this.afAuth.auth.signInAnonymously();
+    this.auth.signInAnonymously();
   }
 }

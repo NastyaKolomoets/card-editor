@@ -27,9 +27,6 @@
               "src/styles.css",
               "./node_modules/froala-editor/css/froala_editor.pkgd.min.css",
               "./node_modules/froala-editor/css/froala_style.min.css"
-            ],
-            "scripts": [
-              "./node_modules/froala-editor/js/froala_editor.pkgd.min.js"
             ]
           },
           "configurations": {
@@ -120,6 +117,10 @@
               "devServerTarget": "card-editor:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {}
         }
       }
     }
