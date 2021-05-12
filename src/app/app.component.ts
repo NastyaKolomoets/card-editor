@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from './core/auth/auth.service';
-import {filter, mapTo, switchMap} from 'rxjs/operators';
-import { Observable, ObservableLike } from 'rxjs';
-import { AngularFireDatabase } from '@angular/fire/database';
+import {filter} from 'rxjs/operators';
+import { Observable } from 'rxjs';
 import { AngularFireAuth } from '@angular/fire/auth';
 import firebase from 'firebase/app';
 
@@ -22,9 +20,7 @@ export class AppComponent implements OnInit {
   value = '';
 
   constructor(
-    public db: AngularFireDatabase,
-    public afAuth: AngularFireAuth,
-    public auth: firebase.auth.Auth) {
+    public afAuth: AngularFireAuth) {
 
     this.user = afAuth.authState.pipe(
       filter((user: firebase.User | null) => user !== null)) as Observable<firebase.User>;
@@ -38,6 +34,6 @@ export class AppComponent implements OnInit {
   }
 
   login() {
-    this.auth.signInAnonymously();
+    this.afAuth.signInAnonymously();
   }
 }

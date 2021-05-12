@@ -33,9 +33,7 @@ import { AngularFireStorageModule } from '@angular/fire/storage';
     MunchkinModule
   ],
   providers: [
-    AuthService,
-    AngularFirestore,
-    { provide: AUTH_SETTINGS, useValue: { appVerificationDisabledForTesting: true } },
+    AuthService
   ],
   bootstrap: [AppComponent]
 })
