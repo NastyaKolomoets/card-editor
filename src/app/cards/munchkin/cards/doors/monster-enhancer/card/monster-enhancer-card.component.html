@@ -1,6 +1,9 @@
 <app-card-content [backgroundImg]="card.backgroundImg">
-  <app-card-header [cardName]="card.name" [extraBottom]="enhancer">
+  <app-card-header [cardName]="card.name"
+                   [extraBottom]="enhancer">
   </app-card-header>
-  <app-card-body [firstText]="description" [imgUrl]="card.img" [fieldsPlacement]="card.layout">
+  <app-card-body [firstText]="description"
+                 [imgUrl]="card.img"
+                 [fieldsPlacement]="card.layout.fieldsPlacement">
   </app-card-body>
 </app-card-content>

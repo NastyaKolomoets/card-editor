@@ -1,7 +1,10 @@
 <app-card-content [backgroundImg]="card.backgroundImg">
-  <app-card-header [cardName]="card.name" [extraTop]="bonus">
+  <app-card-header [cardName]="card.name"
+                   [extraTop]="bonus">
   </app-card-header>
-  <app-card-body [firstText]="card.description" [imgUrl]="card.img" [fieldsPlacement]="card.layout">
+  <app-card-body [firstText]="card.description"
+                 [imgUrl]="card.img"
+                 [fieldsPlacement]="card.layout.fieldsPlacement">
   </app-card-body>
   <app-card-footer [rightText]="hirelingText">
   </app-card-footer>

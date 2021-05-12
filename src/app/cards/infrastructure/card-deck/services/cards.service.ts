@@ -10,19 +10,24 @@ export class CardsService {
   constructor(private firebase: AngularFireDatabase) {
   }
 
-  getAll(): Observable<any> {
-    return this.firebase.list<any>(`${this.uri}`).valueChanges();
+  getAll(): Observable<Card[]> {
+    return this.firebase.list<Card>(`${this.uri}`).valueChanges();
   }
 
   add(card: Card): Promise<any> {
     const key = this.firebase.database.ref(this.uri).push().key;
-    card.key = key;
+    if (key !== null) {
+      card.key = key;
+    }
     return this.firebase.database.ref(`${this.uri}/${card.type.namePlural}/${key}`).set(this.mapToDto(card));
   }
 
   addOrUpdateCard(card: Card): Promise<any> {
     if (card.key === null) {
-      card.key = this.firebase.database.ref(this.uri).push().key;
+      const result = this.firebase.database.ref(this.uri).push().key;
+      if (result !== null) {
+        card.key = result;
+      }
     }
 
     return this.firebase.database.ref(`${this.uri}/${card.type.namePlural}/${card.key}`).set(this.mapToDto(card));

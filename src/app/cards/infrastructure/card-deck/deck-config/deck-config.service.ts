@@ -11,8 +11,8 @@ export class DeckConfigService {
   groups: CardGroup[];
   cardTypes: Map<string, CardType[]>;
   cards: Map<string, Type<Card>>;
-  cardTemplates: Map<string, Type<CardTemplate>>;
-  editTemplates: Map<string, Type<EditCardTemplate>>;
+  cardTemplates: Map<string, Type<CardTemplate> | undefined>;
+  editTemplates: Map<string, Type<EditCardTemplate> | undefined>;
 
   constructor(deck: DeckConfig) {
     this.groups = Array.from(new Set(deck.config.map(x => x.belongsToGroup)));

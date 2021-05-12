@@ -2,5 +2,14 @@
   "projects": {
     "default": "munchkin-card-editor",
     "card-editor": "munchkin-card-editor"
+  },
+  "targets": {
+    "bizarre-card-editor": {
+      "hosting": {
+        "card-editor": [
+          "bizarre-card-editor"
+        ]
+      }
+    }
   }
 }

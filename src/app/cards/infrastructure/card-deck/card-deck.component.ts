@@ -28,11 +28,12 @@ export class CardDeckComponent implements OnInit {
   ngOnInit(): void {
     this.cardsService.getAll()
       .subscribe(cards => {
-        this.cards = Object.values((cards as Array<any>).reduce((prev, next) => prev = { ...prev, ...next }))
+        this.cards = Object.values(cards.reduce((prev, next) => prev = { ...prev, ...next }))
           .map((x: { type: string }) => {
             const card = this.deckService.cards.get(x.type);
-            return new card(x);
-          });
+            return card ? new card(x) : null;
+          })
+          .filter(x => x != null) as Card[];
       });
   }
 
@@ -44,7 +45,9 @@ export class CardDeckComponent implements OnInit {
 
   addCard(type: CardType) {
     const card = this.deckService.cards.get(type.name);
-    this.openModal(new card());
+    if (card) {
+      this.openModal(new card());
+    }
   }
 
   editCard(card: Card) {
