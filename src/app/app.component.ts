@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from './core/auth/auth.service';
 import {filter, mapTo, switchMap} from 'rxjs/operators';
-import { Observable } from 'rxjs';
+import { Observable, ObservableLike } from 'rxjs';
 import { AngularFireDatabase } from '@angular/fire/database';
 import { AngularFireAuth } from '@angular/fire/auth';
 import firebase from 'firebase/app';
@@ -27,7 +27,7 @@ export class AppComponent implements OnInit {
     public auth: firebase.auth.Auth) {
 
     this.user = afAuth.authState.pipe(
-      filter((user: firebase.User | null) => user !== null));
+      filter((user: firebase.User | null) => user !== null)) as Observable<firebase.User>;
     this.user.subscribe((user: firebase.User) => {
       this.currentUser = user;
     });

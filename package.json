@@ -23,6 +23,7 @@
     "@angular/platform-browser-dynamic": "^11.2.13",
     "@angular/router": "^11.2.13",
     "@ng-bootstrap/ng-bootstrap": "^9.1.0",
+    "@types/events": "^3.0.0",
     "angular-froala-wysiwyg": "^3.2.6",
     "bootstrap": "^4.6.0",
     "firebase": "^8.5.0",

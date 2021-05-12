@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-img-field',
@@ -8,4 +8,7 @@ import { Component, Input } from '@angular/core';
 export class ImgFieldComponent {
   @Input()
   img: string;
+
+  @Output()
+  imgChange = new EventEmitter<string>();
 }

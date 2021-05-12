@@ -8,7 +8,7 @@ import { ImageBottomComponent } from './image-bottom/image-bottom.component';
 import { ImageOverlapComponent } from './image-overlap/image-overlap.component';
 import { LargeTextComponent } from './large-text/large-text.component';
 
-export class BodyLayoutResolver implements TemplateResolver<LayoutType> {
+export class BodyLayoutResolver implements TemplateResolver<LayoutType, BodyLayoutBaseComponent> {
   getTemplateType(type: LayoutType): Type<BodyLayoutBaseComponent> {
     switch (type) {
       case LayoutType.IMAGE_TOP:

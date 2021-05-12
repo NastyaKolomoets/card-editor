@@ -4,7 +4,7 @@ export function prependRichText(text: string, insertText: string, tag: string) {
   }
 
   const regexp = new RegExp(`<${tag}[^>]*>`);
-  const openingTag = regexp.exec(text)[0] || '';
+  const openingTag = regexp.exec(text)?.[0] || '';
   const closingTag = `</${tag}>`;
   const start = text.indexOf(openingTag) + openingTag.length;
   const end = text.lastIndexOf(closingTag);
