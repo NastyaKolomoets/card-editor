@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AngularFireAuthModule } from '@angular/fire/auth';
+import {AngularFirestore, AngularFirestoreModule} from '@angular/fire/firestore';
+import { SETTINGS as AUTH_SETTINGS } from '@angular/fire/auth';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -25,13 +27,15 @@ import { AngularFireStorageModule } from '@angular/fire/storage';
     AppRoutingModule,
     AngularFireAuthModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFireStorageModule,
+    AngularFirestoreModule,
     FormsModule,
     ReactiveFormsModule,
     MunchkinModule
   ],
   providers: [
-    AuthService
+    AuthService,
+    AngularFirestore,
+    { provide: AUTH_SETTINGS, useValue: { appVerificationDisabledForTesting: true } },
   ],
   bootstrap: [AppComponent]
 })
