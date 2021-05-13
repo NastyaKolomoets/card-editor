@@ -1,22 +1,22 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { RouterModule } from '@angular/router';
-import { NgModule } from '@angular/core';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { AngularFireModule } from '@angular/fire';
-import { AngularFireAuthModule } from '@angular/fire/auth';
-import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { BrowserModule } from "@angular/platform-browser";
+import { RouterModule } from "@angular/router";
+import { NgModule } from "@angular/core";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { AngularFireModule } from "@angular/fire";
+import { AngularFireAuthModule } from "@angular/fire/auth";
+import { AngularFirestoreModule } from "@angular/fire/firestore";
 
-import { AppRoutingModule } from 'app/app-routing.module';
-import { AppComponent } from 'app/app.component';
-import { environment } from 'environments/environment';
-import { MunchkinModule } from 'app/cards/munchkin/munchkin.module';
-import { NavigationComponent } from 'app/core/components';
-import { AuthService } from 'app/core/services';
+import { AppRoutingModule } from "app/app-routing.module";
+import { AppComponent } from "app/app.component";
+import { environment } from "environments/environment";
+import { MunchkinModule } from "app/cards/munchkin/munchkin.module";
+import { NavigationComponent } from "app/core/components";
+import { AuthService } from "app/core/services";
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavigationComponent
+    NavigationComponent,
   ],
   imports: [
     BrowserModule,
@@ -27,10 +27,10 @@ import { AuthService } from 'app/core/services';
     AngularFirestoreModule,
     FormsModule,
     ReactiveFormsModule,
-    MunchkinModule
+    MunchkinModule,
   ],
   providers: [
-    AuthService
+    AuthService,
   ],
   bootstrap: [AppComponent]
 })

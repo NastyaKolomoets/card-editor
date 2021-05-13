@@ -3,21 +3,19 @@
   "compilerOptions": {
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
     "declaration": false,
-    "strict": true,
     "downlevelIteration": true,
-    "strictPropertyInitialization": false,
     "experimentalDecorators": true,
+    "strictPropertyInitialization": false,
     "target": "es2015",
     "module": "es2020",
     "moduleResolution": "node",
     "importHelpers": true,
-    "typeRoots": [
-      "node_modules/@types"
-    ],
     "lib": [
       "es2019",
       "dom"

@@ -1,15 +1,15 @@
-import { Component, OnInit } from '@angular/core';
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { EditCardModalComponent } from './edit-card-modal/edit-card-modal.component';
-import { Card, CardType } from '../card/card';
-import { CardGroup } from './deck-config/card-group';
-import { CardsService } from './services/cards.service';
-import { DeckConfigService } from './deck-config/deck-config.service';
+import { Component, OnInit } from "@angular/core";
+import { NgbModal } from "@ng-bootstrap/ng-bootstrap";
+import { EditCardModalComponent } from "./edit-card-modal/edit-card-modal.component";
+import { Card, CardType } from "../card/card";
+import { CardGroup } from "./deck-config/card-group";
+import { CardsService } from "./services/cards.service";
+import { DeckConfigService } from "./deck-config/deck-config.service";
 
 @Component({
-  selector: 'app-card-deck',
-  templateUrl: 'card-deck.component.html',
-  styleUrls: ['card-deck.component.css']
+  selector: "app-card-deck",
+  templateUrl: "card-deck.component.html",
+  styleUrls: ["card-deck.component.css"]
 })
 export class CardDeckComponent implements OnInit {
   groups: CardGroup[];
@@ -55,7 +55,7 @@ export class CardDeckComponent implements OnInit {
   }
 
   private openModal(card: Card) {
-    const modalRef = this.modalService.open(EditCardModalComponent, { size: 'lg' });
+    const modalRef = this.modalService.open(EditCardModalComponent, { size: "lg" });
     const modal = modalRef.componentInstance as EditCardModalComponent;
     modal.card = card;
   }

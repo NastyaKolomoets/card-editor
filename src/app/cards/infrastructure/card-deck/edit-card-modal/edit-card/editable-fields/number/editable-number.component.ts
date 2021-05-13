@@ -1,9 +1,9 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from "@angular/core";
 
 @Component({
-  selector: 'app-editable-number',
-  templateUrl: './editable-number.component.html',
-  styleUrls: ['./editable-number.component.css']
+  selector: "app-editable-number",
+  templateUrl: "./editable-number.component.html",
+  styleUrls: ["./editable-number.component.css"]
 })
 export class EditableNumberComponent {
 
@@ -12,13 +12,13 @@ export class EditableNumberComponent {
   @Input() max: number;
   @Input() step: number;
 
-  numberValue: number;
   @Output() numberChange = new EventEmitter();
+  numberValue: number;
   @Input()
-  get number() {
+  get value() {
     return this.numberValue;
   }
-  set number(val) {
+  set value(val) {
     this.numberValue = val;
     this.numberChange.emit(this.numberValue);
   }

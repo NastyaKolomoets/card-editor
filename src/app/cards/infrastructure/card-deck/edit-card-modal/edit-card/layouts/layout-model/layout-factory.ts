@@ -1,6 +1,6 @@
 
-import { ImageTopLayout, ImageCenterLayout, ImageBottomLayout, ImageOverlapLayout, LargeTextLayout } from './layouts';
-import { LayoutType } from '../../../../../card/card';
+import { ImageTopLayout, ImageCenterLayout, ImageBottomLayout, ImageOverlapLayout, LargeTextLayout } from "./layouts";
+import { LayoutType } from "../../../../../card/card";
 
 export class LayoutFactory {
   static getLayout(fieldsPlacement: LayoutType) {

@@ -1,27 +1,27 @@
-import { Layout } from './layout';
-import { LayoutType } from '../../../../../card/card';
+import { Layout } from "./layout";
+import { LayoutType } from "../../../../../card/card";
 
 export const ImageTopLayout: Layout = {
   fieldsPlacement: LayoutType.IMAGE_TOP,
-  icon: ''
+  icon: ""
 };
 
 export const ImageCenterLayout: Layout = {
   fieldsPlacement: LayoutType.IMAGE_CENTER,
-  icon: ''
+  icon: ""
 };
 
 export const ImageBottomLayout: Layout = {
   fieldsPlacement: LayoutType.IMAGE_BOTTOM,
-  icon: ''
+  icon: ""
 };
 
 export const LargeTextLayout: Layout = {
   fieldsPlacement: LayoutType.LARGE_TEXT,
-  icon: ''
+  icon: ""
 };
 
 export const ImageOverlapLayout: Layout = {
   fieldsPlacement: LayoutType.IMAGE_OVERLAP,
-  icon: ''
+  icon: ""
 };

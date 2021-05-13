@@ -1,13 +1,13 @@
-import { Component, Input } from '@angular/core';
-import { CardTemplate } from 'src/app/cards/infrastructure/cards';
-import { CurseCard } from '../model/curse-card';
+import { Component, Input } from "@angular/core";
+import { CardTemplate } from "src/app/cards/infrastructure/cards";
+import { CurseCard } from "../model/curse-card";
 
 @Component({
-  selector: 'app-curse-card',
-  templateUrl: './curse-card.component.html'
+  selector: "app-curse-card",
+  templateUrl: "./curse-card.component.html"
 })
 export class CurseCardComponent implements CardTemplate {
   @Input() card: CurseCard;
 
-  readonly curseText: string = 'Прокляття!';
+  readonly curseText: string = "Прокляття!";
 }

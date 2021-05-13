@@ -1,8 +1,8 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from "@angular/core";
 
 @Component({
-  selector: 'app-img-field',
-  templateUrl: './img-field.component.html'
+  selector: "app-img-field",
+  templateUrl: "./img-field.component.html"
 })
 
 export class ImgFieldComponent {

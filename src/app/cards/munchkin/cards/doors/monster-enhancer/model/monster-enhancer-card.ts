@@ -1,6 +1,6 @@
-import { DoorCard } from '../../door-card';
-import { MonsterEnhancerType } from './monster-enhancer-type';
-import { ImageBottomLayout } from 'src/app/cards/infrastructure/cards';
+import { DoorCard } from "../../door-card";
+import { MonsterEnhancerType } from "./monster-enhancer-type";
+import { ImageBottomLayout } from "src/app/cards/infrastructure/cards";
 
 /**
  * Represents a monster enhancer card. Extends [[DoorCard]].

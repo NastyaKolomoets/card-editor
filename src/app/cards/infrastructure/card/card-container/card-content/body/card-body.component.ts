@@ -1,12 +1,12 @@
-import { Component, Input, ViewChild, OnChanges, SimpleChanges } from '@angular/core';
-import { TemplateDirective, TemplateComponentFactory } from 'src/app/cards/infrastructure/template/template';
-import { BodyLayoutBaseComponent } from './body-layout-base.component';
-import { LayoutType } from '../../../card-model/layout-type';
-import { BodyLayoutService } from './body-layout.service';
+import { Component, Input, ViewChild, OnChanges, SimpleChanges } from "@angular/core";
+import { TemplateDirective, TemplateComponentFactory } from "src/app/cards/infrastructure/template/template";
+import { BodyLayoutBaseComponent } from "./body-layout-base.component";
+import { LayoutType } from "../../../card-model/layout-type";
+import { BodyLayoutService } from "./body-layout.service";
 
 @Component({
-  selector: 'app-card-body',
-  templateUrl: './card-body.component.html'
+  selector: "app-card-body",
+  templateUrl: "./card-body.component.html"
 })
 
 export class CardBodyComponent extends BodyLayoutBaseComponent implements OnChanges {

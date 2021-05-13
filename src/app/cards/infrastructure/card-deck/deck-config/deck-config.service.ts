@@ -1,11 +1,11 @@
-import { Injectable, Type } from '@angular/core';
-import { DeckConfig } from '../deck-config/deck-config';
-import { CardGroup } from '../card-deck';
-import { CardType, Card, CardTemplate } from '../../card/card';
-import { EditCardTemplate } from '../edit-card-modal/edit-card/edit-card-template';
+import { Injectable, Type } from "@angular/core";
+import { DeckConfig } from "../deck-config/deck-config";
+import { CardGroup } from "../card-deck";
+import { CardType, Card, CardTemplate } from "../../card/card";
+import { EditCardTemplate } from "../edit-card-modal/edit-card/edit-card-template";
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root"
 })
 export class DeckConfigService {
   groups: CardGroup[];

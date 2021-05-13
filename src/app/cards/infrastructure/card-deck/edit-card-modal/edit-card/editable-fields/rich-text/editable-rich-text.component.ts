@@ -1,9 +1,9 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from "@angular/core";
 
 @Component({
-  selector: 'app-editable-rich-text',
-  templateUrl: './editable-rich-text.component.html',
-  styleUrls: ['./editable-rich-text.component.css']
+  selector: "app-editable-rich-text",
+  templateUrl: "./editable-rich-text.component.html",
+  styleUrls: ["./editable-rich-text.component.css"]
 })
 export class EditableRichTextComponent {
 
@@ -13,8 +13,8 @@ export class EditableRichTextComponent {
   @Input()
   label: string;
 
-  textValue: string;
   @Output() textChange = new EventEmitter();
+  textValue: string;
   @Input()
   get text() {
     return this.textValue;
@@ -28,10 +28,10 @@ export class EditableRichTextComponent {
     return {
       toolbarButtonsXS: {
         moreText: {
-          buttons: ['bold', 'italic', 'underline']
+          buttons: ["bold", "italic", "underline"]
         },
         moreParagraph: {
-          buttons: ['alignLeft', 'alignCenter', 'alignRight']
+          buttons: ["alignLeft", "alignCenter", "alignRight"]
         }
       },
       toolbarInline: true,

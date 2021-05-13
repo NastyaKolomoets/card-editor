@@ -1,11 +1,11 @@
-import { Injectable } from '@angular/core';
-import { AngularFireDatabase } from '@angular/fire/database';
-import { Observable } from 'rxjs';
-import { Card } from '../../card/card-model/card';
+import { Injectable } from "@angular/core";
+import { AngularFireDatabase } from "@angular/fire/database";
+import { Observable } from "rxjs";
+import { Card } from "../../card/card-model/card";
 
 @Injectable()
 export class CardsService {
-  uri = '/cards';
+  uri = "/cards";
 
   constructor(private firebase: AngularFireDatabase) {
   }
