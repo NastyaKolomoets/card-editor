@@ -1,9 +1,9 @@
 <div>
-  <app-editable-string [(string)]="card.level"
+  <app-editable-string [(value)]="card.level"
                        [label]="'level'"></app-editable-string>
-  <app-editable-string [(string)]="card.name"
+  <app-editable-string [(value)]="card.name"
                        [label]="'name'"></app-editable-string>
-  <app-editable-string [(string)]="card.extra"
+  <app-editable-string [(value)]="card.extra"
                        [label]="'extra'"></app-editable-string>
 
   <app-editable-rich-text [(text)]="card.description"
@@ -15,12 +15,12 @@
                           [multiline]="true">
   </app-editable-rich-text>
 
-  <app-editable-number [(number)]="card.winLevels"
+  <app-editable-number [(value)]="card.winLevels"
                        [label]="'win levels'"
                        [min]=1
                        [max]=2>
   </app-editable-number>
-  <app-editable-number [(number)]="card.winTreasures"
+  <app-editable-number [(value)]="card.winTreasures"
                        [label]="'win treasures'"
                        [min]="0"
                        [max]="10">

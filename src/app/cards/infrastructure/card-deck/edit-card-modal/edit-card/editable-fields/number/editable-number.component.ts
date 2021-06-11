@@ -12,7 +12,7 @@ export class EditableNumberComponent {
   @Input() max: number;
   @Input() step: number;
 
-  @Output() numberChange = new EventEmitter();
+  @Output() valueChange = new EventEmitter();
   numberValue: number;
   @Input()
   get value() {
@@ -20,6 +20,6 @@ export class EditableNumberComponent {
   }
   set value(val) {
     this.numberValue = val;
-    this.numberChange.emit(this.numberValue);
+    this.valueChange.emit(this.numberValue);
   }
 }

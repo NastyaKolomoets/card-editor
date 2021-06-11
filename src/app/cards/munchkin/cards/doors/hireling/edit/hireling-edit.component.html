@@ -1,8 +1,8 @@
 <div>
-  <app-editable-string [(string)]="card.name"
+  <app-editable-string [(value)]="card.name"
                        [label]="'name'"></app-editable-string>
 
-  <app-editable-string [(string)]="card.bonus"
+  <app-editable-string [(value)]="card.bonus"
                        [label]="'bonus'">
   </app-editable-string>
   <app-editable-rich-text [(text)]="card.description"

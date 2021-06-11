@@ -9,7 +9,7 @@ export class EditableStringComponent {
 
   @Input() label: string;
 
-  @Output() stringChange = new EventEmitter();
+  @Output() valueChange = new EventEmitter();
   stringValue: string;
   @Input()
   get value() {
@@ -17,6 +17,6 @@ export class EditableStringComponent {
   }
   set value(val) {
     this.stringValue = val;
-    this.stringChange.emit(this.stringValue);
+    this.valueChange.emit(this.stringValue);
   }
 }
