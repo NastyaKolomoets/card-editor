@@ -1,0 +1,22 @@
+.card-name {
+  font-size: 1em;
+  font-weight: 600;
+}
+
+.card-extra {
+  font-size: 0.75em;
+  font-weight: 600;
+}
+
+.custom-card-body {
+  font-size: .6em;
+}
+
+.custom-card-body p{
+  margin-bottom: .5em;
+}
+
+.custom-card-footer{
+  font-size: .75em;
+  font-weight: 700;
+}
