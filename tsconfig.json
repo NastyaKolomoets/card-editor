@@ -13,7 +13,7 @@
     "downlevelIteration": true,
     "experimentalDecorators": true,
     "strictPropertyInitialization": false,
-    "target": "es2020",
+    "target": "ES2022",
     "module": "es2020",
     "moduleResolution": "node",
     "importHelpers": true,
@@ -27,8 +27,9 @@
       ],
       "environments/*": [
         "src/environments/*"
-      ],
+      ]
     },
+    "useDefineForClassFields": false
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
