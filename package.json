@@ -22,8 +22,7 @@
     "@angular/platform-browser-dynamic": "^17.0.6",
     "@angular/router": "^17.0.6",
     "@ng-bootstrap/ng-bootstrap": "^16.0.0",
-    "angular-froala-wysiwyg": "^4.0.3",
-    "firebase": "^8.7.1",
+    "angular-froala-wysiwyg": "^4.1.4",
     "rxjs": "^7.4.0",
     "zone.js": "~0.14.2"
   },
