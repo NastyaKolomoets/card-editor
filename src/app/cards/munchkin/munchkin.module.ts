@@ -27,112 +27,110 @@ import {
 import { LevelUpCardComponent, LevelUpEditComponent, LevelUpType, LevelUpCard } from './cards/treasures/level-up/level-up';
 
 @NgModule({
-  declarations: [
-    MunchkinDeckComponent,
-    MonsterCardComponent,
-    MonsterEditComponent,
-    ClassCardComponent,
-    ClassEditComponent,
-    RaceCardComponent,
-    RaceEditComponent,
-    CurseCardComponent,
-    CurseEditComponent,
-    MonsterEnhancerCardComponent,
-    MonsterEnhancerEditComponent,
-    OtherDoorCardComponent,
-    OtherDoorEditComponent,
-    HirelingCardComponent,
-    HirelingEditComponent,
-    ReusableItemCardComponent,
-    ReusableItemEditComponent,
-    SingleUseItemCardComponent,
-    SingleUseItemEditComponent,
-    LevelUpCardComponent,
-    LevelUpEditComponent
-  ],
-  entryComponents: [
-  ],
-  imports: [
-    BrowserModule,
-    AngularFireDatabaseModule,
-    FormsModule,
-    ReactiveFormsModule,
-    NgbModule,
-    NgbModalModule,
-    FroalaEditorModule.forRoot(),
-    FroalaViewModule.forRoot(),
-    CardsModule.forRoot([
-      {
-        cardType: RaceType,
-        belongsToGroup: Doors,
-        useCard: RaceCard,
-        useCardTemplate: RaceCardComponent,
-        useEditTemplate: RaceEditComponent
-      },
-      {
-        cardType: ClassType,
-        belongsToGroup: Doors,
-        useCard: ClassCard,
-        useCardTemplate: ClassCardComponent,
-        useEditTemplate: ClassEditComponent
-      },
-      {
-        cardType: MonsterType,
-        belongsToGroup: Doors,
-        useCard: MonsterCard,
-        useCardTemplate: MonsterCardComponent,
-        useEditTemplate: MonsterEditComponent
-      },
-      {
-        cardType: CurseType,
-        belongsToGroup: Doors,
-        useCard: CurseCard,
-        useCardTemplate: CurseCardComponent,
-        useEditTemplate: CurseEditComponent
-      },
-      {
-        cardType: MonsterEnhancerType,
-        belongsToGroup: Doors,
-        useCard: MonsterEnhancerCard,
-        useCardTemplate: MonsterEnhancerCardComponent,
-        useEditTemplate: MonsterEnhancerEditComponent
-      },
-      {
-        cardType: HirelingType,
-        belongsToGroup: Doors,
-        useCard: HirelingCard,
-        useCardTemplate: HirelingCardComponent,
-        useEditTemplate: HirelingEditComponent
-      },
-      {
-        cardType: OtherDoorType,
-        belongsToGroup: Doors,
-        useCard: OtherDoorCard,
-        useCardTemplate: OtherDoorCardComponent,
-        useEditTemplate: OtherDoorEditComponent
-      },
-      {
-        cardType: ReusableItemType,
-        belongsToGroup: Treasures,
-        useCard: ReusableItemCard,
-        useCardTemplate: ReusableItemCardComponent,
-        useEditTemplate: ReusableItemEditComponent
-      },
-      {
-        cardType: SingleUseItemType,
-        belongsToGroup: Treasures,
-        useCard: SingleUseItemCard,
-        useCardTemplate: SingleUseItemCardComponent,
-        useEditTemplate: SingleUseItemEditComponent
-      },
-      {
-        cardType: LevelUpType,
-        belongsToGroup: Treasures,
-        useCard: LevelUpCard,
-        useCardTemplate: LevelUpCardComponent,
-        useEditTemplate: LevelUpEditComponent
-      }
-    ])
-  ]
+    declarations: [
+        MunchkinDeckComponent,
+        MonsterCardComponent,
+        MonsterEditComponent,
+        ClassCardComponent,
+        ClassEditComponent,
+        RaceCardComponent,
+        RaceEditComponent,
+        CurseCardComponent,
+        CurseEditComponent,
+        MonsterEnhancerCardComponent,
+        MonsterEnhancerEditComponent,
+        OtherDoorCardComponent,
+        OtherDoorEditComponent,
+        HirelingCardComponent,
+        HirelingEditComponent,
+        ReusableItemCardComponent,
+        ReusableItemEditComponent,
+        SingleUseItemCardComponent,
+        SingleUseItemEditComponent,
+        LevelUpCardComponent,
+        LevelUpEditComponent
+    ],
+    imports: [
+        BrowserModule,
+        AngularFireDatabaseModule,
+        FormsModule,
+        ReactiveFormsModule,
+        NgbModule,
+        NgbModalModule,
+        FroalaEditorModule.forRoot(),
+        FroalaViewModule.forRoot(),
+        CardsModule.forRoot([
+            {
+                cardType: RaceType,
+                belongsToGroup: Doors,
+                useCard: RaceCard,
+                useCardTemplate: RaceCardComponent,
+                useEditTemplate: RaceEditComponent
+            },
+            {
+                cardType: ClassType,
+                belongsToGroup: Doors,
+                useCard: ClassCard,
+                useCardTemplate: ClassCardComponent,
+                useEditTemplate: ClassEditComponent
+            },
+            {
+                cardType: MonsterType,
+                belongsToGroup: Doors,
+                useCard: MonsterCard,
+                useCardTemplate: MonsterCardComponent,
+                useEditTemplate: MonsterEditComponent
+            },
+            {
+                cardType: CurseType,
+                belongsToGroup: Doors,
+                useCard: CurseCard,
+                useCardTemplate: CurseCardComponent,
+                useEditTemplate: CurseEditComponent
+            },
+            {
+                cardType: MonsterEnhancerType,
+                belongsToGroup: Doors,
+                useCard: MonsterEnhancerCard,
+                useCardTemplate: MonsterEnhancerCardComponent,
+                useEditTemplate: MonsterEnhancerEditComponent
+            },
+            {
+                cardType: HirelingType,
+                belongsToGroup: Doors,
+                useCard: HirelingCard,
+                useCardTemplate: HirelingCardComponent,
+                useEditTemplate: HirelingEditComponent
+            },
+            {
+                cardType: OtherDoorType,
+                belongsToGroup: Doors,
+                useCard: OtherDoorCard,
+                useCardTemplate: OtherDoorCardComponent,
+                useEditTemplate: OtherDoorEditComponent
+            },
+            {
+                cardType: ReusableItemType,
+                belongsToGroup: Treasures,
+                useCard: ReusableItemCard,
+                useCardTemplate: ReusableItemCardComponent,
+                useEditTemplate: ReusableItemEditComponent
+            },
+            {
+                cardType: SingleUseItemType,
+                belongsToGroup: Treasures,
+                useCard: SingleUseItemCard,
+                useCardTemplate: SingleUseItemCardComponent,
+                useEditTemplate: SingleUseItemEditComponent
+            },
+            {
+                cardType: LevelUpType,
+                belongsToGroup: Treasures,
+                useCard: LevelUpCard,
+                useCardTemplate: LevelUpCardComponent,
+                useEditTemplate: LevelUpEditComponent
+            }
+        ])
+    ]
 })
 export class MunchkinModule { }
