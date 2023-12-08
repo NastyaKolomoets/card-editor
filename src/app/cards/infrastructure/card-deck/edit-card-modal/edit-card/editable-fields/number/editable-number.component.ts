@@ -1,9 +1,9 @@
-import { Component, Input, Output, EventEmitter } from "@angular/core";
+import { Component, EventEmitter, Input, Output } from "@angular/core";
 
 @Component({
   selector: "app-editable-number",
   templateUrl: "./editable-number.component.html",
-  styleUrls: ["./editable-number.component.css"]
+  styleUrls: ["./editable-number.component.scss"]
 })
 export class EditableNumberComponent {
 

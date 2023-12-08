@@ -1,18 +1,26 @@
 import { Component, Input, OnInit, ViewChild } from "@angular/core";
 
-import { EditTemplateService } from "src/app/cards/infrastructure/card-deck/edit-card-modal/edit-card/edit-template.service";
-import { ImagesService } from "src/app/cards/infrastructure/card-deck/services/images.service";
+import {
+  EditTemplateService,
+} from "src/app/cards/infrastructure/card-deck/edit-card-modal/edit-card/edit-template.service";
+import {
+  ImagesService,
+} from "src/app/cards/infrastructure/card-deck/services/images.service";
 import { CardType } from "src/app/cards/infrastructure/card/card";
 import { Card } from "src/app/cards/infrastructure/card/card-model/card";
-import { TemplateComponentFactory } from "src/app/cards/infrastructure/template/template-component-factory";
-import { TemplateDirective } from "src/app/cards/infrastructure/template/template.directive";
+import {
+  TemplateComponentFactory,
+} from "src/app/cards/infrastructure/template/template-component-factory";
+import {
+  TemplateDirective,
+} from "src/app/cards/infrastructure/template/template.directive";
 
 import { EditCardTemplate } from "./edit-card-template";
 
 @Component({
   selector: "app-edit-card",
   templateUrl: "./edit-card.component.html",
-  styleUrls: ["./edit-card.component.css"]
+  styleUrls: ["./edit-card.component.scss"]
 })
 
 export class EditCardComponent implements OnInit {
