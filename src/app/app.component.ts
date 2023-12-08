@@ -1,8 +1,6 @@
 import { Component, OnInit } from "@angular/core";
-import {filter} from "rxjs/operators";
-import { Observable } from "rxjs";
-import { AngularFireAuth } from "@angular/fire/auth";
 import firebase from "firebase/app";
+import { Observable } from "rxjs";
 
 @Component({
   selector: "app-root",
@@ -19,21 +17,9 @@ export class AppComponent implements OnInit {
   topics = "";
   value = "";
 
-  constructor(
-    public afAuth: AngularFireAuth) {
-
-    this.user = afAuth.authState.pipe(
-      filter((user: firebase.User | null) => user !== null)) as Observable<firebase.User>;
-    this.user.subscribe((user: firebase.User) => {
-      this.currentUser = user;
-    });
+  constructor() {
   }
 
   ngOnInit(): void {
-    this.login();
-  }
-
-  login() {
-    this.afAuth.signInAnonymously();
   }
 }
