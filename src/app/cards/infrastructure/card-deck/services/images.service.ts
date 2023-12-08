@@ -1,12 +1,13 @@
-import { Injectable } from "@angular/core";
-import { doc, Firestore, updateDoc } from "@angular/fire/firestore";
+import { Injectable } from '@angular/core';
+import { AngularFireStorage } from '@angular/fire/compat/storage';
+import { UploadTask } from '@angular/fire/compat/storage/interfaces';
 
 @Injectable()
 export class ImagesService {
-  constructor(private firestore: Firestore) {
+  constructor(private firebase: AngularFireStorage) {
   }
 
-  async upload(file: any) {
-    await updateDoc(doc(this.firestore, file.name), file);
+  upload(file: any): UploadTask {
+    return this.firebase.storage.ref(file.name).put(file);
   }
 }
