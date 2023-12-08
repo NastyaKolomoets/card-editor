@@ -1,30 +1,47 @@
 import { NgModule } from "@angular/core";
-import { BrowserModule } from "@angular/platform-browser";
-import { AngularFireDatabaseModule } from "@angular/fire/database";
+import { AngularFireStorageModule } from "@angular/fire/compat/storage";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { BrowserModule } from "@angular/platform-browser";
 import { NgbModalModule, NgbModule } from "@ng-bootstrap/ng-bootstrap";
 import { FroalaEditorModule, FroalaViewModule } from "angular-froala-wysiwyg";
-import { CardsModule } from "../infrastructure/cards";
 
-import { MunchkinDeckComponent } from "./deck/munchkin-deck.component";
-import { MonsterCardComponent, MonsterEditComponent, MonsterType, MonsterCard } from "./cards/doors/monster/monster";
-import { ClassCardComponent, ClassType, ClassCard, ClassEditComponent } from "./cards/doors/class/class";
+import { CardsModule } from "../infrastructure/cards";
+import {
+  ClassCard, ClassCardComponent, ClassEditComponent, ClassType,
+} from "./cards/doors/class/class";
+import {
+  CurseCard, CurseCardComponent, CurseEditComponent, CurseType,
+} from "./cards/doors/curse/curse";
 import { Doors } from "./cards/doors/door-group";
-import { RaceType, RaceCard, RaceCardComponent, RaceEditComponent } from "./cards/doors/race/race";
-import { CurseCardComponent, CurseEditComponent, CurseType, CurseCard } from "./cards/doors/curse/curse";
 import {
-  MonsterEnhancerCardComponent, MonsterEnhancerEditComponent, MonsterEnhancerType, MonsterEnhancerCard
-} from './cards/doors/monster-enhancer/monster-enhancer';
-import { OtherDoorCardComponent, OtherDoorEditComponent, OtherDoorType, OtherDoorCard } from './cards/doors/other-door/other-door';
-import { HirelingCardComponent, HirelingEditComponent, HirelingType, HirelingCard } from './cards/doors/hireling/hireling';
+  HirelingCard, HirelingCardComponent, HirelingEditComponent, HirelingType,
+} from "./cards/doors/hireling/hireling";
 import {
-  ReusableItemCardComponent, ReusableItemEditComponent, ReusableItemType, ReusableItemCard
-} from './cards/treasures/reusable-item/reusable-item';
-import { Treasures } from './cards/treasures/treasure-group';
+  MonsterEnhancerCard, MonsterEnhancerCardComponent,
+  MonsterEnhancerEditComponent, MonsterEnhancerType,
+} from "./cards/doors/monster-enhancer/monster-enhancer";
 import {
-  SingleUseItemCardComponent, SingleUseItemEditComponent, SingleUseItemType, SingleUseItemCard
-} from './cards/treasures/single-use-item/single-use-item';
-import { LevelUpCardComponent, LevelUpEditComponent, LevelUpType, LevelUpCard } from './cards/treasures/level-up/level-up';
+  MonsterCard, MonsterCardComponent, MonsterEditComponent, MonsterType,
+} from "./cards/doors/monster/monster";
+import {
+  OtherDoorCard, OtherDoorCardComponent, OtherDoorEditComponent, OtherDoorType,
+} from "./cards/doors/other-door/other-door";
+import {
+  RaceCard, RaceCardComponent, RaceEditComponent, RaceType,
+} from "./cards/doors/race/race";
+import {
+  LevelUpCard, LevelUpCardComponent, LevelUpEditComponent, LevelUpType,
+} from "./cards/treasures/level-up/level-up";
+import {
+  ReusableItemCard, ReusableItemCardComponent, ReusableItemEditComponent,
+  ReusableItemType,
+} from "./cards/treasures/reusable-item/reusable-item";
+import {
+  SingleUseItemCard, SingleUseItemCardComponent, SingleUseItemEditComponent,
+  SingleUseItemType,
+} from "./cards/treasures/single-use-item/single-use-item";
+import { Treasures } from "./cards/treasures/treasure-group";
+import { MunchkinDeckComponent } from "./deck/munchkin-deck.component";
 
 @NgModule({
   declarations: [
@@ -50,11 +67,9 @@ import { LevelUpCardComponent, LevelUpEditComponent, LevelUpType, LevelUpCard } 
     LevelUpCardComponent,
     LevelUpEditComponent
   ],
-  entryComponents: [
-  ],
   imports: [
     BrowserModule,
-    AngularFireDatabaseModule,
+    AngularFireStorageModule,
     FormsModule,
     ReactiveFormsModule,
     NgbModule,

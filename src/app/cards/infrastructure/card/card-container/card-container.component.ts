@@ -1,13 +1,16 @@
-import { Component, OnInit, Input, ViewChild } from "@angular/core";
+import { Component, Input, OnInit, ViewChild } from "@angular/core";
+
+import {
+  TemplateComponentFactory, TemplateDirective,
+} from "../../template/template";
 import { Card, CardType } from "../card";
 import { CardTemplate } from "./card-template";
-import { TemplateDirective, TemplateComponentFactory } from "../../template/template";
 import { CardTemplateService } from "./card-template.service";
 
 @Component({
   selector: "app-card-container",
   templateUrl: "./card-container.component.html",
-  styleUrls: ["./card-container.component.css"]
+  styleUrls: ["./card-container.component.scss"]
 })
 export class CardContainerComponent implements OnInit {
   @Input() card: Card;

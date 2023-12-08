@@ -3,6 +3,8 @@
   "compilerOptions": {
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
+    // TODO: remove after migration to new @angular/fire@7 API
+    "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "noImplicitReturns": true,
@@ -13,7 +15,7 @@
     "downlevelIteration": true,
     "experimentalDecorators": true,
     "strictPropertyInitialization": false,
-    "target": "es2015",
+    "target": "ES2022",
     "module": "es2020",
     "moduleResolution": "node",
     "importHelpers": true,
@@ -27,8 +29,9 @@
       ],
       "environments/*": [
         "src/environments/*"
-      ],
+      ]
     },
+    "useDefineForClassFields": false
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

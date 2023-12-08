@@ -1,9 +1,9 @@
-import { Component, Input, Output, EventEmitter } from "@angular/core";
+import { Component, EventEmitter, Input, Output } from "@angular/core";
 
 @Component({
   selector: "app-editable-rich-text",
   templateUrl: "./editable-rich-text.component.html",
-  styleUrls: ["./editable-rich-text.component.css"]
+  styleUrls: ["./editable-rich-text.component.scss"]
 })
 export class EditableRichTextComponent {
 

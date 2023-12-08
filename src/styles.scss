@@ -1,0 +1,15 @@
+/* You can add global styles to this file, and also import other style files */
+@import "./app/cards/munchkin/munchkin-styles.scss";
+
+ngb-modal-backdrop {
+  z-index: 1050 !important;
+}
+
+.list-group a {
+  color: #343a40;
+}
+
+.list-group a:hover {
+  text-decoration: none;
+  color: black;
+}

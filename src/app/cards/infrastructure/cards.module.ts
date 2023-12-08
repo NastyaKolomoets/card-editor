@@ -1,36 +1,24 @@
-import { NgModule, ModuleWithProviders } from "@angular/core";
-import { BrowserModule } from "@angular/platform-browser";
-import { AngularFireDatabaseModule } from "@angular/fire/database";
-import { AngularFireStorageModule } from "@angular/fire/storage";
+import { ModuleWithProviders, NgModule } from "@angular/core";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { BrowserModule } from "@angular/platform-browser";
 import { NgbModalModule, NgbModule } from "@ng-bootstrap/ng-bootstrap";
-import { FroalaViewModule, FroalaEditorModule } from "angular-froala-wysiwyg";
+import { FroalaEditorModule, FroalaViewModule } from "angular-froala-wysiwyg";
 
 import {
-  CardDeckComponent,
-  EditCardModalComponent, EditCardComponent, LayoutsComponent,
-  DeckConfigService, ImagesService, EditTemplateService, CardsService,
-  DeckConfig,
-  CardTypeConfig,
-  EditableRichTextComponent,
-  EditableStringComponent,
-  EditableNumberComponent,
+  CardDeckComponent, CardsService, CardTypeConfig, DeckConfig,
+  DeckConfigService, EditableNumberComponent, EditableRichTextComponent, EditableStringComponent,
+  EditCardComponent, EditCardModalComponent, EditTemplateService, ImagesService,
+  LayoutsComponent,
 } from "./card-deck/card-deck";
-
+import { EditTemplateResolver } from "./card-deck/edit-card-modal/edit-card/edit-template-resolver";
 import {
-  TemplateModule,
-} from "./template/template";
-
-import {
-  CardContainerComponent, CardTemplateService,
-  CardBodyComponent, CardContentComponent,
-  BodyLayoutBaseComponent,
-  TextFieldComponent, ImgFieldComponent,
-  ImageTopComponent, ImageBottomComponent, ImageOverlapComponent, LargeTextComponent, ImageCenterComponent,
-  BodyLayoutResolver, BodyLayoutService, CardHeaderComponent, CardFooterComponent,
+  BodyLayoutBaseComponent, BodyLayoutResolver, BodyLayoutService, CardBodyComponent,
+  CardContainerComponent, CardContentComponent, CardFooterComponent, CardHeaderComponent,
+  CardTemplateService, ImageBottomComponent, ImageCenterComponent, ImageOverlapComponent,
+  ImageTopComponent, ImgFieldComponent, LargeTextComponent, TextFieldComponent,
 } from "./card/card";
 import { CardTemplateResolver } from "./card/card-container/card-template-resolver";
-import { EditTemplateResolver } from "./card-deck/edit-card-modal/edit-card/edit-template-resolver";
+import { TemplateModule } from "./template/template";
 
 @NgModule({
   declarations: [
@@ -57,8 +45,6 @@ import { EditTemplateResolver } from "./card-deck/edit-card-modal/edit-card/edit
   ],
   imports: [
     BrowserModule,
-    AngularFireDatabaseModule,
-    AngularFireStorageModule,
     FormsModule,
     ReactiveFormsModule,
     NgbModule,
@@ -89,9 +75,6 @@ import { EditTemplateResolver } from "./card-deck/edit-card-modal/edit-card/edit
     EditTemplateResolver,
     EditTemplateService,
     { provide: BodyLayoutService, useValue: new BodyLayoutService(new BodyLayoutResolver()) },
-  ],
-  entryComponents: [
-    EditCardModalComponent,
   ]
 })
 export class CardsModule {

@@ -23,7 +23,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css",
+              "src/styles.scss",
               "./node_modules/froala-editor/css/froala_editor.pkgd.min.css",
               "./node_modules/froala-editor/css/froala_style.min.css"
             ],
@@ -67,18 +67,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "card-editor:build"
+            "buildTarget": "card-editor:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "card-editor:build:production"
+              "buildTarget": "card-editor:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "card-editor:build"
+            "buildTarget": "card-editor:build"
           }
         },
         "test": {
@@ -93,7 +93,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.scss"
             ],
             "scripts": []
           }
@@ -126,5 +126,7 @@
       }
     }
   },
-  "defaultProject": "card-editor"
+  "cli": {
+    "analytics": false
+  }
 }

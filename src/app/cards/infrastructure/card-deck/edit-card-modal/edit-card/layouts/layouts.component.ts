@@ -1,11 +1,16 @@
-import { Component, Input, Output, EventEmitter } from "@angular/core";
-import { Layout } from "src/app/cards/infrastructure/card-deck/edit-card-modal/edit-card/layouts/layout-model/layout";
-import { LayoutType } from "src/app/cards/infrastructure/card/card-model/layout-type";
+import { Component, EventEmitter, Input, Output } from "@angular/core";
+
+import {
+  Layout,
+} from "src/app/cards/infrastructure/card-deck/edit-card-modal/edit-card/layouts/layout-model/layout";
+import {
+  LayoutType,
+} from "src/app/cards/infrastructure/card/card-model/layout-type";
 
 @Component({
   selector: "app-layouts",
   templateUrl: "./layouts.component.html",
-  styleUrls: ["./layouts.component.css"]
+  styleUrls: ["./layouts.component.scss"]
 })
 
 export class LayoutsComponent {

@@ -1,6 +1,6 @@
-import { Injectable } from "@angular/core";
-import { AngularFireStorage } from "@angular/fire/storage";
-import { UploadTask } from "@angular/fire/storage/interfaces";
+import { Injectable } from '@angular/core';
+import { AngularFireStorage } from '@angular/fire/compat/storage';
+import { UploadTask } from '@angular/fire/compat/storage/interfaces';
 
 @Injectable()
 export class ImagesService {
