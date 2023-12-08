@@ -1,4 +1,4 @@
-import { LayoutType } from '../../../../../card/card-model/layout-type';
+import { LayoutType } from "../../../../../card/card-model/layout-type";
 
 export class Layout {
   fieldsPlacement: LayoutType;

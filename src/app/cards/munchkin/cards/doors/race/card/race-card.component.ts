@@ -1,13 +1,13 @@
-import { Component, Input } from '@angular/core';
-import { CardTemplate } from 'src/app/cards/infrastructure/cards';
-import { RaceCard } from '../model/race-card';
+import { Component, Input } from "@angular/core";
+import { CardTemplate } from "src/app/cards/infrastructure/cards";
+import { RaceCard } from "../model/race-card";
 
 @Component({
-  selector: 'app-race-card',
-  templateUrl: './race-card.component.html'
+  selector: "app-race-card",
+  templateUrl: "./race-card.component.html"
 })
 export class RaceCardComponent implements CardTemplate {
   @Input() card: RaceCard;
 
-  readonly raceText: string = 'Раса';
+  readonly raceText: string = "Раса";
 }

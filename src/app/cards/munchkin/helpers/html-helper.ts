@@ -1,10 +1,10 @@
 export function prependRichText(text: string, insertText: string, tag: string) {
   if (!text) {
-    return '';
+    return "";
   }
 
   const regexp = new RegExp(`<${tag}[^>]*>`);
-  const openingTag = regexp.exec(text)[0] || '';
+  const openingTag = regexp.exec(text)?.[0] || "";
   const closingTag = `</${tag}>`;
   const start = text.indexOf(openingTag) + openingTag.length;
   const end = text.lastIndexOf(closingTag);
@@ -14,7 +14,7 @@ export function prependRichText(text: string, insertText: string, tag: string) {
 
 export function appendRichText(text: string, insertText: string, tag: string) {
   if (!text) {
-    return '';
+    return "";
   }
 
   const closingTag = `</${tag}>`;

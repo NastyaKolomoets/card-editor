@@ -1,5 +1,5 @@
-import { Card } from '../../../infrastructure/card/card-model/card';
-import { CardType } from '../../../infrastructure/card/card-model/card-type';
+import { Card } from "../../../infrastructure/card/card-model/card";
+import { CardType } from "../../../infrastructure/card/card-model/card-type";
 
 export class TreasureCard extends Card {
 
@@ -8,14 +8,14 @@ export class TreasureCard extends Card {
   constructor(type: CardType, obj: any) {
     super(type, obj);
     this.price = obj?.price;
-    this.backgroundImg = 'assets/doors_back.png'; // temp
+    this.backgroundImg = "assets/doors_back.png"; // temp
   }
 
   get priceText() {
     if (!this.price && this.price !== 0) {
-      return '';
+      return "";
     }
 
-    return this.price > 0 ? `${this.price} золотих` : 'Нічого не варта';
+    return this.price > 0 ? `${this.price} золотих` : "Нічого не варта";
   }
 }

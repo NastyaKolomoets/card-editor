@@ -1,8 +1,8 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from "@angular/core";
 
 @Component({
-  selector: 'app-layout',
-  template: ''
+  selector: "app-layout",
+  template: ""
 })
 export class BodyLayoutBaseComponent {
   @Input() firstText: string;

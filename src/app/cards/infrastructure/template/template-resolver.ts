@@ -1,5 +1,5 @@
-import { Type } from '@angular/core';
+import { Type } from "@angular/core";
 
-export interface TemplateResolver<T> {
-  getTemplateType(type: T): Type<any>;
+export interface TemplateResolver<T, R> {
+  getTemplateType(type: T): Type<R>;
 }

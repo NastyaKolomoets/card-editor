@@ -1,4 +1,4 @@
-import { LayoutType } from './layout-type';
+import { LayoutType } from "./layout-type";
 
 export class CardType {
   name: string;

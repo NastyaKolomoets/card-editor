@@ -1,16 +1,16 @@
-import { NgModule, ModuleWithProviders } from '@angular/core';
-import { TemplateDirective } from './template.directive';
-import { TemplateComponentFactory } from './template-component-factory';
+import { NgModule, ModuleWithProviders } from "@angular/core";
+import { TemplateDirective } from "./template.directive";
+import { TemplateComponentFactory } from "./template-component-factory";
 
 @NgModule({
   declarations: [
-    TemplateDirective
+    TemplateDirective,
   ],
   exports: [
-    TemplateDirective
+    TemplateDirective,
   ],
   providers: [
-    TemplateComponentFactory
+    TemplateComponentFactory,
   ]
 })
 export class TemplateModule {

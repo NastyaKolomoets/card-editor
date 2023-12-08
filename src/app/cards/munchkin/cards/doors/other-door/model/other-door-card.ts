@@ -1,6 +1,6 @@
-import { DoorCard } from '../../door-card';
-import { OtherDoorType } from './other-door-type';
-import { ImageBottomLayout } from 'src/app/cards/infrastructure/cards';
+import { DoorCard } from "../../door-card";
+import { OtherDoorType } from "./other-door-type";
+import { ImageBottomLayout } from "src/app/cards/infrastructure/cards";
 
 /**
  * Represents an other door card. Extends [[DoorCard]].

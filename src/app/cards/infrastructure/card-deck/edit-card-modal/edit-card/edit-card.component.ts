@@ -1,16 +1,16 @@
-import { Component, Input, OnInit, ViewChild } from '@angular/core';
-import { Card } from 'src/app/cards/infrastructure/card/card-model/card';
-import { ImagesService } from 'src/app/cards/infrastructure/card-deck/services/images.service';
-import { EditTemplateService } from 'src/app/cards/infrastructure/card-deck/edit-card-modal/edit-card/edit-template.service';
-import { TemplateComponentFactory } from 'src/app/cards/infrastructure/template/template-component-factory';
-import { TemplateDirective } from 'src/app/cards/infrastructure/template/template.directive';
-import { CardType } from 'src/app/cards/infrastructure/card/card';
-import { EditCardTemplate } from './edit-card-template';
+import { Component, Input, OnInit, ViewChild } from "@angular/core";
+import { Card } from "src/app/cards/infrastructure/card/card-model/card";
+import { ImagesService } from "src/app/cards/infrastructure/card-deck/services/images.service";
+import { EditTemplateService } from "src/app/cards/infrastructure/card-deck/edit-card-modal/edit-card/edit-template.service";
+import { TemplateComponentFactory } from "src/app/cards/infrastructure/template/template-component-factory";
+import { TemplateDirective } from "src/app/cards/infrastructure/template/template.directive";
+import { CardType } from "src/app/cards/infrastructure/card/card";
+import { EditCardTemplate } from "./edit-card-template";
 
 @Component({
-  selector: 'app-edit-card',
-  templateUrl: './edit-card.component.html',
-  styleUrls: ['./edit-card.component.css']
+  selector: "app-edit-card",
+  templateUrl: "./edit-card.component.html",
+  styleUrls: ["./edit-card.component.css"]
 })
 
 export class EditCardComponent implements OnInit {
@@ -29,7 +29,7 @@ export class EditCardComponent implements OnInit {
   }
 
   getImageName() {
-    return this.card.img.substring(this.card.img.lastIndexOf('/') + 1, this.card.img.indexOf('?'));
+    return this.card.img.substring(this.card.img.lastIndexOf("/") + 1, this.card.img.indexOf("?"));
   }
 
   handleFileInput(file: any) {

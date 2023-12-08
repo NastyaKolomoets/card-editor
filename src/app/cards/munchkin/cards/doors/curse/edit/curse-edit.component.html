@@ -1,8 +1,13 @@
 <div>
-  <app-editable-string [(string)]="card.name" [label]="'name'"></app-editable-string>
+  <app-editable-string [(value)]="card.name"
+                       [label]="'name'"></app-editable-string>
 
-  <app-editable-rich-text [(text)]="card.badStuff" [label]="'bad stuff'" [multiline]="'true'">
+  <app-editable-rich-text [(text)]="card.badStuff"
+                          [label]="'bad stuff'"
+                          [multiline]="true">
   </app-editable-rich-text>
-  <app-editable-rich-text [(text)]="card.description" [label]="'description'" [multiline]="'true'">
+  <app-editable-rich-text [(text)]="card.description"
+                          [label]="'description'"
+                          [multiline]="true">
   </app-editable-rich-text>
 </div>
