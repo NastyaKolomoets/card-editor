@@ -26,6 +26,10 @@ jobs:
 
     - name: Build
       run: npm run build:prod
+
+    - uses: microsoft/variable-substitution@v1
+      with:
+        files: 'environment.prod.ts'
       env:
         apiKey: ${{ secrets.APIKEY }}
         projectId: ${{ vars.projectId }}
