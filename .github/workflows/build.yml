@@ -28,10 +28,12 @@ jobs:
       uses: bluwy/substitute-string-action@v1
       with:
         _input-file: './src/environments/environment.prod.ts'
-        $apiKey: ${{ secrets.APIKEY }}
-        $projectId: ${{ vars.projectId }}
-        $databaseURL: ${{ vars.databaseURL }}
-        $storageBucket: ${{ vars.storageBucket }}
+        _output-file: './src/environments/environment.prod.ts'
+        _format-key: '%%key%%'
+        apiKey: ${{ secrets.APIKEY }}
+        projectId: ${{ vars.projectId }}
+        databaseURL: ${{ vars.databaseURL }}
+        storageBucket: ${{ vars.storageBucket }}
 
     - name: Build
       run: npm run build:prod
