@@ -1,47 +1,84 @@
-import { NgModule } from "@angular/core";
-import { AngularFireStorageModule } from "@angular/fire/compat/storage";
-import { FormsModule, ReactiveFormsModule } from "@angular/forms";
-import { BrowserModule } from "@angular/platform-browser";
-import { NgbModalModule, NgbModule } from "@ng-bootstrap/ng-bootstrap";
-import { FroalaEditorModule, FroalaViewModule } from "angular-froala-wysiwyg";
+import { NgModule } from '@angular/core';
+import {
+  FormsModule,
+  ReactiveFormsModule,
+} from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
 
-import { CardsModule } from "../infrastructure/cards";
 import {
-  ClassCard, ClassCardComponent, ClassEditComponent, ClassType,
-} from "./cards/doors/class/class";
+  FroalaEditorModule,
+  FroalaViewModule,
+} from 'angular-froala-wysiwyg';
+
 import {
-  CurseCard, CurseCardComponent, CurseEditComponent, CurseType,
-} from "./cards/doors/curse/curse";
-import { Doors } from "./cards/doors/door-group";
+  NgbModalModule,
+  NgbModule,
+} from '@ng-bootstrap/ng-bootstrap';
+
+import { CardsModule } from '../infrastructure/cards';
 import {
-  HirelingCard, HirelingCardComponent, HirelingEditComponent, HirelingType,
-} from "./cards/doors/hireling/hireling";
+  ClassCard,
+  ClassCardComponent,
+  ClassEditComponent,
+  ClassType,
+} from './cards/doors/class/class';
 import {
-  MonsterEnhancerCard, MonsterEnhancerCardComponent,
-  MonsterEnhancerEditComponent, MonsterEnhancerType,
-} from "./cards/doors/monster-enhancer/monster-enhancer";
+  CurseCard,
+  CurseCardComponent,
+  CurseEditComponent,
+  CurseType,
+} from './cards/doors/curse/curse';
+import { Doors } from './cards/doors/door-group';
 import {
-  MonsterCard, MonsterCardComponent, MonsterEditComponent, MonsterType,
-} from "./cards/doors/monster/monster";
+  HirelingCard,
+  HirelingCardComponent,
+  HirelingEditComponent,
+  HirelingType,
+} from './cards/doors/hireling/hireling';
 import {
-  OtherDoorCard, OtherDoorCardComponent, OtherDoorEditComponent, OtherDoorType,
-} from "./cards/doors/other-door/other-door";
+  MonsterEnhancerCard,
+  MonsterEnhancerCardComponent,
+  MonsterEnhancerEditComponent,
+  MonsterEnhancerType,
+} from './cards/doors/monster-enhancer/monster-enhancer';
 import {
-  RaceCard, RaceCardComponent, RaceEditComponent, RaceType,
-} from "./cards/doors/race/race";
+  MonsterCard,
+  MonsterCardComponent,
+  MonsterEditComponent,
+  MonsterType,
+} from './cards/doors/monster/monster';
 import {
-  LevelUpCard, LevelUpCardComponent, LevelUpEditComponent, LevelUpType,
-} from "./cards/treasures/level-up/level-up";
+  OtherDoorCard,
+  OtherDoorCardComponent,
+  OtherDoorEditComponent,
+  OtherDoorType,
+} from './cards/doors/other-door/other-door';
 import {
-  ReusableItemCard, ReusableItemCardComponent, ReusableItemEditComponent,
+  RaceCard,
+  RaceCardComponent,
+  RaceEditComponent,
+  RaceType,
+} from './cards/doors/race/race';
+import {
+  LevelUpCard,
+  LevelUpCardComponent,
+  LevelUpEditComponent,
+  LevelUpType,
+} from './cards/treasures/level-up/level-up';
+import {
+  ReusableItemCard,
+  ReusableItemCardComponent,
+  ReusableItemEditComponent,
   ReusableItemType,
-} from "./cards/treasures/reusable-item/reusable-item";
+} from './cards/treasures/reusable-item/reusable-item';
 import {
-  SingleUseItemCard, SingleUseItemCardComponent, SingleUseItemEditComponent,
+  SingleUseItemCard,
+  SingleUseItemCardComponent,
+  SingleUseItemEditComponent,
   SingleUseItemType,
-} from "./cards/treasures/single-use-item/single-use-item";
-import { Treasures } from "./cards/treasures/treasure-group";
-import { MunchkinDeckComponent } from "./deck/munchkin-deck.component";
+} from './cards/treasures/single-use-item/single-use-item';
+import { Treasures } from './cards/treasures/treasure-group';
+import { MunchkinDeckComponent } from './deck/munchkin-deck.component';
 
 @NgModule({
   declarations: [
@@ -69,7 +106,6 @@ import { MunchkinDeckComponent } from "./deck/munchkin-deck.component";
   ],
   imports: [
     BrowserModule,
-    AngularFireStorageModule,
     FormsModule,
     ReactiveFormsModule,
     NgbModule,

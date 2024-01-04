@@ -1,24 +1,75 @@
-import { ModuleWithProviders, NgModule } from "@angular/core";
-import { FormsModule, ReactiveFormsModule } from "@angular/forms";
-import { BrowserModule } from "@angular/platform-browser";
-import { NgbModalModule, NgbModule } from "@ng-bootstrap/ng-bootstrap";
-import { FroalaEditorModule, FroalaViewModule } from "angular-froala-wysiwyg";
+import {
+  ModuleWithProviders,
+  NgModule,
+} from '@angular/core';
+import {
+  initializeApp,
+  provideFirebaseApp,
+} from '@angular/fire/app';
+import {
+  getDatabase,
+  provideDatabase,
+} from '@angular/fire/database';
+import {
+  getStorage,
+  provideStorage,
+} from '@angular/fire/storage';
+import {
+  FormsModule,
+  ReactiveFormsModule,
+} from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
 
 import {
-  CardDeckComponent, CardsService, CardTypeConfig, DeckConfig,
-  DeckConfigService, EditableNumberComponent, EditableRichTextComponent, EditableStringComponent,
-  EditCardComponent, EditCardModalComponent, EditTemplateService, ImagesService,
-  LayoutsComponent,
-} from "./card-deck/card-deck";
-import { EditTemplateResolver } from "./card-deck/edit-card-modal/edit-card/edit-template-resolver";
+  FroalaEditorModule,
+  FroalaViewModule,
+} from 'angular-froala-wysiwyg';
+import { environment } from 'environments/environment';
+
 import {
-  BodyLayoutBaseComponent, BodyLayoutResolver, BodyLayoutService, CardBodyComponent,
-  CardContainerComponent, CardContentComponent, CardFooterComponent, CardHeaderComponent,
-  CardTemplateService, ImageBottomComponent, ImageCenterComponent, ImageOverlapComponent,
-  ImageTopComponent, ImgFieldComponent, LargeTextComponent, TextFieldComponent,
-} from "./card/card";
-import { CardTemplateResolver } from "./card/card-container/card-template-resolver";
-import { TemplateModule } from "./template/template";
+  NgbModalModule,
+  NgbModule,
+} from '@ng-bootstrap/ng-bootstrap';
+
+import {
+  CardDeckComponent,
+  CardsService,
+  CardTypeConfig,
+  DeckConfig,
+  DeckConfigService,
+  EditableNumberComponent,
+  EditableRichTextComponent,
+  EditableStringComponent,
+  EditCardComponent,
+  EditCardModalComponent,
+  EditTemplateService,
+  LayoutsComponent,
+} from './card-deck/card-deck';
+import {
+  EditTemplateResolver,
+} from './card-deck/edit-card-modal/edit-card/edit-template-resolver';
+import {
+  BodyLayoutBaseComponent,
+  BodyLayoutResolver,
+  BodyLayoutService,
+  CardBodyComponent,
+  CardContainerComponent,
+  CardContentComponent,
+  CardFooterComponent,
+  CardHeaderComponent,
+  CardTemplateService,
+  ImageBottomComponent,
+  ImageCenterComponent,
+  ImageOverlapComponent,
+  ImageTopComponent,
+  ImgFieldComponent,
+  LargeTextComponent,
+  TextFieldComponent,
+} from './card/card';
+import {
+  CardTemplateResolver,
+} from './card/card-container/card-template-resolver';
+import { TemplateModule } from './template/template';
 
 @NgModule({
   declarations: [
@@ -52,6 +103,9 @@ import { TemplateModule } from "./template/template";
     FroalaEditorModule.forRoot(),
     FroalaViewModule.forRoot(),
     TemplateModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideDatabase(() => getDatabase()),
+    provideStorage(() => getStorage())
   ],
   exports: [
     CardContainerComponent,
@@ -69,7 +123,6 @@ import { TemplateModule } from "./template/template";
   providers: [
     DeckConfigService,
     CardsService,
-    ImagesService,
     CardTemplateResolver,
     CardTemplateService,
     EditTemplateResolver,

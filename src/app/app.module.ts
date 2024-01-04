@@ -1,16 +1,25 @@
-import { NgModule } from "@angular/core";
-import { AngularFireModule } from "@angular/fire/compat";
-import { AngularFirestoreModule } from "@angular/fire/compat/firestore";
-import { FormsModule, ReactiveFormsModule } from "@angular/forms";
-import { BrowserModule } from "@angular/platform-browser";
-import { RouterModule } from "@angular/router";
+import { NgModule } from '@angular/core';
+import {
+  initializeApp,
+  provideFirebaseApp,
+} from '@angular/fire/app';
+import {
+  getDatabase,
+  provideDatabase,
+} from '@angular/fire/database';
+import {
+  FormsModule,
+  ReactiveFormsModule,
+} from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
+import { RouterModule } from '@angular/router';
 
-import { AppRoutingModule } from "app/app-routing.module";
-import { AppComponent } from "app/app.component";
-import { MunchkinModule } from "app/cards/munchkin/munchkin.module";
-import { NavigationComponent } from "app/core/components";
-import { AuthService } from "app/core/services";
-import { environment } from "environments/environment";
+import { AppRoutingModule } from 'app/app-routing.module';
+import { AppComponent } from 'app/app.component';
+import { MunchkinModule } from 'app/cards/munchkin/munchkin.module';
+import { NavigationComponent } from 'app/core/components';
+import { AuthService } from 'app/core/services';
+import { environment } from 'environments/environment';
 
 @NgModule({
   declarations: [
@@ -21,8 +30,8 @@ import { environment } from "environments/environment";
     BrowserModule,
     RouterModule,
     AppRoutingModule,
-    AngularFireModule.initializeApp(environment.firebase),
-    AngularFirestoreModule.enablePersistence({ synchronizeTabs: true }),
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideDatabase(() => getDatabase()),
     FormsModule,
     ReactiveFormsModule,
     MunchkinModule,

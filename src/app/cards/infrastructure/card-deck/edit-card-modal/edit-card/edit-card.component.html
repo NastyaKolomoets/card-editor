@@ -2,9 +2,10 @@
   <ng-template appTemplate></ng-template>
   <div class="custom-file">
     <input type="file"
+           accept="image/*"
            class="custom-file-input"
            id="img"
-           (change)="handleFileInput($event)">
+           (change)="handleFileInput($event)" />
     <label class="custom-file-label d-inline-block text-truncate"
            for="customFile">{{getImageName()}}</label>
   </div>

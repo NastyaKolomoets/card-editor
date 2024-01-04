@@ -1,13 +1,20 @@
-import { Component, OnInit } from "@angular/core";
-import { NgbModal } from "@ng-bootstrap/ng-bootstrap";
+import {
+  Component,
+  OnInit,
+} from '@angular/core';
 
-import { Card, CardType } from "../card/card";
-import { CardGroup } from "./deck-config/card-group";
-import { DeckConfigService } from "./deck-config/deck-config.service";
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+
+import {
+  Card,
+  CardType,
+} from '../card/card';
+import { CardGroup } from './deck-config/card-group';
+import { DeckConfigService } from './deck-config/deck-config.service';
 import {
   EditCardModalComponent,
-} from "./edit-card-modal/edit-card-modal.component";
-import { CardsService } from "./services/cards.service";
+} from './edit-card-modal/edit-card-modal.component';
+import { CardsService } from './services/cards.service';
 
 @Component({
   selector: "app-card-deck",
@@ -29,7 +36,7 @@ export class CardDeckComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.cardsService.getAll()
+    this.cardsService.getAllCards()
       .subscribe(cards => {
         this.cards = Object.values(cards.reduce((prev, next) => prev = { ...prev, ...next }))
           .map((x: { type: string }) => {

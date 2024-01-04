@@ -1,41 +1,59 @@
-import { Injectable } from "@angular/core";
-import { AngularFireDatabase } from "@angular/fire/compat/database";
-import { Observable } from "rxjs";
+import { Injectable } from '@angular/core';
+import {
+  Database,
+  listVal,
+  objectVal,
+  push,
+  ref,
+  remove,
+  set,
+} from '@angular/fire/database';
 
-import { Card } from "../../card/card-model/card";
+import {
+  map,
+  Observable,
+} from 'rxjs';
+
+import { Card } from '../../card/card-model/card';
 
 @Injectable()
 export class CardsService {
-  uri = "/cards";
+  private readonly uri = "/cards";
 
-  constructor(private firebase: AngularFireDatabase) {
+  constructor(private firebase: Database) {
   }
 
-  getAll(): Observable<Card[]> {
-    return this.firebase.list<Card>(`${this.uri}`).valueChanges();
+  getAllCards(): Observable<Card[]> {
+    const cardsRef = ref(this.firebase, this.uri);
+    return objectVal(cardsRef)
+      .pipe(map((dynamicCardTypes:any) => Object.values(dynamicCardTypes)));
   }
 
-  add(card: Card): Promise<any> {
-    const key = this.firebase.database.ref(this.uri).push().key;
-    if (key !== null) {
-      card.key = key;
-    }
-    return this.firebase.database.ref(`${this.uri}/${card.type.namePlural}/${key}`).set(this.mapToDto(card));
+  getAllCardOfType(type: string): Observable<Card[]> {
+    const cardsRef = ref(this.firebase, `${this.uri}/${type}`);
+    return listVal(cardsRef);
   }
 
   addOrUpdateCard(card: Card): Promise<any> {
     if (card.key === null) {
-      const result = this.firebase.database.ref(this.uri).push().key;
-      if (result !== null) {
-        card.key = result;
+      const location = ref(this.firebase, this.getCardRef(card));
+      const newRef = push(location);
+      if (newRef.key !== null) {
+        card.key = newRef.key;
       }
     }
 
-    return this.firebase.database.ref(`${this.uri}/${card.type.namePlural}/${card.key}`).set(this.mapToDto(card));
+    const cardRef = ref(this.firebase, this.getCardRef(card))
+    return set(cardRef, this.mapToDto(card));
+  }
+
+  private getCardRef(card: Card): string {
+    return `${this.uri}/${card.type.namePlural}/${card.key}`;
   }
 
   delete(card: Card): Promise<any> {
-    return this.firebase.database.ref(`${this.uri}/${card.type.namePlural}/${card.key}`).remove();
+    const cardRef = ref(this.firebase, this.getCardRef(card));
+    return remove(cardRef);
   }
 
   mapToDto(card: Card): any {
